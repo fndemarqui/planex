@@ -1,0 +1,136 @@
+---
+title: "Planejamento de Experimentos"
+author: "Fábio N. Demarqui"
+date: 
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Análise de variância envolvendo delineamentos com um fator fixo
+
+### Exemplo: resistência de saquinhos de papel
+
+ Um fabricante de sacos de papel pardo está interessado em melhorar a resistência do produto à tensão. Acredita-se que a resistência à tensão seja uma função da concentração de madeira de lei na polpa, e que a faixa prática de interesse das concentraçoes da madeira de lei esteja entre 5\% e 20\%. Quatro níveis de concentração são investigados, a saber: 5\%, 10\%, 15\% e 20\%. Seis corpos de prova (unidades experimentais) para cada nível de concentração são testados.
+
+
+Carregando os pacotes necessários para a realização da análise:
+```{r}
+library(planex)
+library(agricolae)
+library(multcomp)
+library(ggplot2)
+```
+Na sequência iremos ler/visualizar o banco de dados:
+
+```{r}
+# lendo o banco de dados:
+data(saquinhos)
+saquinhos
+```
+Como podemos observar, os dados estão empilhados, ou seja, temos um data.frame cuja primeira coluna contém a resistência dos saquinhos observada, e a segunda coluna contém uma variável indicadora dos níveis (concentração de madeira de lei) do fator de interesse.
+
+A variável concentracao do data.frame dados é uma variável categórica (com 4 níveis). Variáveis categóricas devem ser armazenadas em objetos da classe factor no R. Entrentando, como pode ser visto abaixo, a variável  concentracao possui classe integer. Desta forma, antes de procedermos a análise dos dados, precisamos converter o objeto concentracao para um objeto da classe factor:
+
+```{r}
+#verificando a classe de cada variável do nosso objeto dados:
+sapply(saquinhos, class)
+# transformando a variável concentracao em um objeto da classe "factor":
+saquinhos$concentracao <- as.factor(saquinhos$concentracao)
+sapply(saquinhos, class)
+```
+
+Agora que os saquinhos estão devidamente preparados, vamos proceder a uma análise descritiva:
+
+```{r}
+# obtendo as médias amostrais associadas a cada nível do fator de interesse:
+medias <- tapply(saquinhos$resistencia, saquinhos$concentracao, mean)
+medias
+# explorando graficamente:
+plot(resistencia~concentracao,data=saquinhos)
+
+# alternativamente, utilizando o pacote ggplot2:
+g <- ggplot(saquinhos, aes(concentracao, resistencia))
+g + geom_boxplot()
+```
+
+A tabela ANOVA é obtida da seguinte forma:
+
+```{r}
+# ajustando o modelo:
+modelo <- aov(resistencia~concentracao,data=saquinhos)
+# obtendo a tabela ANOVA:
+summary(modelo)
+```
+Como podemos observar, considerando um nível de significância de 5\%, temos evidências para rejeitar a hipótese de igualdade das médias. Consequentemente, devemos proceder às comparações múltiplas, isto é, verificar quais pares de médias diferem significativamente. 
+
+#### Procedimentos de comparaçoes múltiplas
+
+No nosso curso estudaremos 4 procedimentos de comparações múltiplas, a saber: mínima diferênça significativa de Fisher, Bonferroni, Tukey, e Dunnet.
+
+Os 3 primeiros procedimentos de comparações múltiplas devem ser empregados quando temos interesse em realizar comparações envolvendo todos os possíveis pares de médias. Já os testes de Dunnet devem ser utilizados quando temos interesse em realizar comparações envolvendo um grupo controle. Neste caso, dizemos que um dos níveis do fator de interesse é o nível de referência (grupo controle), e temos interesse em verificar se exitem diferenças apens entre a média associada ao nível de referência  e os demais níveis do fator de interesse. 
+
+#### Teste da mínima diferença significativa de Fisher
+
+A função LSD.test do pacote agricolae realiza o procedimento de comparações múltiplas da mínima diferença significativa de Fisher. Quando a opção group=FALSE é utilizada, a função LSD.test fornece as diferenças estimadas dos pares de médias, juntamente com os resistenciaectivos intervalos de confiança de 95\% para as diferenças das médias, e os p-valores corresistenciaondentes.
+
+```{r}
+# Acessando o help da função LSD.test:
+? LSD.test
+print(LSD.test(modelo, "concentracao", group=FALSE))
+```
+
+A partir da saída fornecida acima podemos concluir que não existe diferença significativa apenas entre as resistências médias associadas aos níveis de concentração de madeira de lei de 10\% e 15\% (p-valor > 0.05; intervalo de confiança contém o valor zero). Todos os demais pares de médias diferem significativamente.
+
+Quando utilizamos o argumento group=TRUE temos a seguinte saída:
+
+```{r}
+print(LSD.test(modelo, "concentracao", group=TRUE))
+```
+
+Neste caso, a função LSD.test o valor tabelado (t.value) da distribuição de referência (t de Student), juntamente com o valor da mínima diferença significativa (LDS). A comparação das médias neste caso é feita da seguinte forma: níveis que comparilham a mesma letra não possuem diferenças significativas considerando um nível de significância de 5\% (para mudar o nível de significância para 0.01, por exemplo, basta usar o argumento alpha=0.01 da LSD.test). 
+
+#### Teste de Bonferroni
+
+A função LSD.test também é usada para realizarmos comparações múltiplas utilizando a correção de Bonferroni. Para tanto, basta passar o argumento p.adj="bonferroni" para função LSD.test, como ilustrado a seguir:
+
+```{r}
+print(LSD.test(modelo, "concentracao", group=FALSE, p.adj="bonferroni"))
+print(LSD.test(modelo, "concentracao", group=TRUE, p.adj="bonferroni"))
+```
+
+A análise dos resultados é similar àquela discutida para o procedimento de comparações múltiplas da mínima diferença significativa de Fisher. Entretanto, dada a mudança do procedimento de comparações múltiplas empregado, agora temos as seguintes conclusões: considerando $\alpha=0.05$, não existem diferenças significativas entre os nívels 10\% e 15\%, e  15\% e 20\%.
+
+#### Teste de Tukey
+
+Para realizar o procedimento de comparações múltiplas de Tukey utilizamos a função HSD.test, conforme ilustrado a seguir:
+
+```{r}
+print(HSD.test(modelo, "concentracao", group=FALSE))
+print(HSD.test(modelo, "concentracao", group=TRUE))
+```
+
+A saída da função HSD.test, bem como a interpretação dos resultados, é similar àquela fornecida pela função LSD.test. Como podemos observar, o procedimento de comparações múltiplas de Tukey forneceu, neste caso, os mesmos resutados de que o procedimento da mínima diferença significativa de Fisher.
+
+#### Teste de Dunnet:
+
+Suponha agora que o fabricante de saquinhos de papel já produz saquinhos utilizando a concentração de madeira de lei de 20\%, e ele deseja reduzir tal concetração de modo a baratear o processo de produção, sem prejuízos quanto a resistência dos saquinhos produzidos. Neste caso devemos considerar que o nível 20\% como o nível de referência (grupo controle). Note que neste novo contexto apenas comparações de pares de médias envolvendo o grupo controle são de interesse prático. Para a realização das comparações múltiplas vamos usar a função glht do pacote multcomp. Antes disso, precisamos informar ao R que o nível de referência da nossa variável categórica é o nível 20\%, e reajustar nosso modelo:
+
+```{r}
+# verificando os níveis da variável concentracao:
+levels(saquinhos$concentracao)
+# alterando o nível de referência:
+saquinhos$concentracao <- relevel(saquinhos$concentracao, ref="20")
+# conferindo a alteração:
+levels(saquinhos$concentracao)
+modelo  <- aov(resistencia~concentracao, data=saquinhos)
+comp <- glht(modelo, linfct = mcp(concentracao = "Dunnet"))
+summary(comp)
+```
+
+Note que a saída da função glht é deferente das saídas discutidas anteriormente, sendo fornecidos apenas os p-valores. Em termos práticos, considerando um nível de significância de 5\%, podemos concluir o grupo controle  (nível 20\%) difere significativamente dos demais níveis. Consequentemente, podemos concluir que a redução do nível de concentração de madeira de lei acarretará uma redução significativa na resistência média dos saquinhos de papel.
+
+
+

@@ -1,0 +1,18 @@
+---
+title: "Delineamento com um fator fixo"
+author: "Fábio N. Demarqui"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+  toc: true
+toc_depth: 3
+toc_float: true
+number_sections: true
+highlight: tango
+vignette: >
+  %\VignetteIndexEntry{Using sim_ functions to generate random survival times from parametric models}
+%\VignetteEngine{knitr::rmarkdown}
+\usepackage[utf8]{inputenc}
+---
+
+  $~~~~$The first example consists of a comparison between estimates obtained from the PH partial ML results from \texttt{survival::coxph}, which is the classic regression model, and the proposed BP based PH modeling discussed in previous sections, either using already available \texttt{stats:optim} or \texttt{HI:arms} \texttt{R} routines and \texttt{spsurv::spbp} interface to \texttt{Stan}. In the second example,  the assumption of proportional risks is violated thus a comparison between semiparametric PO model estimates were also done. The results obtained by maximizing the modified partial likelihood implemented in \texttt{timereg::prop.odds} were compared to the proposed BP modeling available at the \texttt{spsurv} package.
