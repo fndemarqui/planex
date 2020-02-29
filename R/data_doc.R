@@ -161,3 +161,21 @@ NULL
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
+
+
+#' Enxertos vasculares (veias artificiais)
+#'
+#' @name enxertos
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Delineamento com blocos completos aleatorizados realizado com o objetivo de avaliar o efeito de diferentes níveis de pressão na ocorrência de saliências em enxertos vasculares produzidos com diferentes lotes de materia prima.
+#' @format Data frame com 12 linhas e 3 variáveis:
+#' \itemize{
+#'   \item pressao: pressão de extrusão (em libras; fator de interesse principal)
+#'   \item lote: lote de materia prima (bloco - fator de interesse secundário)
+#'   \item saliencia: saliência (variável resposta)
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
