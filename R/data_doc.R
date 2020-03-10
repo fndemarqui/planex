@@ -32,6 +32,39 @@ NULL
 NULL
 
 
+#' Efeito de dietas sobre o teor de proteínas do leite
+#'
+#' @name dietas
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description (Exercício 13.13) Delineamento com um fator fixo conduzido para investigar o efeito de três dietas sobre o teor de proteína de leite de vaca.
+#' @format Data frame com 79 linhas e duas variáveis:
+#' \itemize{
+#'   \item teor: teor de proteína do leite (variável resposta)
+#'   \item dieta: tipo de dieta (variável categórica com três níveis; fator de interesse)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+#' Efeito de diferentes temperaturas sobre a densidade de tijolos
+#'
+#' @name tijolos
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description (Exercício 13.15) Delineamento com um fator fixo conduzido para determinar se quatro temperaturas específicas de queima afetam a densidade de certo tipo de tijolo.
+#' @format Data frame com 22 linhas e duas variáveis:
+#' \itemize{
+#'   \item densidade: densidade do tijolo (variável resposta)
+#'   \item temperatura: temperatura do forno, em ºF; (variável categórica com quatro níveis; fator de interesse)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
 #' Homogeneidade da produção de teares
 #'
 #' @name teares
@@ -49,6 +82,40 @@ NULL
 NULL
 
 
+#' Homogeneidade da produção de teares
+#'
+#' @name moinho
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description (Exercício 13.29) Delineamento com um fator aleatório conduzido para avaliar a homogeneidade da produção dos teares de um moinho têxtil.
+#' @format Data frame com 25 linhas e duas variáveis:
+#' \itemize{
+#'   \item producao: produção do tear em 1b/min. (variável resposta)
+#'   \item tear: variável indicadora dos teares selecionados aleatoriamente da linha de produção (variável categórica com quadro níveis; fator de interesse)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+#' Homogeneidade do brilho da polpa
+#'
+#' @name brilho
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description (Exercício 13.31) Delineamento com um fator aleatório conduzido para avaliar os efeitos, no brilho da polpa, de 4 produtos químicos selecionados aleatoriamente de uma grande população de agentes potenciais para o branqueamento.
+#' @format Data frame com 20 linhas e duas variáveis:
+#' \itemize{
+#'   \item producao: produção do tear em 1b/min. (variável resposta)
+#'   \item produto: variável indicadora do produto químico selecionado aleatoriamente da população de agentes para branqueamento (variável categórica com quadro níveis; fator de interesse)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
 #' Resistência de tecidos
 #'
 #' @name tecidos
@@ -56,7 +123,7 @@ NULL
 #' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Delineamento em esquema de blocos completos aleatorizados e um fator fixo conduzido para avaliar o efeito de 4 diferentes produtos químicos sobre a resistência de tecidos.
-#' @format Data frame com 20 linhas e duas variáveis:
+#' @format Data frame com 20 linhas e 3 variáveis:
 #' \itemize{
 #'   \item resistencia: resistência do tecido (variável resposta)
 #'   \item produto: tipo de produto químico (variável categórica com quadro níveis; fator de interesse)
@@ -65,6 +132,43 @@ NULL
 #' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
 #'
 NULL
+
+
+#' Efeitos do tipo de bocal sobre medidas de formas
+#'
+#' @name bocais
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description (Exercício 13.37) Delineamento em esquema de blocos completos aleatorizados e um fator fixo conduzido para avaliar o efeito de 5 diferentes tipos de bocais sobre sobre a medida de forma.
+#' @format Data frame com 30 linhas e três variáveis:
+#' \itemize{
+#'   \item medida: medida da forma (variável resposta)
+#'   \item bocal: tipo de bocal (variável categórica com 5 níveis; fator de interesse)
+#'   \item velocidade: velocidade do jato de saída, em m/s; (bloco; fator de interesse secundário)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+#' Efeitos do tipo de bocal sobre medidas de formas
+#'
+#' @name escapamento
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description (Exercício 13.41) Delineamento em esquema de blocos completos aleatorizados e um fator fixo conduzido para avaliar o efeito de 4 comprimentos de canais sobre o escapamento de corrente elétrica.
+#' @format Data frame com 25 linhas e três variáveis:
+#' \itemize{
+#'   \item escapamento: escapamento de corrente elétrica (variável resposta)
+#'   \item comprimento: comprimento do canal (variável categórica com 4 níveis; fator de interesse)
+#'   \item largura: largura do canal (bloco; fator de interesse secundário)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
 
 
 #' Tempo de vida de baterias
@@ -187,7 +291,7 @@ NULL
 #' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Delineamento com blocos completos aleatorizados realizado com o objetivo de avaliar o efeito de diferentes níveis de pressão na ocorrência de saliências em enxertos vasculares produzidos com diferentes lotes de materia prima.
-#' @format Data frame com 12 linhas e 3 variáveis:
+#' @format Data frame com 24 linhas e 3 variáveis:
 #' \itemize{
 #'   \item pressao: pressão de extrusão (em libras; fator de interesse principal)
 #'   \item lote: lote de materia prima (bloco - fator de interesse secundário)

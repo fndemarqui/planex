@@ -4,7 +4,7 @@
 \name{tecidos}
 \alias{tecidos}
 \title{Resistência de tecidos}
-\format{Data frame com 20 linhas e duas variáveis:
+\format{Data frame com 20 linhas e 3 variáveis:
 \itemize{
   \item resistencia: resistência do tecido (variável resposta)
   \item produto: tipo de produto químico (variável categórica com quadro níveis; fator de interesse)
