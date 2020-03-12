@@ -233,7 +233,7 @@ NULL
 #' @docType data
 #' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description Delineamento em esquema quadrado greco-latino conduzido para avaliar 5 diferentes formulações de propulsores de foguetes.
+#' @description (Exemplo 4.3) Delineamento em esquema quadrado greco-latino conduzido para avaliar 5 diferentes formulações de propulsores de foguetes.
 #' @format Data frame com 25 linhas e 5 variáveis:
 #' \itemize{
 #'   \item lote: lote de materia prima utilizado no preparo das formulações (variável categórica com 5 níveis; bloco 1)

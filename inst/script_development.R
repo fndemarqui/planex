@@ -6,7 +6,7 @@
 # usethis::use_data(teares, overwrite = TRUE)
 
 escapamento <- read.table("dados.txt", header=TRUE)
-usethis::use_data(escapamento, overwrite = TRUE)
+usethis::use_data(propulsores, overwrite = TRUE)
 
 devtools::install()
 devtools::document()
