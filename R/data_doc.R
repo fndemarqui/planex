@@ -300,3 +300,23 @@ NULL
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
+
+
+
+#' Efeito de ingredientes sobre o tempo de reação de um processo químico
+#'
+#' @name ingredientes
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description O efeito de cinco ingredientes diferentes (A, B, C, D, E) sobre o tempo de reação de um processo químico está sendo estudado. Cada lote de material novo é grande o suficiente para permitir cinco corridas do experimento. Além disso, cada corrida requer aproximadamente 1.5 horas, de forma que apenas cinco execuções podem ser feitas em um dia. O engenheiro decide executar um experimento quadrado latino para que os efeitos do dia e do lote podem ser sistematicamente controlados. Analise os dados desta experiência (use um nível de significância de 0,05) e tire conclusões.
+#' @format Data frame com 20 linhas e 4 variáveis:
+#' \itemize{
+#'   \item ingrediente: ingrediente utilizado no processo químico (fator de interesse principal; 5 níveis)
+#'   \item dia: dia de execução do experimento (bloco1 - fator de interesse secundário)
+#'   \item lote: lote de materia prima (bloco2 - fator de interesse secundário)
+#'   \item tempo: tempo de reação do processo químico (variável resposta)
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
