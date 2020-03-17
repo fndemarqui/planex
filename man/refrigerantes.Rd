@@ -4,13 +4,15 @@
 \name{refrigerantes}
 \alias{refrigerantes}
 \title{Volume de garrafas de refrigerantes}
-\format{Data frame com 24 linhas e 4 variáveis:
+\format{
+Data frame com 24 linhas e 4 variáveis:
 \itemize{
   \item devio: desvio do volume nominal da garrafa (em ml; variável resposta)
   \item carbonatacao: percentual de carbonatação (variável categórica com três níveis; fator de interesse principal)
   \item pressao:  pressão (em libras)  (variável categórica com 2 níveis; fator de interesse principal)
   \item velocidade: velocidade da linha de produção (variável categórica com 2 níveis; fator de interesse principal)
-}}
+}
+}
 \description{
 Delineamento com 3 fatores fixos cruzados conduzido para avaliar o efeito da carbonatação, da pressão de operação, e a da velocidade da linha de produção sobre o desvio do volume nominal de garrafas de refrigerante.
 }

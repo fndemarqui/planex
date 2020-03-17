@@ -4,11 +4,13 @@
 \name{saquinhos}
 \alias{saquinhos}
 \title{Resistência de saquinhos de papel}
-\format{Data frame com 24 linhas e duas variáveis:
+\format{
+Data frame com 24 linhas e duas variáveis:
 \itemize{
   \item resistencia: resistência dos saquinhos (variável resposta)
   \item concentracao: concentração de madeira de lei (variável categórica com quadro níveis; fator de interesse)
-}}
+}
+}
 \description{
 Delineamento com um fator fixo conduzido para avaliar o efeito de 4 diferentes concentrações de madeira de lei sobre a resistência de saquinhos de papel.
 }

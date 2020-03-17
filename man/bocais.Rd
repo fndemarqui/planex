@@ -4,14 +4,16 @@
 \name{bocais}
 \alias{bocais}
 \title{Efeitos do tipo de bocal sobre medidas de formas}
-\format{Data frame com 30 linhas e três variáveis:
+\format{
+Data frame com 30 linhas e três variáveis:
 \itemize{
   \item medida: medida da forma (variável resposta)
   \item bocal: tipo de bocal (variável categórica com 5 níveis; fator de interesse)
   \item velocidade: velocidade do jato de saída, em m/s; (bloco; fator de interesse secundário)
-}}
+}
+}
 \description{
-(Exercício 13.37) Delineamento em esquema de blocos completos aleatorizados e um fator fixo conduzido para avaliar o efeito de 5 diferentes tipos de bocais sobre sobre a medida de forma.
+Exercício 13.37: Um experimento foi realizado em que uma medida de forma foi determinda para vários tipos diferentes de bocais, com níveis diferentes de velocidade de jatos de saída. O interesse nesse experimento está principalmente no tipo de bocal, sendo a velocidade um fator de ruído. Analise adequadamente os dados desse experimentos, apresentando as conclusões práticas.
 }
 \references{
 Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.

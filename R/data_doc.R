@@ -21,7 +21,7 @@ NULL
 #' @docType data
 #' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description Delineamento com um fator fixo conduzido para investigar o efeito do consumo de chocolate sobre saúde cardiovascular. O experimento consistiu no uso de três tipos diferentes de chocolates: 100 g de chocolate, 100 g de chocolate amargo com 200 mL de leite integral, e 200 g de chocolate ao leite. Os voluntários participantes do estudo receberam aleatoriamente um dos 3 tipos de chocolates investigados e depois de uma hora do consumo do produto a capacidade antioxidante do plasma sanguíneo foi medida em um ensaio.
+#' @description Um experimento foi conduzido para investigar o efeito do consumo de chocolate sobre saúde cardiovascular. O experimento consistiu no uso de três tipos diferentes de chocolates: 100 g de chocolate, 100 g de chocolate amargo com 200 mL de leite integral, e 200 g de chocolate ao leite. Os voluntários participantes do estudo receberam aleatoriamente um dos 3 tipos de chocolates investigados e depois de uma hora do consumo do produto a capacidade antioxidante do plasma sanguíneo foi medida em um ensaio. Analise adequadamente os dados provenientes desse experimento, apresentando as conclusões práticas.
 #' @format Data frame com 36 linhas e duas variáveis:
 #' \itemize{
 #'   \item capacidade: capacidade antioxidante do plasma sanguíneo (variável resposta)
@@ -38,7 +38,7 @@ NULL
 #' @docType data
 #' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description (Exercício 13.13) Delineamento com um fator fixo conduzido para investigar o efeito de três dietas sobre o teor de proteína de leite de vaca.
+#' @description Exercício 13.13: Um experimento foi realizado para analisar o efeito de 3 dietas sobre o teor de proteína de leite de vaca. Os dados foram coletados depois de uma semana e incluem 25 vacas sujeitas à dietada de cevada, 27 vacas sujeitas à outras duas dietas. Analise adequadamente os dados provenientes desse experimento e apresente as conclusões práticas obtidas.
 #' @format Data frame com 79 linhas e duas variáveis:
 #' \itemize{
 #'   \item teor: teor de proteína do leite (variável resposta)
@@ -54,7 +54,7 @@ NULL
 #' @docType data
 #' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description (Exercício 13.15) Delineamento com um fator fixo conduzido para determinar se quatro temperaturas específicas de queima afetam a densidade de certo tipo de tijolo.
+#' @description Exercício 13.15: Um experimento foi realizado para determinar se quatro temperaturas específicas de queima afetam a densidade de certo tipo de tijolo. Analise adequadamente os dados provenientes deste experimento, apresentando as conclusões práticas.
 #' @format Data frame com 22 linhas e duas variáveis:
 #' \itemize{
 #'   \item densidade: densidade do tijolo (variável resposta)
@@ -88,7 +88,7 @@ NULL
 #' @docType data
 #' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description (Exercício 13.29) Delineamento com um fator aleatório conduzido para avaliar a homogeneidade da produção dos teares de um moinho têxtil.
+#' @description Exercício 13.29: Um moinho têxtil tem um grande número de teares. Supõe-se que cada tear forneça a mesma quantidade de tecidos. Para investigar essa suposição, 5 teares foram escolhidos ao acaso e suas produções foram medidas em diferentes tempos. Pede-se: a) Os teares são similares em relação à produção? Use alpha=0,05. b) Estime a variabilidade entre os teares. c) Estime a variância do erro experimental. d) Analise os resíduos desse experimento e verifique a adequação do modelo.
 #' @format Data frame com 25 linhas e duas variáveis:
 #' \itemize{
 #'   \item producao: produção do tear em 1b/min. (variável resposta)
@@ -105,7 +105,7 @@ NULL
 #' @docType data
 #' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description (Exercício 13.31) Delineamento com um fator aleatório conduzido para avaliar os efeitos, no brilho da polpa, de 4 produtos químicos selecionados aleatoriamente de uma grande população de agentes potenciais para o branqueamento.
+#' @description Exercício 13.31: Um experimento foi conduzido para investigar os efeitos no brilho da polpa, de 4 produtos químicos de branqueamento. Esses produtos químicos foram selecionados ao acaso, a partir de uma população grande de agentes potenciais para o branqueamento. Pede-se: a) Existe uma diferença nos tipos de produtos químicos? b) Estime a variabilidade entre os teares. c) Estime a variância do erro experimental. d) Analise os resíduos desse experimento e verifique a adequação do modelo.
 #' @format Data frame com 20 linhas e duas variáveis:
 #' \itemize{
 #'   \item producao: produção do tear em 1b/min. (variável resposta)
@@ -140,7 +140,7 @@ NULL
 #' @docType data
 #' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description (Exercício 13.37) Delineamento em esquema de blocos completos aleatorizados e um fator fixo conduzido para avaliar o efeito de 5 diferentes tipos de bocais sobre sobre a medida de forma.
+#' @description Exercício 13.37: Um experimento foi realizado em que uma medida de forma foi determinda para vários tipos diferentes de bocais, com níveis diferentes de velocidade de jatos de saída. O interesse nesse experimento está principalmente no tipo de bocal, sendo a velocidade um fator de ruído. Analise adequadamente os dados desse experimentos, apresentando as conclusões práticas.
 #' @format Data frame com 30 linhas e três variáveis:
 #' \itemize{
 #'   \item medida: medida da forma (variável resposta)
@@ -158,7 +158,7 @@ NULL
 #' @docType data
 #' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description (Exercício 13.41) Delineamento em esquema de blocos completos aleatorizados e um fator fixo conduzido para avaliar o efeito de 4 comprimentos de canais sobre o escapamento de corrente elétrica.
+#' @description Exercício 13.41: Um experimento foi conduzido a fim de se investigar o escapamento de corrente elétrica em um dispositivo SOS MOSFETS. A finalidade do experimento foi investigar como o escapamento de corrente elétrica varia com o comprimento do canal. Quatro comprimentos diferentes do canal foram selecionados. Para cada comprimento do canal, 5 larguras diferentes foram também usadas. A largura deve ser considerada um fator de ruído.  Analise adequadamente os dados desse experiemnto, apresentando as conclusões práticas.
 #' @format Data frame com 25 linhas e três variáveis:
 #' \itemize{
 #'   \item escapamento: escapamento de corrente elétrica (variável resposta)
@@ -290,7 +290,7 @@ NULL
 #' @docType data
 #' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description Delineamento com blocos completos aleatorizados realizado com o objetivo de avaliar o efeito de diferentes níveis de pressão na ocorrência de saliências em enxertos vasculares produzidos com diferentes lotes de materia prima.
+#' @description Um delineamento com blocos completos aleatorizados foi realizado com o objetivo de avaliar o efeito de diferentes níveis de pressão na ocorrência de saliências em enxertos vasculares produzidos com diferentes lotes de materia prima (fonte de variablidade de perturbação). Analise adequadamente os dados provenientes desse experimento, apresentando as conclusões práticas.
 #' @format Data frame com 24 linhas e 3 variáveis:
 #' \itemize{
 #'   \item pressao: pressão de extrusão (em libras; fator de interesse principal)

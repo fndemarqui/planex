@@ -4,13 +4,15 @@
 \name{tijolos}
 \alias{tijolos}
 \title{Efeito de diferentes temperaturas sobre a densidade de tijolos}
-\format{Data frame com 22 linhas e duas variáveis:
+\format{
+Data frame com 22 linhas e duas variáveis:
 \itemize{
   \item densidade: densidade do tijolo (variável resposta)
   \item temperatura: temperatura do forno, em ºF; (variável categórica com quatro níveis; fator de interesse)
-}}
+}
+}
 \description{
-(Exercício 13.15) Delineamento com um fator fixo conduzido para determinar se quatro temperaturas específicas de queima afetam a densidade de certo tipo de tijolo.
+Exercício 13.15: Um experimento foi realizado para determinar se quatro temperaturas específicas de queima afetam a densidade de certo tipo de tijolo. Analise adequadamente os dados provenientes deste experimento, apresentando as conclusões práticas.
 }
 \references{
 Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.

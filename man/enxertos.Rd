@@ -4,14 +4,16 @@
 \name{enxertos}
 \alias{enxertos}
 \title{Enxertos vasculares (veias artificiais)}
-\format{Data frame com 24 linhas e 3 variáveis:
+\format{
+Data frame com 24 linhas e 3 variáveis:
 \itemize{
   \item pressao: pressão de extrusão (em libras; fator de interesse principal)
   \item lote: lote de materia prima (bloco - fator de interesse secundário)
   \item saliencia: saliência (variável resposta)
-}}
+}
+}
 \description{
-Delineamento com blocos completos aleatorizados realizado com o objetivo de avaliar o efeito de diferentes níveis de pressão na ocorrência de saliências em enxertos vasculares produzidos com diferentes lotes de materia prima.
+Um delineamento com blocos completos aleatorizados foi realizado com o objetivo de avaliar o efeito de diferentes níveis de pressão na ocorrência de saliências em enxertos vasculares produzidos com diferentes lotes de materia prima (fonte de variablidade de perturbação). Analise adequadamente os dados provenientes desse experimento, apresentando as conclusões práticas.
 }
 \references{
 Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.

@@ -4,13 +4,15 @@
 \name{brilho}
 \alias{brilho}
 \title{Homogeneidade do brilho da polpa}
-\format{Data frame com 20 linhas e duas variáveis:
+\format{
+Data frame com 20 linhas e duas variáveis:
 \itemize{
   \item producao: produção do tear em 1b/min. (variável resposta)
   \item produto: variável indicadora do produto químico selecionado aleatoriamente da população de agentes para branqueamento (variável categórica com quadro níveis; fator de interesse)
-}}
+}
+}
 \description{
-(Exercício 13.31) Delineamento com um fator aleatório conduzido para avaliar os efeitos, no brilho da polpa, de 4 produtos químicos selecionados aleatoriamente de uma grande população de agentes potenciais para o branqueamento.
+Exercício 13.31: Um experimento foi conduzido para investigar os efeitos no brilho da polpa, de 4 produtos químicos de branqueamento. Esses produtos químicos foram selecionados ao acaso, a partir de uma população grande de agentes potenciais para o branqueamento. Pede-se: a) Existe uma diferença nos tipos de produtos químicos? b) Estime a variabilidade entre os teares. c) Estime a variância do erro experimental. d) Analise os resíduos desse experimento e verifique a adequação do modelo.
 }
 \references{
 Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.

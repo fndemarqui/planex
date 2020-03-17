@@ -4,14 +4,16 @@
 \name{propulsores}
 \alias{propulsores}
 \title{Propulsores de foguetes}
-\format{Data frame com 25 linhas e 5 variáveis:
+\format{
+Data frame com 25 linhas e 5 variáveis:
 \itemize{
   \item lote: lote de materia prima utilizado no preparo das formulações (variável categórica com 5 níveis; bloco 1)
   \item operador: operador responsável por preparar as formulações (variável categórica com 5 níveis; bloco 2)
   \item montagem:  método de montagem empregado (variável categórica com 5 níveis; bloco 3)
   \item formulacao: tipos de formulação sendo comparadas (variável categórica com 5 níveis; fator de interesse principal)
   \item queima: taxa de queima
-}}
+}
+}
 \description{
 (Exemplo 4.3) Delineamento em esquema quadrado greco-latino conduzido para avaliar 5 diferentes formulações de propulsores de foguetes.
 }

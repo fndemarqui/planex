@@ -4,13 +4,15 @@
 \name{moinho}
 \alias{moinho}
 \title{Homogeneidade da produção de teares}
-\format{Data frame com 25 linhas e duas variáveis:
+\format{
+Data frame com 25 linhas e duas variáveis:
 \itemize{
   \item producao: produção do tear em 1b/min. (variável resposta)
   \item tear: variável indicadora dos teares selecionados aleatoriamente da linha de produção (variável categórica com quadro níveis; fator de interesse)
-}}
+}
+}
 \description{
-(Exercício 13.29) Delineamento com um fator aleatório conduzido para avaliar a homogeneidade da produção dos teares de um moinho têxtil.
+Exercício 13.29: Um moinho têxtil tem um grande número de teares. Supõe-se que cada tear forneça a mesma quantidade de tecidos. Para investigar essa suposição, 5 teares foram escolhidos ao acaso e suas produções foram medidas em diferentes tempos. Pede-se: a) Os teares são similares em relação à produção? Use alpha=0,05. b) Estime a variabilidade entre os teares. c) Estime a variância do erro experimental. d) Analise os resíduos desse experimento e verifique a adequação do modelo.
 }
 \references{
 Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.

@@ -4,13 +4,15 @@
 \name{dietas}
 \alias{dietas}
 \title{Efeito de dietas sobre o teor de proteínas do leite}
-\format{Data frame com 79 linhas e duas variáveis:
+\format{
+Data frame com 79 linhas e duas variáveis:
 \itemize{
   \item teor: teor de proteína do leite (variável resposta)
   \item dieta: tipo de dieta (variável categórica com três níveis; fator de interesse)
-}}
+}
+}
 \description{
-(Exercício 13.13) Delineamento com um fator fixo conduzido para investigar o efeito de três dietas sobre o teor de proteína de leite de vaca.
+Exercício 13.13: Um experimento foi realizado para analisar o efeito de 3 dietas sobre o teor de proteína de leite de vaca. Os dados foram coletados depois de uma semana e incluem 25 vacas sujeitas à dietada de cevada, 27 vacas sujeitas à outras duas dietas. Analise adequadamente os dados provenientes desse experimento e apresente as conclusões práticas obtidas.
 }
 \references{
 Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.

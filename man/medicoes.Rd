@@ -4,12 +4,14 @@
 \name{medicoes}
 \alias{medicoes}
 \title{Sistema de medições}
-\format{Data frame com 12 linhas e 3 variáveis:
+\format{
+Data frame com 12 linhas e 3 variáveis:
 \itemize{
   \item peca: peça que será submetida à medição (fator 1)
   \item operador: operador operar o equipamento (fator 2)
   \item dimensao: dimensão da peça (variável resposta)
-}}
+}
+}
 \description{
 Delineamento com dois fatores aleatórios conduzido com o objetivo de avaliar potenciais fontes de variabilidade de um sistema de medições.
 }

@@ -4,12 +4,14 @@
 \name{fibras}
 \alias{fibras}
 \title{Força de fibras de monofilamento}
-\format{Data frame com 15 linhas e 3 variáveis:
+\format{
+Data frame com 15 linhas e 3 variáveis:
 \itemize{
   \item força: força da fibra de monofilamento (variável resposta)
   \item maquina: máquina utilizada na produção das fibras de monofilamento (variável categórica com três níveis; fator de interesse principal)
   \item diametro:  diâmetro da fibra de monofilamento (covariável; interesse secundário)
-}}
+}
+}
 \description{
 Delineamento com um fator fixo e uma covariável conduzido para avaliar se existem diferenças na forças de fibras de monofilamentos produzidas por 3 máquinas.
 }

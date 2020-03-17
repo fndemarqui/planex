@@ -4,14 +4,16 @@
 \name{escapamento}
 \alias{escapamento}
 \title{Efeitos do tipo de bocal sobre medidas de formas}
-\format{Data frame com 25 linhas e três variáveis:
+\format{
+Data frame com 25 linhas e três variáveis:
 \itemize{
   \item escapamento: escapamento de corrente elétrica (variável resposta)
   \item comprimento: comprimento do canal (variável categórica com 4 níveis; fator de interesse)
   \item largura: largura do canal (bloco; fator de interesse secundário)
-}}
+}
+}
 \description{
-(Exercício 13.41) Delineamento em esquema de blocos completos aleatorizados e um fator fixo conduzido para avaliar o efeito de 4 comprimentos de canais sobre o escapamento de corrente elétrica.
+Exercício 13.41: Um experimento foi conduzido a fim de se investigar o escapamento de corrente elétrica em um dispositivo SOS MOSFETS. A finalidade do experimento foi investigar como o escapamento de corrente elétrica varia com o comprimento do canal. Quatro comprimentos diferentes do canal foram selecionados. Para cada comprimento do canal, 5 larguras diferentes foram também usadas. A largura deve ser considerada um fator de ruído.  Analise adequadamente os dados desse experiemnto, apresentando as conclusões práticas.
 }
 \references{
 Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.

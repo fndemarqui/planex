@@ -4,12 +4,14 @@
 \name{catalisadores}
 \alias{catalisadores}
 \title{Tempo de reação de um processo químico}
-\format{Data frame com 12 linhas e 3 variáveis:
+\format{
+Data frame com 12 linhas e 3 variáveis:
 \itemize{
   \item lote: lote de materia prima utilizada no processo (variável categórica com 4 níveis; bloco)
   \item operador: operador responsável por preparar as formulações (variável categórica com 4 níveis; fator de interesse principal)
   \item tempo: tempo de reação do processo químico (variável resposta)
-}}
+}
+}
 \description{
 Delineamento com blocos incompletos balanceados conduzido com o objetivo de avaliar o efeito de 4 diferentes tipos de catalisadores sobre o tempo de reação de um processo químico.
 }
