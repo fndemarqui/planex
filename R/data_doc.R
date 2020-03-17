@@ -320,3 +320,43 @@ NULL
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
+
+
+#' Tempo de montagem de um componente de tv
+#'
+#' @name montagem
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 4.36: Um engenheiro industrial está investigando o efeito de 4 tipos de métodos de montagem sobre o tempo de montagem de um componente de tv. Quatro operadores foram selecionados para o  estudo. Além disso, o engenheiro sabe que que cada processo de montagem gera fadiga (no operador), afetando o tempo de montagem das sucessivas componentes. O engenheiro também suspeita que o local de trabalho dos operadores pode afetar o tempo de montagem. Desta forma, um experimento do tipo quadrado greco-latino foi conduzido, visando controlar as fontes de variação de perturbação. Analise adequadamente os dados desse experimento, apresentando as conclusões práticas.
+#' @format Data frame com 16 linhas e 5 variáveis:
+#' \itemize{
+#'   \item ordem: ordem de montagem (variável categórica com 4 níveis; bloco 1)
+#'   \item operador: operador selecionado (variável categórica com 4 níveis; bloco 2)
+#'   \item local:  local de trabaho (variável categórica com 4 níveis; bloco 3)
+#'   \item metodo: método de montagem (variável categórica com 4 níveis; fator de interesse principal)
+#'   \item tempo: tempo de montagem da componente
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
+
+
+#' Rendimeno de um processo químico
+#'
+#' @name rendimento
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 4.35: O rendimento de um processo químico foi medido usando-se 5 lotes de matéria prima, 5 concentrações de ácido, 5 tempos de espera, e 5 concentrações de catalisadores, configurando um delineamento do tipo quadrado greco-latino. Analise adequadamente os dados provenientes desse experimento, apresentando as suas conclusões práticas.
+#' @format Data frame com 25 linhas e 5 variáveis:
+#' \itemize{
+#'   \item lote: lote de materia prima utilizado no preparo das formulações (variável categórica com 5 níveis; bloco 1)
+#'   \item acido: concentracao de ácido utilizado no processo (variável categórica com 5 níveis; bloco 2)
+#'   \item catalisador:  concentração de catalisador utilizado no processo (variável categórica com 5 níveis; bloco 3)
+#'   \item tempo: tempo de espera (variável categórica com 5 níveis; fator de interesse principal)
+#'   \item rendimento: rendimento do processo químico
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL

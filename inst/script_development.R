@@ -5,9 +5,9 @@
 # teares <- read.table("exemplo13_4.txt", header=TRUE)
 # usethis::use_data(teares, overwrite = TRUE)
 
-# ingredientes <- read.table("inst/dados.txt", header=TRUE)
-# usethis::use_data(ingredientes, overwrite = TRUE)
+montagem <- read.table("inst/dados.txt", header=TRUE)
+usethis::use_data(montagem, overwrite = TRUE)
 
 devtools::install()
 devtools::document()
-# devtools::build_manual()
+devtools::build_manual()
