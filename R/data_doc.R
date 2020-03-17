@@ -360,3 +360,39 @@ NULL
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
+
+
+#' Efeito de aditivos na gasolina sobre a quilometragem
+#'
+#' @name quilometragem
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 4.40: Um engenheiro está estudando o desempenho da quilometragem característica de cinco tipos de aditivos à gasolina. No teste de estrada ele deseja usar carros como blocos; no entanto, devido a uma restrição de tempo, ele deve usar um delineamento com blocos incompletos. Analise adequadamente os dados desse experimento e apresente as conclusões práticas.
+#' @format Data frame com 20 linhas e 3 variáveis:
+#' \itemize{
+#'   \item aditivo: aditivo utilizado (variável categórica com 5 níveis; fator de interesse principal)
+#'   \item carro: carro utilizado para a realização do experimento (variável categórica com 5 níveis; bloco)
+#'   \item quilometragem: quilometragem observada (variável resposta)
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
+
+
+#' Efeito da concentração de madeira sobre a força do papel
+#'
+#' @name papel
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 4.42: Sete concentrações diferentes de madeira estão sendo estudados para determinar seu efeito sobre a força do papel produzido. No entanto, a planta piloto só pode produzir três corridas do experimento por dia. Como os dias podem afetar a força do papel produzido, um delineamento com blocos incompletos aleatorizados foi conduzido. Analise os dados desse experimento e apresente as conclusões práticas.
+#' @format Data frame com 21 linhas e 3 variáveis:
+#' \itemize{
+#'   \item concentracao: concentração de madeira (variável categórica com 7 níveis; fator de interesse principal)
+#'   \item dia: dia em que o experimento foi conduzido (variável categórica com 4 níveis; bloco)
+#'   \item forca: forca do papel (variável resposta)
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
