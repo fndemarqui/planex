@@ -396,3 +396,75 @@ NULL
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
+
+
+#' Rendimento de um processo químico
+#'
+#' @name rendimento2k
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo (pág. 234): Um engenheiro quı́mico está interessado em investigar o efeito da concentração de um reagente (fator A) e da quantidade de catalisador (fator B) sobre o rendimento de um processo quı́mico com o objetivo de verificar se ajustes sobre os nı́veis tais fatores aumentariam o rendimento.
+#' @format Data frame com 12 linhas e 3 variáveis:
+#' \itemize{
+#'   \item reagente: nı́vel baixo (-): 15%; nı́vel alto (+): 20%
+#'   \item catalisador: nı́vel baixo (-): 1 libra; nı́vel alto (+): 2 libra
+#'   \item rendimento: rendimento do processo químico
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
+
+
+#' Entendendo efeitos de interação (caso 1)
+#'
+#' @name interacao1
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo de efeitos de interação em delineamentos com dois fatores fixos cruzados.
+#' @format Data frame com 8 linhas e 3 variáveis:
+#' \itemize{
+#'   \item fator A: variável categórica com 2 níveis
+#'   \item fator B: variável categórica com 2 níveis
+#'   \item resp: variável resposta
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
+
+
+#' Entendendo efeitos de interação (caso 2)
+#'
+#' @name interacao2
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo de efeitos de interação em delineamentos com dois fatores fixos cruzados.
+#' @format Data frame com 8 linhas e 3 variáveis:
+#' \itemize{
+#'   \item fator A: variável categórica com 2 níveis
+#'   \item fator B: variável categórica com 2 níveis
+#'   \item resp: variável resposta
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
+
+
+#' Entendendo efeitos de interação (caso 3)
+#'
+#' @name interacao3
+#' @docType data
+#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo de efeitos de interação em delineamentos com dois fatores fixos cruzados.
+#' @format Data frame com 8 linhas e 3 variáveis:
+#' \itemize{
+#'   \item fator A: variável categórica com 2 níveis
+#'   \item fator B: variável categórica com 2 níveis
+#'   \item resp: variável resposta
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL

@@ -5,8 +5,8 @@
 # teares <- read.table("exemplo13_4.txt", header=TRUE)
 # usethis::use_data(teares, overwrite = TRUE)
 
-papel <- read.table("inst/dados.txt", header=TRUE)
-usethis::use_data(papel, overwrite = TRUE)
+rendimento2k <- read.table("inst/dados.txt", header=TRUE)
+usethis::use_data(rendimento2k, overwrite = TRUE)
 
 devtools::install()
 devtools::document()
