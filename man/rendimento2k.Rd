@@ -7,18 +7,18 @@
 \format{
 Data frame com 12 linhas e 3 variáveis:
 \itemize{
-  \item reagente: nı́vel baixo (-): 15%; nı́vel alto (+): 20%
-  \item catalisador: nı́vel baixo (-): 1 libra; nı́vel alto (+): 2 libra
+  \item reagente: nivel baixo (-): 15%; nivel alto (+): 20%
+  \item catalisador: nivel baixo (-): 1 libra; nivel alto (+): 2 libra
   \item rendimento: rendimento do processo químico
 }
 }
 \description{
-Exemplo (pág. 234): Um engenheiro quı́mico está interessado em investigar o efeito da concentração de um reagente (fator A) e da quantidade de catalisador (fator B) sobre o rendimento de um processo quı́mico com o objetivo de verificar se ajustes sobre os nı́veis tais fatores aumentariam o rendimento.
+Exemplo (pág. 234): Um engenheiro químico está interessado em investigar o efeito da concentração de um reagente (fator A) e da quantidade de catalisador (fator B) sobre o rendimento de um processo químico com o objetivo de verificar se ajustes sobre os níveis tais fatores aumentariam o rendimento.
 }
 \references{
 Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
-Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 }
 \keyword{datasets}

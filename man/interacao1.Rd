@@ -19,6 +19,6 @@ Exemplo de efeitos de interação em delineamentos com dois fatores fixos cruzad
 Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
-Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 }
 \keyword{datasets}

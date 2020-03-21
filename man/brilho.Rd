@@ -18,6 +18,6 @@ Exercício 13.31: Um experimento foi conduzido para investigar os efeitos no bri
 Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
 }
 \author{
-Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 }
 \keyword{datasets}

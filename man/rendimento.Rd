@@ -21,6 +21,6 @@ Exercício 4.35: O rendimento de um processo químico foi medido usando-se 5 lot
 Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
-Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 }
 \keyword{datasets}

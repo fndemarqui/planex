@@ -2,7 +2,7 @@
 #'
 #' @name saquinhos
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Delineamento com um fator fixo conduzido para avaliar o efeito de 4 diferentes concentrações de madeira de lei sobre a resistência de saquinhos de papel.
 #' @format Data frame com 24 linhas e duas variáveis:
@@ -19,7 +19,7 @@ NULL
 #'
 #' @name chocolate
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Um experimento foi conduzido para investigar o efeito do consumo de chocolate sobre saúde cardiovascular. O experimento consistiu no uso de três tipos diferentes de chocolates: 100 g de chocolate, 100 g de chocolate amargo com 200 mL de leite integral, e 200 g de chocolate ao leite. Os voluntários participantes do estudo receberam aleatoriamente um dos 3 tipos de chocolates investigados e depois de uma hora do consumo do produto a capacidade antioxidante do plasma sanguíneo foi medida em um ensaio. Analise adequadamente os dados provenientes desse experimento, apresentando as conclusões práticas.
 #' @format Data frame com 36 linhas e duas variáveis:
@@ -36,7 +36,7 @@ NULL
 #'
 #' @name dietas
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Exercício 13.13: Um experimento foi realizado para analisar o efeito de 3 dietas sobre o teor de proteína de leite de vaca. Os dados foram coletados depois de uma semana e incluem 25 vacas sujeitas à dietada de cevada, 27 vacas sujeitas à outras duas dietas. Analise adequadamente os dados provenientes desse experimento e apresente as conclusões práticas obtidas.
 #' @format Data frame com 79 linhas e duas variáveis:
@@ -52,7 +52,7 @@ NULL
 #'
 #' @name tijolos
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Exercício 13.15: Um experimento foi realizado para determinar se quatro temperaturas específicas de queima afetam a densidade de certo tipo de tijolo. Analise adequadamente os dados provenientes deste experimento, apresentando as conclusões práticas.
 #' @format Data frame com 22 linhas e duas variáveis:
@@ -69,7 +69,7 @@ NULL
 #'
 #' @name teares
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Delineamento com um fator aleatório conduzido para avaliar a homogeneidade da resistência de tecidos produzidos por diferentes teares de uma fábrica.
 #' @format Data frame com 16 linhas e duas variáveis:
@@ -86,7 +86,7 @@ NULL
 #'
 #' @name moinho
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Exercício 13.29: Um moinho têxtil tem um grande número de teares. Supõe-se que cada tear forneça a mesma quantidade de tecidos. Para investigar essa suposição, 5 teares foram escolhidos ao acaso e suas produções foram medidas em diferentes tempos. Pede-se: a) Os teares são similares em relação à produção? Use alpha=0,05. b) Estime a variabilidade entre os teares. c) Estime a variância do erro experimental. d) Analise os resíduos desse experimento e verifique a adequação do modelo.
 #' @format Data frame com 25 linhas e duas variáveis:
@@ -103,7 +103,7 @@ NULL
 #'
 #' @name brilho
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Exercício 13.31: Um experimento foi conduzido para investigar os efeitos no brilho da polpa, de 4 produtos químicos de branqueamento. Esses produtos químicos foram selecionados ao acaso, a partir de uma população grande de agentes potenciais para o branqueamento. Pede-se: a) Existe uma diferença nos tipos de produtos químicos? b) Estime a variabilidade entre os teares. c) Estime a variância do erro experimental. d) Analise os resíduos desse experimento e verifique a adequação do modelo.
 #' @format Data frame com 20 linhas e duas variáveis:
@@ -120,7 +120,7 @@ NULL
 #'
 #' @name tecidos
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Delineamento em esquema de blocos completos aleatorizados e um fator fixo conduzido para avaliar o efeito de 4 diferentes produtos químicos sobre a resistência de tecidos.
 #' @format Data frame com 20 linhas e 3 variáveis:
@@ -138,7 +138,7 @@ NULL
 #'
 #' @name bocais
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Exercício 13.37: Um experimento foi realizado em que uma medida de forma foi determinda para vários tipos diferentes de bocais, com níveis diferentes de velocidade de jatos de saída. O interesse nesse experimento está principalmente no tipo de bocal, sendo a velocidade um fator de ruído. Analise adequadamente os dados desse experimentos, apresentando as conclusões práticas.
 #' @format Data frame com 30 linhas e três variáveis:
@@ -156,7 +156,7 @@ NULL
 #'
 #' @name escapamento
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Exercício 13.41: Um experimento foi conduzido a fim de se investigar o escapamento de corrente elétrica em um dispositivo SOS MOSFETS. A finalidade do experimento foi investigar como o escapamento de corrente elétrica varia com o comprimento do canal. Quatro comprimentos diferentes do canal foram selecionados. Para cada comprimento do canal, 5 larguras diferentes foram também usadas. A largura deve ser considerada um fator de ruído.  Analise adequadamente os dados desse experiemnto, apresentando as conclusões práticas.
 #' @format Data frame com 25 linhas e três variáveis:
@@ -175,7 +175,7 @@ NULL
 #'
 #' @name baterias
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Delineamento com dois fatores fixos cruzados conduzido para avaliar o efeito do tipo de material e nível de temperatura sobre o tempo de vida de baterias.
 #' @format Data frame com 36 linhas e 3 variáveis:
@@ -194,7 +194,7 @@ NULL
 #'
 #' @name refrigerantes
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Delineamento com 3 fatores fixos cruzados conduzido para avaliar o efeito da carbonatação, da pressão de operação, e a da velocidade da linha de produção sobre o desvio do volume nominal de garrafas de refrigerante.
 #' @format Data frame com 24 linhas e 4 variáveis:
@@ -213,7 +213,7 @@ NULL
 #'
 #' @name fibras
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Delineamento com um fator fixo e uma covariável conduzido para avaliar se existem diferenças na forças de fibras de monofilamentos produzidas por 3 máquinas.
 #' @format Data frame com 15 linhas e 3 variáveis:
@@ -231,7 +231,7 @@ NULL
 #'
 #' @name propulsores
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description (Exemplo 4.3) Delineamento em esquema quadrado greco-latino conduzido para avaliar 5 diferentes formulações de propulsores de foguetes.
 #' @format Data frame com 25 linhas e 5 variáveis:
@@ -251,7 +251,7 @@ NULL
 #'
 #' @name catalisadores
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Delineamento com blocos incompletos balanceados conduzido com o objetivo de avaliar o efeito de 4 diferentes tipos de catalisadores sobre o tempo de reação de um processo químico.
 #' @format Data frame com 12 linhas e 3 variáveis:
@@ -270,7 +270,7 @@ NULL
 #'
 #' @name medicoes
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Delineamento com dois fatores aleatórios conduzido com o objetivo de avaliar potenciais fontes de variabilidade de um sistema de medições.
 #' @format Data frame com 12 linhas e 3 variáveis:
@@ -288,7 +288,7 @@ NULL
 #'
 #' @name enxertos
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Um delineamento com blocos completos aleatorizados foi realizado com o objetivo de avaliar o efeito de diferentes níveis de pressão na ocorrência de saliências em enxertos vasculares produzidos com diferentes lotes de materia prima (fonte de variablidade de perturbação). Analise adequadamente os dados provenientes desse experimento, apresentando as conclusões práticas.
 #' @format Data frame com 24 linhas e 3 variáveis:
@@ -307,7 +307,7 @@ NULL
 #'
 #' @name ingredientes
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description O efeito de cinco ingredientes diferentes (A, B, C, D, E) sobre o tempo de reação de um processo químico está sendo estudado. Cada lote de material novo é grande o suficiente para permitir cinco corridas do experimento. Além disso, cada corrida requer aproximadamente 1.5 horas, de forma que apenas cinco execuções podem ser feitas em um dia. O engenheiro decide executar um experimento quadrado latino para que os efeitos do dia e do lote podem ser sistematicamente controlados. Analise os dados desta experiência (use um nível de significância de 0,05) e tire conclusões.
 #' @format Data frame com 20 linhas e 4 variáveis:
@@ -326,7 +326,7 @@ NULL
 #'
 #' @name montagem
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Exercício 4.36: Um engenheiro industrial está investigando o efeito de 4 tipos de métodos de montagem sobre o tempo de montagem de um componente de tv. Quatro operadores foram selecionados para o  estudo. Além disso, o engenheiro sabe que que cada processo de montagem gera fadiga (no operador), afetando o tempo de montagem das sucessivas componentes. O engenheiro também suspeita que o local de trabalho dos operadores pode afetar o tempo de montagem. Desta forma, um experimento do tipo quadrado greco-latino foi conduzido, visando controlar as fontes de variação de perturbação. Analise adequadamente os dados desse experimento, apresentando as conclusões práticas.
 #' @format Data frame com 16 linhas e 5 variáveis:
@@ -346,7 +346,7 @@ NULL
 #'
 #' @name rendimento
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Exercício 4.35: O rendimento de um processo químico foi medido usando-se 5 lotes de matéria prima, 5 concentrações de ácido, 5 tempos de espera, e 5 concentrações de catalisadores, configurando um delineamento do tipo quadrado greco-latino. Analise adequadamente os dados provenientes desse experimento, apresentando as suas conclusões práticas.
 #' @format Data frame com 25 linhas e 5 variáveis:
@@ -366,7 +366,7 @@ NULL
 #'
 #' @name quilometragem
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Exercício 4.40: Um engenheiro está estudando o desempenho da quilometragem característica de cinco tipos de aditivos à gasolina. No teste de estrada ele deseja usar carros como blocos; no entanto, devido a uma restrição de tempo, ele deve usar um delineamento com blocos incompletos. Analise adequadamente os dados desse experimento e apresente as conclusões práticas.
 #' @format Data frame com 20 linhas e 3 variáveis:
@@ -384,7 +384,7 @@ NULL
 #'
 #' @name papel
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Exercício 4.42: Sete concentrações diferentes de madeira estão sendo estudados para determinar seu efeito sobre a força do papel produzido. No entanto, a planta piloto só pode produzir três corridas do experimento por dia. Como os dias podem afetar a força do papel produzido, um delineamento com blocos incompletos aleatorizados foi conduzido. Analise os dados desse experimento e apresente as conclusões práticas.
 #' @format Data frame com 21 linhas e 3 variáveis:
@@ -402,13 +402,13 @@ NULL
 #'
 #' @name rendimento2k
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description Exemplo (pág. 234): Um engenheiro quı́mico está interessado em investigar o efeito da concentração de um reagente (fator A) e da quantidade de catalisador (fator B) sobre o rendimento de um processo quı́mico com o objetivo de verificar se ajustes sobre os nı́veis tais fatores aumentariam o rendimento.
+#' @description Exemplo (pág. 234): Um engenheiro químico está interessado em investigar o efeito da concentração de um reagente (fator A) e da quantidade de catalisador (fator B) sobre o rendimento de um processo químico com o objetivo de verificar se ajustes sobre os níveis tais fatores aumentariam o rendimento.
 #' @format Data frame com 12 linhas e 3 variáveis:
 #' \itemize{
-#'   \item reagente: nı́vel baixo (-): 15%; nı́vel alto (+): 20%
-#'   \item catalisador: nı́vel baixo (-): 1 libra; nı́vel alto (+): 2 libra
+#'   \item reagente: nivel baixo (-): 15%; nivel alto (+): 20%
+#'   \item catalisador: nivel baixo (-): 1 libra; nivel alto (+): 2 libra
 #'   \item rendimento: rendimento do processo químico
 #' }
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
@@ -420,7 +420,7 @@ NULL
 #'
 #' @name interacao1
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Exemplo de efeitos de interação em delineamentos com dois fatores fixos cruzados.
 #' @format Data frame com 8 linhas e 3 variáveis:
@@ -438,7 +438,7 @@ NULL
 #'
 #' @name interacao2
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Exemplo de efeitos de interação em delineamentos com dois fatores fixos cruzados.
 #' @format Data frame com 8 linhas e 3 variáveis:
@@ -456,7 +456,7 @@ NULL
 #'
 #' @name interacao3
 #' @docType data
-#' @author Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
 #' @description Exemplo de efeitos de interação em delineamentos com dois fatores fixos cruzados.
 #' @format Data frame com 8 linhas e 3 variáveis:
@@ -466,5 +466,62 @@ NULL
 #'   \item resp: variável resposta
 #' }
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
+
+
+#' Impureza de um produto químico
+#'
+#' @name impureza
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo 5.2: A impureza de um produto químico é afetada por dois fatores, a saber: temperatura e pressão. Um exeprimento com dois fatores fixos cruzados foi conduzido para avaliar o efeito desses dois fatores sobre a impureza do produto químico.
+#' @format Data frame com 15 linhas e 3 variáveis:
+#' \itemize{
+#'   \item temperatura: variável categórica com 3 níveis (fator 1)
+#'   \item pressão: variável categórica com 5 níveis (fator 2)
+#'   \item impureza: impureza do produto químico (variável resposta)
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
+
+
+
+#' Taxa de filtragem de um produto químico
+#'
+#' @name filtragem
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo 6.2: Um produto químico é produzido em um vaso de pressão. Um experimento fatorial é realizado na planta piloto para estudar os fatores que podem vir a influenciar a taxa de filtragem desse produto. Os quatro fatores são temperatura (A), pressão (B), concentração de formaldeído (C) e taxa de agitação (D). Cada fator está presente em dois níveis. O desenho da matriz e os dados de resposta obtidos de uma única réplica. As 16 corridas são feitas em ordem aleatória. O engenheiro de processos está interessado em maximizar a taxa de filtração.
+#' @format Data frame com 16 linhas e 5 variáveis:
+#' \itemize{
+#'   \item temperatura: taxa de agitação (variável categórica com 2 níveis; fator4)
+#'   \item pressao: taxa de agitação (variável categórica com 2 níveis; fator4)
+#'   \item concentracao: taxa de agitação (variável categórica com 2 níveis; fator4)
+#'   \item agitacao: taxa de agitação (variável categórica com 2 níveis; fator4)
+#'   \item filtragem: taxa de filtragem (variável resposta)
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
+
+
+#' Zarcao de tintas para aviões
+#'
+#' @name zarcao
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Delineamento com um fator fixo conduzido para avaliar o efeito de 4 diferentes concentrações de madeira de lei sobre a resistência de saquinhos de papel.
+#' @format Data frame com 18 linhas e três variáveis:
+#' \itemize{
+#'   \item adesao: adesao da tinta (variável resposta)
+#'   \item tipo: tipo de zarcao (variável categórica com 3 níveis; fator 1)
+#'   \item metodo: métido de aplicação do zarcao (variável categórica com 2 níveis; fator 2)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
 #'
 NULL

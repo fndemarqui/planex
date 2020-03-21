@@ -19,6 +19,6 @@ Exercício 13.41: Um experimento foi conduzido a fim de se investigar o escapame
 Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
 }
 \author{
-Fabio N. Demarqui \email{fndemarqui@est.ufmg.br}
+Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 }
 \keyword{datasets}
