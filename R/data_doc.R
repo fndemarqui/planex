@@ -1,3 +1,5 @@
+
+
 #' Resistência de saquinhos de papel
 #'
 #' @name saquinhos
@@ -520,7 +522,27 @@ NULL
 #' \itemize{
 #'   \item adesao: adesao da tinta (variável resposta)
 #'   \item tipo: tipo de zarcao (variável categórica com 3 níveis; fator 1)
-#'   \item metodo: métido de aplicação do zarcao (variável categórica com 2 níveis; fator 2)
+#'   \item metodo: método de aplicação do zarcao (variável categórica com 2 níveis; fator 2)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+
+#' Rugosidade da superfície
+#'
+#' @name rugosidade
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Um engenheiro mecânico está estudando a rugosidade da superfície de uma peça usinada. Três fatores são de interesse: taxa de alimentaçao, profundidade do corte e ângulo da ferramenta. O engenheiro decidiu realizar um experinto 2^3 fatorial com duas réplicas completas do experimento
+#' @format Data frame com 16 linhas e 4 variáveis:
+#' \itemize{
+#'   \item rugosidade: rugosidade (variável resposta)
+#'   \item alimentacao: taxa de alimentacao (variável categórica com 2 níveis; fator 1)
+#'   \item profundidade: profundade do corte (variável categórica com 2 níveis; fator 2)
+#'   \item angulo:  ângulo da ferramenta (variável categórica com 2 níveis; fator 3)
 #' }
 #' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
 #'
