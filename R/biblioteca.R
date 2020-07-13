@@ -9,6 +9,7 @@
 #' @examples
 #' \donttest{
 #' library(planex)
+#' library(tidyverse)
 #' head(impureza)
 #' sapply(impureza, class)
 #'impureza <- mutate(impureza,
@@ -21,8 +22,8 @@
 #' }
 #'
 interTest <- function(modelo){
-  tab <- model.tables(modelo, "means")
-  mf <- model.frame(modelo)
+  tab <- stats::model.tables(modelo, "means")
+  mf <- stats::model.frame(modelo)
   fat1 <- mf[,2]
   fat2 <- mf[,3]
   mf$alpha <- (tab$tables[[2]] - tab$tables[[1]])[fat1]
@@ -43,6 +44,7 @@ interTest <- function(modelo){
 #' @examples
 #' \donttest{
 #' library(planex)
+#' library(tidyverse)
 #' # Exemplo da impureza de um produto químico:
 #' head(impureza)
 #' sapply(impureza, class)
@@ -52,7 +54,7 @@ interTest <- function(modelo){
 #')
 #'
 #' mod <- aov(impureza~temperatura+pressao, data=impureza)
-#' interPlot(mod)
+#' interPlot2(mod)
 #'
 #' # Exemplo do tempo de vida de baterias:
 #' head(baterias)
@@ -63,25 +65,29 @@ interTest <- function(modelo){
 #')
 #'
 #' mod <- aov(tempo~temperatura+tipo, data=baterias)
-#' interPlot(mod)
+#' interPlot2(mod)
 #'
 #' }
 #'
-interPlot2 <- function (modelo){
-  mf <- as.data.frame(model.frame(modelo))
+interPlot2 <- function(modelo){
+  mf <- as.data.frame(stats::model.frame(modelo))
   nomes <- names(mf)
   names(mf) <- c("resp", "fat1", "fat2")
   mf %>%
-    group_by(fat1, fat2) %>%
-    summarise(
-      media = mean(resp)
+    mutate(
+      fat1 = as.factor(.data$fat1),
+      fat2 = as.factor(.data$fat2)
     ) %>%
-    ggplot(aes(x=fat1, y=media, color=fat2)) +
+    group_by(.data$fat1, .data$fat2) %>%
+    summarise(
+      media = mean(.data$resp)
+    ) %>%
+    ggplot(aes(x = .data$fat1, y = .data$media, color = .data$fat2)) +
     geom_point() +
-    geom_line(aes(group=fat2)) +
+    geom_line(aes(group = .data$fat2)) +
     xlab(nomes[2]) +
     ylab("media") +
-    labs(color=nomes[3])
+    labs(color = nomes[3])
 }
 
 
@@ -110,28 +116,33 @@ interPlot2 <- function (modelo){
 #'
 #' }
 #'
-interPlot3 <- function (modelo){
-  mf <- as.data.frame(model.frame(modelo))
+interPlot3 <- function(modelo){
+  mf <- as.data.frame(stats::model.frame(modelo))
   nomes <- names(mf)
   names(mf) <- c("resp", "fat1", "fat2", "fat3")
   mf %>%
-    group_by(fat1, fat2, fat3) %>%
-    summarise(
-      media = mean(resp)
+    mutate(
+      fat1 = as.factor(.data$fat1),
+      fat2 = as.factor(.data$fat2),
+      fat3 = as.factor(.data$fat3)
     ) %>%
-    ggplot(aes(x=fat1, y=media, color=fat2)) +
+    group_by(.data$fat1, .data$fat2, .data$fat3) %>%
+    summarise(
+      media = mean(.data$resp)
+    ) %>%
+    ggplot(aes(x = .data$fat1, y = .data$media, color = .data$fat2)) +
     geom_point() +
-    geom_line(aes(group=fat2)) +
+    geom_line(aes(group = .data$fat2)) +
     xlab(nomes[2]) +
     ylab("media") +
-    labs(color=nomes[3]) +
-    facet_wrap(~fat3)
+    labs(color = nomes[3]) +
+    facet_wrap(~ .data$fat3)
 }
 
 
 #' Gráfico de interações para delineamentos com 4 fatores
 #' @aliases interPlot4
-#' @description Gráficos de interações envolvendo delineamentos com dois fatores
+#' @description Gráficos de interações envolvendo delineamentos com 4 fatores
 #' @param modelo modelo ajustado (objeto deve ter classe aov ou lm)
 #' @return Retorna o gráfico de interações
 #' @examples
@@ -152,20 +163,83 @@ interPlot3 <- function (modelo){
 #'
 #' }
 #'
-interPlot4 <- function (modelo){
-  mf <- as.data.frame(model.frame(modelo))
+interPlot4 <- function(modelo){
+  mf <- as.data.frame(stats::model.frame(modelo))
   nomes <- names(mf)
   names(mf) <- c("resp", "fat1", "fat2", "fat3", "fat4")
   mf %>%
-    group_by(fat1, fat2, fat3, fat4) %>%
-    summarise(
-      media = mean(resp)
+    mutate(
+      fat1 = as.factor(.data$fat1),
+      fat2 = as.factor(.data$fat2),
+      fat3 = as.factor(.data$fat3),
+      fat4 = as.factor(.data$fat4)
     ) %>%
-    ggplot(aes(x=fat1, y=media, color=fat2)) +
+    group_by(.data$fat1, .data$fat2, .data$fat3, .data$fat4) %>%
+    summarise(
+      media = mean(.data$resp)
+    ) %>%
+    ggplot(aes(x = .data$fat1, y = .data$media, color = .data$fat2)) +
     geom_point() +
-    geom_line(aes(group=fat2)) +
+    geom_line(aes(group = .data$fat2)) +
     xlab(nomes[2]) +
     ylab("media") +
-    labs(color=nomes[3]) +
-    facet_grid(row=vars(fat3), col=vars(fat4))
+    labs(color = nomes[3]) +
+    facet_grid(rows = vars(.data$fat3), cols = vars(.data$fat4))
+}
+
+
+#' Codificação de variáveis para delineamentos $2^k$ fatoriais
+#'
+#' @aliases as.factor2k
+#' @export
+#' @description Função para codificar os níveis baixos e altos de fatores de interesse em um delinemanto $2^K$ tal que -1 representa o nível baixo e 1 representa o nível alto do fator.
+#' @param x fator que se deseja codificar.
+#' @return o fator codificado em termos dos níveis baixo (-1) e alto (+1).
+#' @examples
+#' library(planex)
+#' library(tidyverse)
+#' data(rugosidade)
+#' head(rugosidade)
+#' rugosidade <- mutate(rugosidade,
+#'   alimentacao = as.factor2k(alimentacao),
+#'   profundidade = as.factor2k(profundidade),
+#'   angulo = as.factor2k(angulo)
+#' )
+#' rugosidade
+#'
+#'
+as.factor2k <- function(x){
+  x <- as.numeric(x)
+  z <- unique(x)
+  if(length(z) != 2){
+    warning("essa função deve ser usada apenas para fatores com 2 níveis!!!")
+  }else{
+    y <- as.numeric((x - mean(z))/(diff(z)/2))
+    return(y)
+  }
+}
+
+
+#' Gráfico de interações para delineamentos com 2 a 4 fatores
+#' @aliases interactionPlot
+#' @description Gráficos de interações envolvendo delineamentos com dois a quatro fatores
+#' @param modelo modelo ajustado (objeto deve ter classe aov ou lm)
+#' @return Retorna o gráfico de interações
+
+interactionPlot <- function(modelo){
+  term.ord <- attr(terms(modelo), "order")
+  nfats <- length(which(term.ord == 1)) # main effects
+  if(nfats < 2){
+    warning("Function only available for factorial with 2 up to 4 factors.")
+  }else{
+    if(nfats == 2){
+      interPlot2(modelo)
+    }else if(nfats == 3){
+      interPlot3(modelo)
+    }else if(nfats == 4){
+      interPlot4(modelo)
+    }else{
+      warning("Function not available for factorial designs with more than 4 factors.")
+    }
+  }
 }

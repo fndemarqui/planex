@@ -13,7 +13,7 @@ interPlot4(modelo)
 Retorna o gráfico de interações
 }
 \description{
-Gráficos de interações envolvendo delineamentos com dois fatores
+Gráficos de interações envolvendo delineamentos com 4 fatores
 }
 \examples{
 \donttest{

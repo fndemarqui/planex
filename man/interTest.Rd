@@ -20,6 +20,7 @@ Realiza o teste de nao aditividade para delineamentos com dois fatores fixos cru
 \examples{
 \donttest{
 library(planex)
+library(tidyverse)
 head(impureza)
 sapply(impureza, class)
 impureza <- mutate(impureza,

@@ -18,6 +18,7 @@ Gráficos de interações envolvendo delineamentos com dois fatores
 \examples{
 \donttest{
 library(planex)
+library(tidyverse)
 # Exemplo da impureza de um produto químico:
 head(impureza)
 sapply(impureza, class)
@@ -27,7 +28,7 @@ impureza <- mutate(impureza,
 )
 
 mod <- aov(impureza~temperatura+pressao, data=impureza)
-interPlot(mod)
+interPlot2(mod)
 
 # Exemplo do tempo de vida de baterias:
 head(baterias)
@@ -38,7 +39,7 @@ baterias <- mutate(baterias,
 )
 
 mod <- aov(tempo~temperatura+tipo, data=baterias)
-interPlot(mod)
+interPlot2(mod)
 
 }
 

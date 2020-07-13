@@ -1,18 +1,80 @@
-alimentacao	profundidade	angulo	rugosidade
-20	0.025	15	9
-20	0.025	15	7
-30	0.025	15	10
-30	0.025	15	12
-20	0.04	15	9
-20	0.04	15	11
-30	0.04	15	12
-30	0.04	15	15
-20	0.025	25	11
-20	0.025	25	10
-30	0.025	25	10
-30	0.025	25	13
-20	0.04	25	10
-20	0.04	25	8
-30	0.04	25	16
-30	0.04	25	14
-
+dieta teor
+Cevada 3.63
+Cevada 3.24
+Cevada 3.98
+Cevada 3.66
+Cevada 4.34
+Cevada 4.36
+Cevada 4.17
+Cevada 4.4
+Cevada 3.4
+Cevada 3.75
+Cevada 4.2
+Cevada 4.02
+Cevada 4.02
+Cevada 3.9
+Cevada 3.81
+Cevada 3.62
+Cevada 3.66
+Cevada 4.44
+Cevada 4.23
+Cevada 3.82
+Cevada 3.53
+Cevada 4.47
+Cevada 3.93
+Cevada 3.27
+Cevada 3.3
+Cevada+lupulus 3.38
+Cevada+lupulus 3.8
+Cevada+lupulus 4.17
+Cevada+lupulus 4.59
+Cevada+lupulus 4.07
+Cevada+lupulus 4.32
+Cevada+lupulus 3.56
+Cevada+lupulus 3.67
+Cevada+lupulus 4.15
+Cevada+lupulus 3.51
+Cevada+lupulus 4.2
+Cevada+lupulus 4.12
+Cevada+lupulus 3.52
+Cevada+lupulus 4.08
+Cevada+lupulus 4.02
+Cevada+lupulus 3.18
+Cevada+lupulus 4.11
+Cevada+lupulus 3.27
+Cevada+lupulus 3.27
+Cevada+lupulus 3.97
+Cevada+lupulus 3.31
+Cevada+lupulus 4.12
+Cevada+lupulus 3.92
+Cevada+lupulus 3.78
+Cevada+lupulus 4
+Cevada+lupulus 4.37
+Cevada+lupulus 3.79
+Lupulos 3.69
+Lupulos 4.2
+Lupulos 3.31
+Lupulos 3.13
+Lupulos 3.73
+Lupulos 4.32
+Lupulos 3.04
+Lupulos 3.84
+Lupulos 3.98
+Lupulos 4.18
+Lupulos 4.2
+Lupulos 4.1
+Lupulos 3.25
+Lupulos 3.34
+Lupulos 3.5
+Lupulos 4.13
+Lupulos 3.21
+Lupulos 3.9
+Lupulos 3.5
+Lupulos 4.1
+Lupulos 2.69
+Lupulos 4.3
+Lupulos 4.06
+Lupulos 3.88
+Lupulos 4
+Lupulos 3.67
+Lupulos 4.27

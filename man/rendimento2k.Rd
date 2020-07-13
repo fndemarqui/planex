@@ -7,8 +7,8 @@
 \format{
 Data frame com 12 linhas e 3 variáveis:
 \itemize{
-  \item reagente: nivel baixo (-): 15%; nivel alto (+): 20%
-  \item catalisador: nivel baixo (-): 1 libra; nivel alto (+): 2 libra
+  \item reagente: nivel baixo (15%): -1 ; nivel alto (20%): +1
+  \item catalisador: nivel baixo (1 libra): -1; nivel alto (2 libras): +1
   \item rendimento: rendimento do processo químico
 }
 }

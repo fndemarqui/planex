@@ -409,8 +409,8 @@ NULL
 #' @description Exemplo (pág. 234): Um engenheiro químico está interessado em investigar o efeito da concentração de um reagente (fator A) e da quantidade de catalisador (fator B) sobre o rendimento de um processo químico com o objetivo de verificar se ajustes sobre os níveis tais fatores aumentariam o rendimento.
 #' @format Data frame com 12 linhas e 3 variáveis:
 #' \itemize{
-#'   \item reagente: nivel baixo (-): 15%; nivel alto (+): 20%
-#'   \item catalisador: nivel baixo (-): 1 libra; nivel alto (+): 2 libra
+#'   \item reagente: nivel baixo (15%): -1 ; nivel alto (20%): +1
+#'   \item catalisador: nivel baixo (1 libra): -1; nivel alto (2 libras): +1
 #'   \item rendimento: rendimento do processo químico
 #' }
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
@@ -505,6 +505,7 @@ NULL
 #'   \item concentracao: taxa de agitação (variável categórica com 2 níveis; fator4)
 #'   \item agitacao: taxa de agitação (variável categórica com 2 níveis; fator4)
 #'   \item filtragem: taxa de filtragem (variável resposta)
+#'   \item comb_trat: combinação de tratamentos (ausência da letra indica nível baixo; presença, nível alto)
 #' }
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'

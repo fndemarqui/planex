@@ -5,7 +5,6 @@
 #' @docType package
 #' @name planex-package
 #' @aliases planex
-#' @useDynLib planex, .registration = TRUE
 #'
 #' @references
 #'
