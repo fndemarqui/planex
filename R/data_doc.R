@@ -548,3 +548,38 @@ NULL
 #' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
 #'
 NULL
+
+
+
+#' Sabor de um refrigerante
+#'
+#' @name refrigerantes2k
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 14.13: Pensa-se que quatro fatores influenciam o sabor de um refrigerante: tipo de adoçante (A), razão entre xarope e água (B), nível de carbonatação (C), e temperataura. Cada fator pode ser corrido em dois níveis, produzindo um delineamento $2^4$ com duas replicações completas. Em cada corrida do experimento amostras de refrigerante são dadas a 20 pessoas para testar. Cara pessoa atribui uma nota de 1 a 10 ao refrigerante provado. A  pontuação total é a variável resposta, e o objetivo é encontrar uma formulação que maximize a pontuação total. Analise adequadamente os dados desse experimento e tire as suas conclusões.
+#' @format Data frame com 32 linhas e duas variáveis:
+#' \itemize{
+#'   \item pontuacao: pontuacao atribuida à amostra de refrigerante (variável resposta)
+#'   \item comb_trat: combinação de tratamentos na ordenação de Yates.
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+#' Semicondutores
+#'
+#' @name semicondutores
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 14.17:
+#' @format Data frame com 32 linhas e duas variáveis:
+#' \itemize{
+#'   \item rendimento:
+#'   \item comb_trat: combinação de tratamentos na ordenação de Yates.
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL

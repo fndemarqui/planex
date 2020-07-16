@@ -281,3 +281,42 @@ Fpower <- function(alpha = 0.05,  nlev = NULL, nreps = NULL, Delta = NULL, sigma
     warning("This function cannot handle designs with more than two factors!!!")
   }
 }
+
+
+
+
+
+
+#' Yates order to canonical format
+#' @aliases yates2factors
+#' @export
+#' @description This function translates treatment combinations organized according to Yates order into factors following the $2^k$ factorial canonical format.
+#' @param data n x 2 data frame containing the experimental data.
+#' @return the updated data with factors in the canonical format
+#' @examples
+#' library(planex)
+#' data(refrigerantes2k)
+#' head(refrigerantes2k)
+#' refrigerantes2k <- yates2factors(refrigerantes2k)
+#' refrigerantes2k
+#'
+yates2factors <- function(data){
+  n <- nrow(data)
+  aux <- sapply(data, class)
+  if(aux[1] == "character" | aux[1] == "factor"){
+    code <- data[,1]
+  }else{
+    code <- data[,2]
+  }
+
+  k <- max(stringi::stri_length(code))
+  df <- matrix(nrow = n, ncol = k)
+  for(i in 1:k){
+    df[,i]   <- ifelse(stringr::str_detect(code, letters[i]), 1, -1)
+  }
+  df <- as.data.frame(df, k)
+  names(df) <- LETTERS[1:k]
+  data <- cbind(data, df)
+  return(data)
+}
+
