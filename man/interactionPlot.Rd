@@ -2,16 +2,73 @@
 % Please edit documentation in R/biblioteca.R
 \name{interactionPlot}
 \alias{interactionPlot}
-\title{Gráfico de interações para delineamentos com 2 a 4 fatores}
+\title{Interaction plot for factorial designs with up to 4 factors.}
 \usage{
-interactionPlot(modelo)
+interactionPlot(object)
 }
 \arguments{
-\item{modelo}{modelo ajustado (objeto deve ter classe aov ou lm)}
+\item{object}{object ajustado (objeto deve ter classe aov ou lm)}
 }
 \value{
-Retorna o gráfico de interações
+the desired interaction plot
 }
 \description{
-Gráficos de interações envolvendo delineamentos com dois a quatro fatores
+This function draws the interaction plot for factorial designs with up to 4 factors using ggplot2 package. The display of the plots depends on the order of factors entering in the model.
+}
+\examples{
+
+#' library(planex)
+library(tidyverse)
+
+# Exemplo da impureza de um produto químico:
+head(impureza)
+sapply(impureza, class)
+impureza <- mutate(impureza,
+                  temperatura = as.factor(temperatura),
+                  pressao = as.factor(pressao)
+)
+
+mod <- aov(impureza~temperatura+pressao, data=impureza)
+interPlot2(mod)
+
+# Exemplo do tempo de vida de baterias:
+
+head(baterias)
+sapply(baterias, class)
+baterias <- mutate(baterias,
+                  temperatura = as.factor(temperatura),
+                  tipo = as.factor(tipo)
+)
+
+mod <- aov(tempo~temperatura+tipo, data=baterias)
+interPlot2(mod)
+
+# Exemplo das garrafas de refrigerante:
+
+head(refrigerantes)
+sapply(refrigerantes, class)
+mod1 <- aov(desvio~carbonatacao+pressao+velocidade, data=refrigerantes)
+mod2 <- aov(desvio~pressao+carbonatacao+velocidade, data=refrigerantes)
+mod3 <- aov(desvio~velocidade+carbonatacao+pressao, data=refrigerantes)
+mod4 <- aov(desvio~velocidade+pressao+carbonatacao, data=refrigerantes)
+
+interPlot3(mod1)
+interPlot3(mod2)
+interPlot3(mod3)
+interPlot3(mod4)
+
+# Exemplo das garrafas de refrigerante:
+
+head(refrigerantes)
+sapply(refrigerantes, class)
+mod1 <- aov(filtragem ~ temperatura+pressao+concentracao+agitacao, data=filtragem)
+mod2 <- aov(filtragem ~ pressao+temperatura+concentracao+agitacao, data=filtragem)
+mod3 <- aov(filtragem ~ concentracao+temperatura+pressao+agitacao, data=filtragem)
+mod4 <- aov(filtragem ~ agitacao+pressao+temperatura+concentracao, data=filtragem)
+
+interPlot4(mod1)
+interPlot4(mod2)
+interPlot4(mod3)
+interPlot4(mod4)
+
 }
