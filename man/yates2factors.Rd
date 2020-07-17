@@ -2,7 +2,8 @@
 % Please edit documentation in R/biblioteca.R
 \name{yates2factors}
 \alias{yates2factors}
-\title{Yates order to canonical format}
+\alias{comb2factors}
+\title{Treatment combinations to canonical format}
 \usage{
 yates2factors(data)
 }
@@ -13,13 +14,13 @@ yates2factors(data)
 the updated data with factors in the canonical format
 }
 \description{
-This function translates treatment combinations organized according to Yates order into factors following the $2^k$ factorial canonical format.
+This function uses treatment combinations in standard (Yates') order to generate factors canonical format for factorial designs with only two levels.
 }
 \examples{
 library(planex)
 data(refrigerantes2k)
 head(refrigerantes2k)
-refrigerantes2k <- yates2factors(refrigerantes2k)
+refrigerantes2k <- comb2factors(refrigerantes2k)
 refrigerantes2k
 
 }

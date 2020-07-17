@@ -287,17 +287,17 @@ Fpower <- function(alpha = 0.05,  nlev = NULL, nreps = NULL, Delta = NULL, sigma
 
 
 
-#' Yates order to canonical format
-#' @aliases yates2factors
+#' Treatment combinations to canonical format
+#' @aliases comb2factors
 #' @export
-#' @description This function translates treatment combinations organized according to Yates order into factors following the $2^k$ factorial canonical format.
+#' @description This function uses treatment combinations in standard (Yates') order to generate factors canonical format for factorial designs with only two levels.
 #' @param data n x 2 data frame containing the experimental data.
 #' @return the updated data with factors in the canonical format
 #' @examples
 #' library(planex)
 #' data(refrigerantes2k)
 #' head(refrigerantes2k)
-#' refrigerantes2k <- yates2factors(refrigerantes2k)
+#' refrigerantes2k <- comb2factors(refrigerantes2k)
 #' refrigerantes2k
 #'
 yates2factors <- function(data){
