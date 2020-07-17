@@ -512,13 +512,13 @@ NULL
 NULL
 
 
-#' Zarcao de tintas para aviões
+#' Zarcões de tintas para aviões
 #'
 #' @name zarcao
 #' @docType data
 #' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description Delineamento com um fator fixo conduzido para avaliar o efeito de 4 diferentes concentrações de madeira de lei sobre a resistência de saquinhos de papel.
+#' @description Zarcões de tinta para avião são aplicados em superfícies de alumínio, por meio de dois métodos: imersão e aspersão. A finalidade do zarcão é melhorar a adesão da tinta, podendo ser aplicado em algumas peças usando qualquer método. O grupo de engenharia de processos responsável por essa operação está interessado em saber se três diferentes tipos de zarcões diferem quanto as suas propriedades de adesão. Um delineamento fatorial foi realizado para investigar o efeito do tipo de zarcão e do método de aplicação na adesão da tinta. Três espécimes foram pintados com cada um dos zarcões, usando cada um dos métodos de adesão. Uma camada de tinta foi aplicada e a força de adesão foi medida.
 #' @format Data frame com 18 linhas e três variáveis:
 #' \itemize{
 #'   \item adesao: adesao da tinta (variável resposta)
@@ -597,6 +597,6 @@ NULL
 #'   \item rendimento: variável resposta
 #'   \item comb_trat: combinação de tratamentos.
 #' }
-#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL

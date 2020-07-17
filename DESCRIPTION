@@ -11,7 +11,9 @@ Depends:
 Imports: 
   car,
   dplyr,
-  rlang
+  rlang,
+  stringi,
+  stringr
 Suggests: tidyverse  
 Encoding: UTF-8
 LazyData: true

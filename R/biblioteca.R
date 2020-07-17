@@ -145,7 +145,7 @@ interPlot4 <- function(object){
 #' @rdname interactionPlot
 #' @aliases interactionPlot
 #' @description This function draws the interaction plot for factorial designs with up to 4 factors using ggplot2 package. The display of the plots depends on the order of factors entering in the model.
-#' @param object object ajustado (objeto deve ter classe aov ou lm)
+#' @param object fitted model of class aov or lm
 #' @return the desired interaction plot
 #' @examples
 #'
@@ -205,7 +205,7 @@ interPlot4 <- function(object){
 #'
 
 interactionPlot <- function(object){
-  term.ord <- attr(terms(object), "order")
+  term.ord <- attr(stats::terms(object), "order")
   nfats <- length(which(term.ord == 1)) # main effects
   if(nfats < 2){
     warning("Function only available for factorial with 2 up to 4 factors.")
@@ -320,3 +320,28 @@ treatcomb2factors <- function(data){
   return(data)
 }
 
+
+
+#' Summary table for unreplicated/fractional 2^k designs.
+#' @aliases table2kunrep
+#' @export
+#' @description This function is aimed to provide a summary suitable for unreplicated/fractional designs.
+#' @param object fitted model of class aov or lm.
+#' @return a data.frame containing the estimated effects, the sum of squares (SS), the sum o squares percentual contribution (SSPC), the effects' relative difference with respect to the overal mean (PRD).
+#'
+#' @examples
+#' library(planex)
+#' data(semicondutores1rep)
+#' semicondutores1rep <- treatcomb2factors(semicondutores1rep)
+#' fit <- lm(rendimento ~ A*B*C*D*E, data = semicondutores1rep)
+#' table2kunrep(fit)
+#'
+table2kunrep <- function(object){
+  effects <- 2*coef(object)[-1]
+  rd <- round(100*(effects/coef(object)[1]), 2)
+  tab <- suppressWarnings(stats::anova(object))
+  SS <- as.vector(tab["Sum Sq"])[1:length(effects),]
+  pc <- round(100*(SS/sum(SS)), 2)
+  df <- data.frame(effects = effects, SS = SS, SSPC = pc, PRD = rd)
+  return(df)
+}

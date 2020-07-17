@@ -16,6 +16,8 @@ devtools::load_all()
 devtools::build_manual()
 devtools::build()
 
+# criar função is.balanced()....
+
 
 # Useful to remove notes:
 # tools::showNonASCIIfile("R/biblioteca.R")

@@ -7,7 +7,7 @@
 interactionPlot(object)
 }
 \arguments{
-\item{object}{object ajustado (objeto deve ter classe aov ou lm)}
+\item{object}{fitted model of class aov or lm}
 }
 \value{
 the desired interaction plot
