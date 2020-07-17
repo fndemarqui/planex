@@ -3,16 +3,16 @@
 \docType{data}
 \name{semicondutores}
 \alias{semicondutores}
-\title{Semicondutores}
+\title{Planta de fabricação de semicondutores}
 \format{
-Data frame com 32 linhas e duas variáveis:
+Data frame com 16 linhas e duas variáveis:
 \itemize{
-  \item rendimento:
-  \item comb_trat: combinação de tratamentos na ordenação de Yates.
+  \item rendimento: variável resposta
+  \item comb_trat: combinação de tratamentos.
 }
 }
 \description{
-Exercício 14.17:
+Exemplo 8.2: Um experimento foi realizado em uma planta de fabricação de semicondutores, como um esforço para aumentar o rendimento. Cinto fatores, cada um com dois níveis foram estudados. Os fatores (e níveis) foram A = abertura (pequena, grande), B = tempo de exposição (20% abaixo do normal, 20% acima do normal), C =  tempo de desenvolvimento (30s e 45s), D = dimensão da máscara (pequena, grande), e E = tempo de ataque químico (14.5 min, 15.5 min). Devido ao número elevado de fatores (5) e a questões orçamentárias, uma meia fração do delineamento 2^5 foi corrida. Analise os dados do experimento e tire as suas conclusões.
 }
 \references{
 Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
