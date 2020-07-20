@@ -13,7 +13,7 @@ Data frame com 18 linhas e três variáveis:
 }
 }
 \description{
-Zarcões de tinta para avião são aplicados em superfícies de alumínio, por meio de dois métodos: imersão e aspersão. A finalidade do zarcão é melhorar a adesão da tinta, podendo ser aplicado em algumas peças usando qualquer método. O grupo de engenharia de processos responsável por essa operação está interessado em saber se três diferentes tipos de zarcões diferem quanto as suas propriedades de adesão. Um delineamento fatorial foi realizado para investigar o efeito do tipo de zarcão e do método de aplicação na adesão da tinta. Três espécimes foram pintados com cada um dos zarcões, usando cada um dos métodos de adesão. Uma camada de tinta foi aplicada e a força de adesão foi medida.
+Exemplo 14.1: Zarcões de tinta para avião são aplicados em superfícies de alumínio, por meio de dois métodos: imersão e aspersão. A finalidade do zarcão é melhorar a adesão da tinta, podendo ser aplicado em algumas peças usando qualquer método. O grupo de engenharia de processos responsável por essa operação está interessado em saber se três diferentes tipos de zarcões diferem quanto as suas propriedades de adesão. Um delineamento fatorial foi realizado para investigar o efeito do tipo de zarcão e do método de aplicação na adesão da tinta. Três espécimes foram pintados com cada um dos zarcões, usando cada um dos métodos de adesão. Uma camada de tinta foi aplicada e a força de adesão foi medida.
 }
 \references{
 Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.

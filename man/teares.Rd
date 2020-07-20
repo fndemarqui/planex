@@ -12,7 +12,7 @@ Data frame com 16 linhas e duas variáveis:
 }
 }
 \description{
-Delineamento com um fator aleatório conduzido para avaliar a homogeneidade da resistência de tecidos produzidos por diferentes teares de uma fábrica.
+Exemplo 13.4: Delineamento com um fator aleatório conduzido para avaliar a homogeneidade da resistência de tecidos produzidos por diferentes teares de uma fábrica.
 }
 \references{
 Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.

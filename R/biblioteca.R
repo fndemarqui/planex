@@ -345,3 +345,56 @@ table2kunrep <- function(object){
   df <- data.frame(effects = effects, SS = SS, SSPC = pc, PRD = rd)
   return(df)
 }
+
+
+#' Residual plot checks
+#' @aliases plotResiduals
+#' @export
+#' @param model an object of the class lm or aov.
+#' @return residual plots suitable for residual analysis of data from design experiments.
+#'
+#' @examples
+#' library(planex)
+#' library(tidyverse)
+#' data(saquinhos)
+#' saquinhos <- mutate(saquinhos,
+#'   concentracao = as.factor(concentracao)
+#' )
+#' mod <- aov(resistencia ~ concentracao, data = saquinhos)
+#' plotResiduals(mod)
+#'
+plotResiduals <- function(model){
+
+  k <- sturges.freq(residuals(model))$classes
+  p1 <- ggplot(model, aes(x = .resid)) +
+   geom_histogram(bins = k, color="white") +
+   xlab("Residuals") +
+   ylab("Frequency")
+  plot(p1)
+
+
+  p2 <- ggplot(model, aes(sample = .resid)) +
+    stat_qq() + stat_qq_line(color="blue") +
+    ggtitle("Normal Q-Q plot")
+  plot(p2)
+
+
+  p3 <-ggplot(model, aes(.fitted, .resid)) +
+    geom_point() +
+    stat_smooth(method="loess", se = FALSE) +
+    xlab("Fitted values") +
+    ylab("Residuals")
+  suppressWarnings(plot(p3))
+
+
+  mf <- as.data.frame(stats::model.frame(model))
+  variable <- names(mf)
+  for(i in 2:ncol(mf)){
+    p <- ggplot(model, aes(x = mf[,i] , y = .resid)) +
+      geom_jitter(position=position_jitter(0.1)) +
+      xlab(variable[i]) +
+      ylab("residuals")
+    plot(p)
+  }
+
+}

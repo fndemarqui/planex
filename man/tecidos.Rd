@@ -13,7 +13,7 @@ Data frame com 20 linhas e 3 variáveis:
 }
 }
 \description{
-Delineamento em esquema de blocos completos aleatorizados e um fator fixo conduzido para avaliar o efeito de 4 diferentes produtos químicos sobre a resistência de tecidos.
+Exemplo 13.5: Delineamento em esquema de blocos completos aleatorizados e um fator fixo conduzido para avaliar o efeito de 4 diferentes produtos químicos sobre a resistência de tecidos.
 }
 \references{
 Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.

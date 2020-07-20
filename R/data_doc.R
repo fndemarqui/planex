@@ -6,7 +6,7 @@
 #' @docType data
 #' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description Delineamento com um fator fixo conduzido para avaliar o efeito de 4 diferentes concentrações de madeira de lei sobre a resistência de saquinhos de papel.
+#' @description Exemplo 13.1: Delineamento com um fator fixo conduzido para avaliar o efeito de 4 diferentes concentrações de madeira de lei sobre a resistência de saquinhos de papel.
 #' @format Data frame com 24 linhas e duas variáveis:
 #' \itemize{
 #'   \item resistencia: resistência dos saquinhos (variável resposta)
@@ -73,7 +73,7 @@ NULL
 #' @docType data
 #' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description Delineamento com um fator aleatório conduzido para avaliar a homogeneidade da resistência de tecidos produzidos por diferentes teares de uma fábrica.
+#' @description Exemplo 13.4: Delineamento com um fator aleatório conduzido para avaliar a homogeneidade da resistência de tecidos produzidos por diferentes teares de uma fábrica.
 #' @format Data frame com 16 linhas e duas variáveis:
 #' \itemize{
 #'   \item resistencia: resistência dos tecidos (variável resposta)
@@ -124,7 +124,7 @@ NULL
 #' @docType data
 #' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description Delineamento em esquema de blocos completos aleatorizados e um fator fixo conduzido para avaliar o efeito de 4 diferentes produtos químicos sobre a resistência de tecidos.
+#' @description Exemplo 13.5: Delineamento em esquema de blocos completos aleatorizados e um fator fixo conduzido para avaliar o efeito de 4 diferentes produtos químicos sobre a resistência de tecidos.
 #' @format Data frame com 20 linhas e 3 variáveis:
 #' \itemize{
 #'   \item resistencia: resistência do tecido (variável resposta)
@@ -518,7 +518,7 @@ NULL
 #' @docType data
 #' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description Zarcões de tinta para avião são aplicados em superfícies de alumínio, por meio de dois métodos: imersão e aspersão. A finalidade do zarcão é melhorar a adesão da tinta, podendo ser aplicado em algumas peças usando qualquer método. O grupo de engenharia de processos responsável por essa operação está interessado em saber se três diferentes tipos de zarcões diferem quanto as suas propriedades de adesão. Um delineamento fatorial foi realizado para investigar o efeito do tipo de zarcão e do método de aplicação na adesão da tinta. Três espécimes foram pintados com cada um dos zarcões, usando cada um dos métodos de adesão. Uma camada de tinta foi aplicada e a força de adesão foi medida.
+#' @description Exemplo 14.1: Zarcões de tinta para avião são aplicados em superfícies de alumínio, por meio de dois métodos: imersão e aspersão. A finalidade do zarcão é melhorar a adesão da tinta, podendo ser aplicado em algumas peças usando qualquer método. O grupo de engenharia de processos responsável por essa operação está interessado em saber se três diferentes tipos de zarcões diferem quanto as suas propriedades de adesão. Um delineamento fatorial foi realizado para investigar o efeito do tipo de zarcão e do método de aplicação na adesão da tinta. Três espécimes foram pintados com cada um dos zarcões, usando cada um dos métodos de adesão. Uma camada de tinta foi aplicada e a força de adesão foi medida.
 #' @format Data frame com 18 linhas e três variáveis:
 #' \itemize{
 #'   \item adesao: adesao da tinta (variável resposta)
@@ -598,5 +598,96 @@ NULL
 #'   \item comb_trat: combinação de tratamentos.
 #' }
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
+
+
+#' Acabamento de superfície de peças metálicas
+#'
+#' @name acabamento
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 14.2: Um engenheiro suspeita que o acabamento de uma superfícies de peças metálicas seja influenciado pelo tipo de tinta usada e pelo tempo de secagem. Ele selecionou 3 tempos de secagem - 20, 25, e 30 minutos - e usou dois tipos de tinta. Três peças são testadas com cada combinação de tipo de tinta e tempo de secagem. Realize a análise dos dados e tire as suas conclusões.
+#' @format Data frame com 18 linhas e três variáveis:
+#' \itemize{
+#'   \item acabamento: variável resposta
+#'   \item tinta: tipo de tinta utilzada (fator 1; dois níveis)
+#'   \item tempo: tempo de secagem (fator 2; 3 níveis: 20min, 25min e 30min)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+
+#' Acabamento de superfície de peças metálicas
+#'
+#' @name acabamento
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 14.7: Um engenheiro realizou um estudo sobre o efeito de duas variáveis -  tratamento com polissilicone e condições de recozimento (tempo e temperatura) - sobre a corrente de um transmissor biploar. Analise os dados provenientes desse experimento e tire as suas conclusões.
+#' @format Data frame com 20 linhas e três variáveis:
+#' \itemize{
+#'   \item corrente: variável resposta
+#'   \item polissilicone: tratamento com polissiliconte (fator 1; dois níveis - 1e-20; 2e-20)
+#'   \item recozimento: recozimento (fator 2; 5 níveis: 900/60, 900/180, 950/60, 1000/15, 1000/30 - temperatura/tempo)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+#' Acabamento de superfície de peças metálicas
+#'
+#' @name queima
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 14.4: Um experimento foi conduzido para determinar se a temperatura (°C) de queima ou a posição da fornalha afetam a densidade de um ânodo de carbono. Análise adequadamente os dados provenientes desse experimento, apresentando as suas conclusões.
+#' @format Data frame com 18 linhas e três variáveis:
+#' \itemize{
+#'   \item densidade: variável resposta
+#'   \item posicao: posição da fornalha (fator 1; dois níveis)
+#'   \item temperatura: temperatura da fornalha (fator 2; 3 níveis: 800, 825 e 850 °C)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+#' Acabamento de superfície de peças metálicas
+#'
+#' @name chumbo
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 14.26: Um delineamento 2^3 foi conduzido para determinar o nível de chumbo, utilizando-se a espectrometria de absorção atômica de chama (EAAC). Análise adequadamente os dados provenientes desse experimento, apresentando as suas conclusões.
+#' @format Data frame com 16 linhas e quatro variáveis:
+#' \itemize{
+#'   \item recuperacao: recuperação de chumbo (%) - variável resposta
+#'   \item TA: tempo de agitação (fator 1 - nível baixo: 5e-6; nível alto: 5e-5)
+#'   \item pH: pH (fator 2 - nível baixo: 6; nível alto: 8)
+#'   \item CR: concentração de reagente (fator 3 - nível baixo: 10; nível alto: 30)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+#' Tratamentos de retardantes de fogo
+#'
+#' @name fogo
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 14.18: Um engenheiro conduziu um experimento para testar tecidos com relação à chama, depois de aplicar tratamentos com retardantes de fogo. Os quatro fatores considerados são: o tipo de tecido (A), o tipo de tratamento de retardante de fogo (B), condição de lavagem (C -  o nível baixo é sem lavagem; o nível alto é depois de uma lavagem), e o método de condução do teste de chama (D). Todos os fatores foram corridos em dois níveis e a variável resposta são as polegadas de tecido queimado na amostra de teste de tamanho padrão. Análise adequadamente os dados provenientes desse experimento, apresentando as suas conclusões.
+#' @format Data frame com 16 linhas e duas variáveis:
+#' \itemize{
+#'   \item polegadas: polegadas de tecido queimado na amostra de teste de tamamnho padrão
+#'   \item combtrat: combinação de tratamentos
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
 #'
 NULL
