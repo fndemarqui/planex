@@ -365,7 +365,7 @@ table2kunrep <- function(object){
 #'
 plotResiduals <- function(model){
 
-  k <- sturges.freq(residuals(model))$classes
+  k <- ceiling(1 + log(length(residuals(model)),2))
   p1 <- ggplot(model, aes(x = .resid)) +
    geom_histogram(bins = k, color="white") +
    xlab("Residuals") +
