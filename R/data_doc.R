@@ -512,6 +512,24 @@ NULL
 NULL
 
 
+#' Taxa de filtragem de um produto químico (meia fração)
+#'
+#' @name filtragemFrac
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 14.44: Um produto químico é produzido em um vaso de pressão. Um experimento fatorial fracionário (meia fração) é realizado na planta piloto para estudar os fatores que podem vir a influenciar a taxa de filtragem desse produto. Os quatro fatores são temperatura (A), pressão (B), concentração de formaldeído (C) e taxa de agitação (D). Cada fator está presente em dois níveis. . O engenheiro de processos está interessado em maximizar a taxa de filtração.
+#' @format Data frame com 8 linhas e 2 variáveis:
+#' \itemize{
+#'   \item filtragem: taxa de filtragem (variável resposta)
+#'   \item comb_trat: combinação de tratamentos (ausência da letra indica nível baixo; presença, nível alto)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+
 #' Zarcões de tintas para aviões
 #'
 #' @name zarcao
@@ -687,6 +705,24 @@ NULL
 #' \itemize{
 #'   \item polegadas: polegadas de tecido queimado na amostra de teste de tamamnho padrão
 #'   \item combtrat: combinação de tratamentos
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+#' Tratamentos de retardantes de fogo
+#'
+#' @name ft
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 14.1: Um engenheiro conduziu um experimento para investigar o feito de dois fatores (tipo de vidro e tipo de fósforo) sobre o brilho de um tubo de televisão. A variável resposta medida é a corrente (em microampères) necessária para a obtenção de um nível especificado de brilho. Análise adequadamente os dados provenientes desse experimento, apresentando as suas conclusões.
+#' @format Data frame com 18 linhas e três variáveis:
+#' \itemize{
+#'   \item corrente: variável resposta (em microampères)
+#'   \item vidro: tipo de vidro (fator 1; 2 níveis)
+#'   \item fosforo: tipo de fósforo (fator 2; 3 níveis)
 #' }
 #' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
 #'

@@ -16,8 +16,8 @@ devtools::build_manual()
 devtools::build()
 
 
-fogo <- read.table("inst/dados.txt", header=TRUE)
-usethis::use_data(fogo, overwrite = TRUE)
+#televisores <- read.table("inst/dados.txt", header=TRUE)
+usethis::use_data(filtragemFrac, overwrite = TRUE)
 
 # criar função is.balanced()....
 
