@@ -486,6 +486,10 @@ testResiduals <- function(model, normality.test = c("SW", "AD"),
   }else{
     cat("Levene test of Homogeneity of Variances:", "\n")
   }
-
   print(tab)
+
+  cat("\n")
+  cat("-----------------------------------------------", "\n")
+  cat("Durbin-Watson Test for Autocorrelated Errors:", "\n")
+  print(car::durbinWatsonTest(model))
 }
