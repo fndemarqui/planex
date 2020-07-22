@@ -2,7 +2,7 @@
 % Please edit documentation in R/biblioteca.R
 \name{plotResiduals}
 \alias{plotResiduals}
-\title{Residual's plots for ANOVA models}
+\title{Residuals' plots for ANOVA models}
 \usage{
 plotResiduals(model)
 }

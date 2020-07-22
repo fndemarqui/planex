@@ -16,6 +16,7 @@ devtools::build_manual()
 devtools::build()
 
 
+
 #televisores <- read.table("inst/dados.txt", header=TRUE)
 #usethis::use_data(filtragemFrac, overwrite = TRUE)
 

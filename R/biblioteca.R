@@ -347,7 +347,7 @@ table2kunrep <- function(object){
 }
 
 
-#' Residual's plots for ANOVA models
+#' Residuals' plots for ANOVA models
 #' @aliases plotResiduals
 #' @export
 #' @description This function is only suitable to analyze residuals of ANOVA models. It must not be used to analyze residuals from regression or ANCOVA models.
@@ -380,7 +380,7 @@ plotResiduals <- function(model){
     geom_line(aes(y=0), color="blue") +
     xlab("Order of observations") +
     ylab("Residuals")
-  p1
+  plot(p1)
 
   p2 <- ggplot(model, aes(sample = .resid)) +
     stat_qq() + stat_qq_line(color="blue") +
@@ -388,9 +388,10 @@ plotResiduals <- function(model){
   plot(p2)
 
 
-  p3 <-ggplot(model, aes(.fitted, .resid)) +
+  p3 <- ggplot(model, aes(.fitted, .resid)) +
     geom_point() +
-    stat_smooth(method="loess", se = FALSE) +
+    geom_line(aes(y=0), color="blue") +
+    #stat_smooth(method="loess", se = TRUE) +
     xlab("Fitted values") +
     ylab("Residuals")
   suppressWarnings(plot(p3))
@@ -401,6 +402,8 @@ plotResiduals <- function(model){
   for(i in 2:ncol(mf)){
     p <- ggplot(model, aes(x = mf[,i] , y = .resid)) +
       geom_jitter(position=position_jitter(0.1)) +
+      #geom_line(aes(y=0), color="blue") +
+      geom_hline(yintercept = 0, color = "blue") +
       xlab(variable[i]) +
       ylab("residuals")
     plot(p)
