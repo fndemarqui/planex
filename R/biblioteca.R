@@ -347,9 +347,10 @@ table2kunrep <- function(object){
 }
 
 
-#' Residual plot checks
+#' Residual's plots for ANOVA models
 #' @aliases plotResiduals
 #' @export
+#' @description This function is only suitable to analyze residuals of ANOVA models. It must not be used to analyze residuals from regression or ANCOVA models.
 #' @param model an object of the class lm or aov.
 #' @return residual plots suitable for residual analysis of data from design experiments.
 #'
@@ -397,4 +398,94 @@ plotResiduals <- function(model){
     plot(p)
   }
 
+}
+
+
+
+
+#' Residual's formal tests for ANOVA models
+#' @aliases testResiduals
+#' @export
+#' @description This function is only suitable to analyze residuals of ANOVA models. It must not be used to analyze residuals from regression or ANCOVA models.
+#' @param model an object of the class lm or aov.
+#' @param normality.test type of normality test; currently Shapiro-Wilk (SW) and Anderson-Darling (AD) tests are available
+#' @param var.test type of homogeneity test of variances; currently Bartlett and Levene tests are available
+#' @return residuals' normality test and residuals' homoneity test of variances.
+#'
+#' @examples
+#' library(planex)
+#' library(tidyverse)
+#' baterias <- mutate(baterias,
+#'   temperatura = as.factor(temperatura),
+#'   tipo = as.factor(tipo)
+#' )
+#'
+#' mod <- aov(tempo ~ temperatura*tipo, data=baterias)
+#' testResiduals(mod)
+#'
+testResiduals <- function(model, normality.test = c("SW", "AD"),
+                          var.test = c("Bartlett", "Levene")){
+  resid <- residuals(model)
+
+  test1 <- match.arg(normality.test)
+  test2 <- match.arg(var.test)
+
+  switch(test1,
+         "SW" = print(stats::shapiro.test(resid)),
+         "AD" = print(nortest::ad.test(resid))
+         )
+
+  #--------------------------------------------------------------
+
+  tabBartlett <- function(aux){
+    tab <- data.frame(aux$statistic, aux$parameter, aux$p.value)
+    names(tab) <- c("Bartlett's K-squared", "df", "p.value")
+    return(tab)
+  }
+
+  tabLevene <- function(aux){
+    tab <- data.frame(aux$'F value', aux$Df, aux$'Pr(>F)')
+    names(tab) <- c("F value", "df", "p.value")
+    return(tab)
+  }
+
+  mf <- as.data.frame(stats::model.frame(model))
+  variable <- names(mf)
+  k <- ncol(mf)
+
+  if(test2 == "Bartlett"){
+    aux <- stats::bartlett.test(resid~mf[,2])
+    tab <- tabBartlett(aux)
+  }else{
+    aux <- car::leveneTest(resid~mf[,2])[1,]
+    tab <- tabLevene(aux)
+  }
+
+  if(k > 2){
+
+    if(test2 == "Bartlett"){
+      for(i in 3:k){
+        aux1 <- bartlett.test(resid~mf[,i])
+        aux2 <- tabBartlett(aux1)
+        tab <- rbind(tab, aux2)
+      }
+    }else{
+      for(i in 3:k){
+        aux1 <- car::leveneTest(resid~mf[,i])[1,]
+        aux2 <- tabLevene(aux1)
+        tab <- rbind(tab, aux2)
+      }
+    }
+
+  }
+  rownames(tab) <- variable[-1]
+
+  cat("------------------------------------------", "\n")
+  if(test2 == "Bartlett"){
+    cat("Bartlett test of Homogeneity of Variances:", "\n")
+  }else{
+    cat("Levene test of Homogeneity of Variances:", "\n")
+  }
+
+  print(tab)
 }

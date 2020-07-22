@@ -2,7 +2,7 @@
 % Please edit documentation in R/biblioteca.R
 \name{plotResiduals}
 \alias{plotResiduals}
-\title{Residual plot checks}
+\title{Residual's plots for ANOVA models}
 \usage{
 plotResiduals(model)
 }
@@ -13,7 +13,7 @@ plotResiduals(model)
 residual plots suitable for residual analysis of data from design experiments.
 }
 \description{
-Residual plot checks
+This function is only suitable to analyze residuals of ANOVA models. It must not be used to analyze residuals from regression or ANCOVA models.
 }
 \examples{
 library(planex)

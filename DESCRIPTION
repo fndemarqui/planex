@@ -11,6 +11,7 @@ Depends:
 Imports: 
   car,
   dplyr,
+  nortest,
   rlang,
   stringi,
   stringr
