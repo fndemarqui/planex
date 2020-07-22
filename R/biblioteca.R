@@ -367,12 +367,20 @@ table2kunrep <- function(object){
 plotResiduals <- function(model){
 
   k <- ceiling(1 + log(length(residuals(model)),2))
-  p1 <- ggplot(model, aes(x = .resid)) +
+  p0 <- ggplot(model, aes(x = .resid)) +
    geom_histogram(bins = k, color="white") +
    xlab("Residuals") +
    ylab("Frequency")
-  plot(p1)
+  plot(p0)
 
+
+  p1 <- ggplot(model, aes(x=1:length(.resid), y=.resid)) +
+    geom_point() +
+    geom_line() +
+    geom_line(aes(y=0), color="blue") +
+    xlab("Order of observations") +
+    ylab("Residuals")
+  p1
 
   p2 <- ggplot(model, aes(sample = .resid)) +
     stat_qq() + stat_qq_line(color="blue") +
