@@ -713,7 +713,7 @@ NULL
 
 #' Tratamentos de retardantes de fogo
 #'
-#' @name ft
+#' @name televisao
 #' @docType data
 #' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
