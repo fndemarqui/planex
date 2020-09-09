@@ -641,7 +641,7 @@ NULL
 
 #' Acabamento de superfície de peças metálicas
 #'
-#' @name acabamento
+#' @name corrente
 #' @docType data
 #' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
@@ -725,5 +725,23 @@ NULL
 #'   \item fosforo: tipo de fósforo (fator 2; 3 níveis)
 #' }
 #' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+#' Capacidade de sistemas de medição
+#'
+#' @name capacidade
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo 13.1: Um instrumento é utilizado para medir uma dimensão crítica em uma peça. Vinte partes foram selecionadas do processo de produção, e três operadores selecionados aleatoriamente medem cada parte duas vezes com este medidor. A ordem em que as medições são feitas é completamente aleatória, resultando em um delineamento com dois fatores aleatórios (peças e operadores) e duas replicações.
+#' @format Data frame com 120 linhas e 3 variáveis:
+#' \itemize{
+#'   \item medicao: variável resposta
+#'   \item peca: peça utilizada para a medição
+#'   \item operador: operador que realiza a medição
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL

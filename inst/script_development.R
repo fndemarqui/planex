@@ -1,8 +1,8 @@
 
 
 
-# teares <- read.table("exemplo13_4.txt", header=TRUE)
-# usethis::use_data(teares, overwrite = TRUE)
+capacidade <- read.table("inst/dados.txt", header=TRUE)
+usethis::use_data(capacidade, overwrite = TRUE)
 
 # rugosidade <- read.table("inst/dados.txt", header=TRUE)
 # usethis::use_data(rugosidade, overwrite = TRUE)
