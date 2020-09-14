@@ -1,4 +1,4 @@
-peca	operadores	medida
+peca	operador	medida
 1	1	21
 1	1	20
 2	1	24

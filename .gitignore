@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+inst/dados.txt
+inst/script_github.R
