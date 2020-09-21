@@ -4,8 +4,8 @@
 # capacidade <- read.table("inst/dados.txt", header=TRUE)
 # usethis::use_data(capacidade, overwrite = TRUE)
 
-# rugosidade <- read.table("inst/dados.txt", header=TRUE)
-# usethis::use_data(rugosidade, overwrite = TRUE)
+# turbinas <- read.table("inst/dados.txt", header=TRUE)
+# usethis::use_data(turbinas, overwrite = TRUE)
 
 devtools::document()
 devtools::install()
