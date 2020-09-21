@@ -745,3 +745,22 @@ NULL
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
+
+
+#' Capacidade de sistemas de medição
+#'
+#' @name turbinas
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo 13.6: A queda de pressão medida através de uma válvula de expansão em uma turbina está sendo estudada. O engenheiro de projeto considera que os fatores temperatura do gás no lado de entrada (A), operador (B), e o manômetro específico usado pelo operador (C) são importantes para explicar a leitura da queda de pressão. Esses três fatores são arranjados em um delineamento fatorial, em que temperatura é considerado um fator fixo e operador e manômetro aleatório são considerados fatore aleatórios.
+#' @format Data frame com 72 linhas e 4 variáveis:
+#' \itemize{
+#'   \item queda: queda de pressão medida
+#'   \item temperatura (A): temperatura do gás no lado de entrada
+#'   \item operador (B): operador que realiza a medição
+#'   \item mamometro(C): manômetro específico usado pelo operador
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
