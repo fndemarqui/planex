@@ -764,3 +764,59 @@ NULL
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
+
+
+#' Rendimento de um processo químico
+#'
+#' @name rendimentoFrac
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 8.1: Um engenheiro realizou um experimento com o objetivo de melhorar o rendimento de um processo químico. Quadro fatores foram selecionados e, por questões orçamentárias, o engenheiro optou por utilizar o delineamento $2^{4-1}$. Apresente a análise dos dados desse experimento.
+#' @format Data frame com 8 linhas e 5 variáveis:
+#' \itemize{
+#'   \item rendimento: variável resposta
+#'   \item A: fator A
+#'   \item B: fator B
+#'   \item C: fator C
+#'   \item D: fator D
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
+
+
+#' Rendimento de um processo químico
+#'
+#' @name carrinhos
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 15.11: Um distribuidor de refrigerantes está estudando a eficácia dos métodos de entrega. Para tanto, três diferentes tipos de carrinhos de mão foram desenvolvidos, e um experimento foi realizado no laboratório de métodos de engenharia da empresa. A variável de interesse é o tempo de entrega em minutos. Os engenheiros suspeitam que o tempo de entrega está relacionado ao o volume de garrafas entregues. Cada carrinho de mão é usado quatro vezes. Os dados referentes a este experimento foram ligeiramente alterados.
+#' @format Data frame com 8 linhas e 5 variáveis:
+#' \itemize{
+#'   \item tempo: variável resposta (em minutos)
+#'   \item carrinho: tipo de carrinho (variável categórica com 3 níveis)
+#'   \item volume
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
+
+
+#' Força de fibras sintéticas
+#'
+#' @name forca
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 13.3: Os fatores que influenciam a resistência à ruptura de um fibras sintéticas estão sendo estudados. As quatro máquinas de produção disponíveis e três operadores são escolhidos e um experimento fatorial é executado usando fibras de um mesmo lote de produção.
+#' @format Data frame com 24 linhas e 3 variáveis:
+#' \itemize{
+#'   \item forca: variável resposta.
+#'   \item operador: fator aleatório com 3 níveis.
+#'   \item maquina: fator fixo com 4 níveis.
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL

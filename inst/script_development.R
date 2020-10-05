@@ -4,8 +4,8 @@
 # capacidade <- read.table("inst/dados.txt", header=TRUE)
 # usethis::use_data(capacidade, overwrite = TRUE)
 
-# turbinas <- read.table("inst/dados.txt", header=TRUE)
-# usethis::use_data(turbinas, overwrite = TRUE)
+forca <- read.table("inst/dados.txt", header=TRUE)
+usethis::use_data(forca, overwrite = TRUE)
 
 devtools::document()
 devtools::install()
