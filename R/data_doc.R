@@ -820,3 +820,21 @@ NULL
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
+
+
+#' Pureza de matéria prima
+#'
+#' @name fornecedores
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo 14.1: Uma empresa compra matéria-prima, em lotes, de três fornecedores diferentes. A pureza da matéria-prima varia consideravelmente, o que causa problemas na fabricação do produto final. Queremos determinar se a variável a pureza é atribuível a diferenças entre os fornecedores. Quatro lotes de matéria-prima são selecionados aleatoriamente de cada fornecedor, e três determinações de pureza são feitas em cada lote.
+#' @format Data frame com 36 linhas e 3 variáveis:
+#' \itemize{
+#'   \item pureza: variável resposta.
+#'   \item fornecedor: fator fixo com 3 níveis.
+#'   \item lote: fator aleatório com 4 níveis.
+#' }
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
