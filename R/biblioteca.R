@@ -1,5 +1,6 @@
 
 #' Teste de não aditividade de Tukey
+#' @export
 #' @description Implementação do teste de não aditividade proposto por Tukey (1949) para testar o efeito de interação envolvendo delineamentos com dois fatores fixos cruzados e  uma  única replicação.
 #' @aliases interactionTest
 #' @description Realiza o teste de nao aditividade para delineamentos com dois fatores fixos cruzados.
@@ -142,14 +143,14 @@ interPlot4 <- function(object){
 
 
 #' Interaction plot for factorial designs with up to 4 factors.
-#' @rdname interactionPlot
+#' @export
 #' @aliases interactionPlot
 #' @description This function draws the interaction plot for factorial designs with up to 4 factors using ggplot2 package. The display of the plots depends on the order of factors entering in the model.
 #' @param object fitted model of class aov or lm
 #' @return the desired interaction plot
 #' @examples
 #'
-#' #' library(planex)
+#' library(planex)
 #' library(tidyverse)
 #'
 #' # Exemplo da impureza de um produto químico:
@@ -161,7 +162,7 @@ interPlot4 <- function(object){
 #')
 #'
 #' mod <- aov(impureza~temperatura+pressao, data=impureza)
-#' interPlot2(mod)
+#' interactionPlot(mod)
 #'
 #' # Exemplo do tempo de vida de baterias:
 #'
@@ -173,7 +174,7 @@ interPlot4 <- function(object){
 #')
 #'
 #' mod <- aov(tempo~temperatura+tipo, data=baterias)
-#' interPlot2(mod)
+#' interactionPlot(mod)
 #'
 #' # Exemplo das garrafas de refrigerante:
 #'
@@ -184,10 +185,10 @@ interPlot4 <- function(object){
 #' mod3 <- aov(desvio~velocidade+carbonatacao+pressao, data=refrigerantes)
 #' mod4 <- aov(desvio~velocidade+pressao+carbonatacao, data=refrigerantes)
 #'
-#' interPlot3(mod1)
-#' interPlot3(mod2)
-#' interPlot3(mod3)
-#' interPlot3(mod4)
+#' interactionPlot(mod1)
+#' interactionPlot(mod2)
+#' interactionPlot(mod3)
+#' interactionPlot(mod4)
 #'
 #' # Exemplo das garrafas de refrigerante:
 #'
@@ -198,10 +199,10 @@ interPlot4 <- function(object){
 #' mod3 <- aov(filtragem ~ concentracao+temperatura+pressao+agitacao, data=filtragem)
 #' mod4 <- aov(filtragem ~ agitacao+pressao+temperatura+concentracao, data=filtragem)
 #'
-#' interPlot4(mod1)
-#' interPlot4(mod2)
-#' interPlot4(mod3)
-#' interPlot4(mod4)
+#' interactionPlot(mod1)
+#' interactionPlot(mod2)
+#' interactionPlot(mod3)
+#' interactionPlot(mod4)
 #'
 
 interactionPlot <- function(object){

@@ -17,7 +17,7 @@ This function draws the interaction plot for factorial designs with up to 4 fact
 }
 \examples{
 
-#' library(planex)
+library(planex)
 library(tidyverse)
 
 # Exemplo da impureza de um produto químico:
@@ -29,7 +29,7 @@ impureza <- mutate(impureza,
 )
 
 mod <- aov(impureza~temperatura+pressao, data=impureza)
-interPlot2(mod)
+interactionPlot(mod)
 
 # Exemplo do tempo de vida de baterias:
 
@@ -41,7 +41,7 @@ baterias <- mutate(baterias,
 )
 
 mod <- aov(tempo~temperatura+tipo, data=baterias)
-interPlot2(mod)
+interactionPlot(mod)
 
 # Exemplo das garrafas de refrigerante:
 
@@ -52,10 +52,10 @@ mod2 <- aov(desvio~pressao+carbonatacao+velocidade, data=refrigerantes)
 mod3 <- aov(desvio~velocidade+carbonatacao+pressao, data=refrigerantes)
 mod4 <- aov(desvio~velocidade+pressao+carbonatacao, data=refrigerantes)
 
-interPlot3(mod1)
-interPlot3(mod2)
-interPlot3(mod3)
-interPlot3(mod4)
+interactionPlot(mod1)
+interactionPlot(mod2)
+interactionPlot(mod3)
+interactionPlot(mod4)
 
 # Exemplo das garrafas de refrigerante:
 
@@ -66,9 +66,9 @@ mod2 <- aov(filtragem ~ pressao+temperatura+concentracao+agitacao, data=filtrage
 mod3 <- aov(filtragem ~ concentracao+temperatura+pressao+agitacao, data=filtragem)
 mod4 <- aov(filtragem ~ agitacao+pressao+temperatura+concentracao, data=filtragem)
 
-interPlot4(mod1)
-interPlot4(mod2)
-interPlot4(mod3)
-interPlot4(mod4)
+interactionPlot(mod1)
+interactionPlot(mod2)
+interactionPlot(mod3)
+interactionPlot(mod4)
 
 }

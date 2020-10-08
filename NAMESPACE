@@ -2,6 +2,8 @@
 
 export(Fpower)
 export(as.factor2k)
+export(interactionPlot)
+export(interactionTest)
 export(plotResiduals)
 export(table2kunrep)
 export(testResiduals)
