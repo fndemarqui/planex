@@ -838,3 +838,21 @@ NULL
 #' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
+
+
+#' Competição de vinhos
+#'
+#' @name vinhos
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo: Em uma competição de julgamento de vinhos, quatro vinhos Chardonnay da mesma safra foram julgados por seis juízes, selecionados aleatoriamente de uma lista de sommeliers renomados. Cada juiz provou os vinhos de forma cega, ou seja, sem conhecer suas identidades. A ordem da apresentação do vinho foi aleatorizada de forma independente para cada juiz. Cada vinho foi avaliado em uma escala de 40 pontos; quanto maior a pontuação, maior é a excelência do vinho.
+#' @format Data frame com 24 linhas e 3 variáveis:
+#' \itemize{
+#'   \item score: pontuação atribuída ao vinho.
+#'   \item juiz: degustador do vinho (variável categórica com 6 níveis).
+#'   \item vinho: vinhos participantes da competição (variável categória com 4 níveis).
+#' }
+#' @references  Kutner, M. H.,  Nachtsheim, C. J., Neter, J., Li, W. (2005). Applied Linear Statistical Models, 5th Edition, New York: McGraw-Hill.
+#'
+NULL
