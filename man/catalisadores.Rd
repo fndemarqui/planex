@@ -16,7 +16,7 @@ Data frame com 12 linhas e 3 variáveis:
 Delineamento com blocos incompletos balanceados conduzido com o objetivo de avaliar o efeito de 4 diferentes tipos de catalisadores sobre o tempo de reação de um processo químico.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

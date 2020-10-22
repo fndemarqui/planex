@@ -16,7 +16,7 @@ Data frame com 24 linhas e 3 variáveis:
 Exercício 13.3: Os fatores que influenciam a resistência à ruptura de um fibras sintéticas estão sendo estudados. As quatro máquinas de produção disponíveis e três operadores são escolhidos e um experimento fatorial é executado usando fibras de um mesmo lote de produção.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

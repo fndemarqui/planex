@@ -19,7 +19,7 @@ Data frame com 16 linhas e 5 variáveis:
 Exemplo 6.2: Um produto químico é produzido em um vaso de pressão. Um experimento fatorial é realizado na planta piloto para estudar os fatores que podem vir a influenciar a taxa de filtragem desse produto. Os quatro fatores são temperatura (A), pressão (B), concentração de formaldeído (C) e taxa de agitação (D). Cada fator está presente em dois níveis. O desenho da matriz e os dados de resposta obtidos de uma única réplica. As 16 corridas são feitas em ordem aleatória. O engenheiro de processos está interessado em maximizar a taxa de filtração.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

@@ -15,7 +15,7 @@ Data frame com 36 linhas e duas variáveis:
 Um experimento foi conduzido para investigar o efeito do consumo de chocolate sobre saúde cardiovascular. O experimento consistiu no uso de três tipos diferentes de chocolates: 100 g de chocolate, 100 g de chocolate amargo com 200 mL de leite integral, e 200 g de chocolate ao leite. Os voluntários participantes do estudo receberam aleatoriamente um dos 3 tipos de chocolates investigados e depois de uma hora do consumo do produto a capacidade antioxidante do plasma sanguíneo foi medida em um ensaio. Analise adequadamente os dados provenientes desse experimento, apresentando as conclusões práticas.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

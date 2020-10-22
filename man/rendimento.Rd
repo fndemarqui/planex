@@ -18,7 +18,7 @@ Data frame com 25 linhas e 5 variáveis:
 Exercício 4.35: O rendimento de um processo químico foi medido usando-se 5 lotes de matéria prima, 5 concentrações de ácido, 5 tempos de espera, e 5 concentrações de catalisadores, configurando um delineamento do tipo quadrado greco-latino. Analise adequadamente os dados provenientes desse experimento, apresentando as suas conclusões práticas.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

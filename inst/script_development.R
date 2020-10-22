@@ -14,8 +14,8 @@ usethis::use_git_ignore("inst/script_github.R")
 
 #tools::showNonASCIIfile("R/biblioteca.R")
 
-# vinhos <- read.table("inst/dados.txt", header=TRUE)
-# usethis::use_data(vinhos, overwrite = TRUE)
+# turbinas2 <- read.table("inst/dados.txt", header=TRUE)
+# usethis::use_data(turbinas2, overwrite = TRUE)
 
 # criar função is.balanced()....
 

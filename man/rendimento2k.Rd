@@ -16,7 +16,7 @@ Data frame com 12 linhas e 3 variáveis:
 Exemplo (pág. 234): Um engenheiro químico está interessado em investigar o efeito da concentração de um reagente (fator A) e da quantidade de catalisador (fator B) sobre o rendimento de um processo químico com o objetivo de verificar se ajustes sobre os níveis tais fatores aumentariam o rendimento.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

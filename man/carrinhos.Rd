@@ -16,7 +16,7 @@ Data frame com 8 linhas e 5 variáveis:
 Exercício 15.11: Um distribuidor de refrigerantes está estudando a eficácia dos métodos de entrega. Para tanto, três diferentes tipos de carrinhos de mão foram desenvolvidos, e um experimento foi realizado no laboratório de métodos de engenharia da empresa. A variável de interesse é o tempo de entrega em minutos. Os engenheiros suspeitam que o tempo de entrega está relacionado ao o volume de garrafas entregues. Cada carrinho de mão é usado quatro vezes. Os dados referentes a este experimento foram ligeiramente alterados.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

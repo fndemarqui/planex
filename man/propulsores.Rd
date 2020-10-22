@@ -18,7 +18,7 @@ Data frame com 25 linhas e 5 variáveis:
 (Exemplo 4.3) Delineamento em esquema quadrado greco-latino conduzido para avaliar 5 diferentes formulações de propulsores de foguetes.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

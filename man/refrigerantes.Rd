@@ -17,7 +17,7 @@ Data frame com 24 linhas e 4 variáveis:
 Delineamento com 3 fatores fixos cruzados conduzido para avaliar o efeito da carbonatação, da pressão de operação, e a da velocidade da linha de produção sobre o desvio do volume nominal de garrafas de refrigerante.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

@@ -16,7 +16,7 @@ Data frame com 36 linhas e 3 variáveis:
 Delineamento com dois fatores fixos cruzados conduzido para avaliar o efeito do tipo de material e nível de temperatura sobre o tempo de vida de baterias.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

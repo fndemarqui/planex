@@ -16,7 +16,7 @@ Data frame com 120 linhas e 3 variáveis:
 Exemplo 13.1: Um instrumento é utilizado para medir uma dimensão crítica em uma peça. Vinte partes foram selecionadas do processo de produção, e três operadores selecionados aleatoriamente medem cada parte duas vezes com este medidor. A ordem em que as medições são feitas é completamente aleatória, resultando em um delineamento com dois fatores aleatórios (peças e operadores) e duas replicações.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

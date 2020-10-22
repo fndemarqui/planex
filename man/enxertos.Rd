@@ -16,7 +16,7 @@ Data frame com 24 linhas e 3 variáveis:
 Um delineamento com blocos completos aleatorizados foi realizado com o objetivo de avaliar o efeito de diferentes níveis de pressão na ocorrência de saliências em enxertos vasculares produzidos com diferentes lotes de materia prima (fonte de variablidade de perturbação). Analise adequadamente os dados provenientes desse experimento, apresentando as conclusões práticas.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

@@ -16,7 +16,7 @@ Data frame com 20 linhas e 3 variáveis:
 Exercício 4.40: Um engenheiro está estudando o desempenho da quilometragem característica de cinco tipos de aditivos à gasolina. No teste de estrada ele deseja usar carros como blocos; no entanto, devido a uma restrição de tempo, ele deve usar um delineamento com blocos incompletos. Analise adequadamente os dados desse experimento e apresente as conclusões práticas.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

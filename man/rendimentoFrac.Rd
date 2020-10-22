@@ -18,7 +18,7 @@ Data frame com 8 linhas e 5 variáveis:
 Exercício 8.1: Um engenheiro realizou um experimento com o objetivo de melhorar o rendimento de um processo químico. Quadro fatores foram selecionados e, por questões orçamentárias, o engenheiro optou por utilizar o delineamento $2^{4-1}$. Apresente a análise dos dados desse experimento.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

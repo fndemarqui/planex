@@ -18,7 +18,7 @@ Data frame com 16 linhas e 5 variáveis:
 Exercício 4.36: Um engenheiro industrial está investigando o efeito de 4 tipos de métodos de montagem sobre o tempo de montagem de um componente de tv. Quatro operadores foram selecionados para o  estudo. Além disso, o engenheiro sabe que que cada processo de montagem gera fadiga (no operador), afetando o tempo de montagem das sucessivas componentes. O engenheiro também suspeita que o local de trabalho dos operadores pode afetar o tempo de montagem. Desta forma, um experimento do tipo quadrado greco-latino foi conduzido, visando controlar as fontes de variação de perturbação. Analise adequadamente os dados desse experimento, apresentando as conclusões práticas.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

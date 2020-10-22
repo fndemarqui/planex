@@ -16,7 +16,7 @@ Data frame com 15 linhas e 3 variáveis:
 Exemplo 5.2: A impureza de um produto químico é afetada por dois fatores, a saber: temperatura e pressão. Um exeprimento com dois fatores fixos cruzados foi conduzido para avaliar o efeito desses dois fatores sobre a impureza do produto químico.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

@@ -16,7 +16,7 @@ Data frame com 8 linhas e 3 variáveis:
 Exemplo de efeitos de interação em delineamentos com dois fatores fixos cruzados.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

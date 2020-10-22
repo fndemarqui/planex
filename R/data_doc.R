@@ -29,7 +29,7 @@ NULL
 #'   \item capacidade: capacidade antioxidante do plasma sanguíneo (variável resposta)
 #'   \item tipo: tipo de chocolate consumido (variável categórica com quadro níveis; fator de interesse)
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -186,7 +186,7 @@ NULL
 #'   \item tipo: tipo de material utilizado para a fabricação da bateria (variável categórica com três níveis; fator de interesse principal)
 #'   \item temperatura: temperatura (em ºF) na qual a bateria será exposta (variável categórica com três níveis; fator de interesse principal)
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -206,7 +206,7 @@ NULL
 #'   \item pressao:  pressão (em libras)  (variável categórica com 2 níveis; fator de interesse principal)
 #'   \item velocidade: velocidade da linha de produção (variável categórica com 2 níveis; fator de interesse principal)
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -224,7 +224,7 @@ NULL
 #'   \item maquina: máquina utilizada na produção das fibras de monofilamento (variável categórica com três níveis; fator de interesse principal)
 #'   \item diametro:  diâmetro da fibra de monofilamento (covariável; interesse secundário)
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -244,7 +244,7 @@ NULL
 #'   \item formulacao: tipos de formulação sendo comparadas (variável categórica com 5 níveis; fator de interesse principal)
 #'   \item queima: taxa de queima
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -262,7 +262,7 @@ NULL
 #'   \item catalisador: catalisador utilizado no processo (variável categórica com 4 níveis; fator de interesse principal)
 #'   \item tempo: tempo de reação do processo químico (variável resposta)
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -281,7 +281,7 @@ NULL
 #'   \item operador: operador operar o equipamento (fator 2)
 #'   \item dimensao: dimensão da peça (variável resposta)
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -299,7 +299,7 @@ NULL
 #'   \item lote: lote de materia prima (bloco - fator de interesse secundário)
 #'   \item saliencia: saliência (variável resposta)
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -319,7 +319,7 @@ NULL
 #'   \item lote: lote de materia prima (bloco2 - fator de interesse secundário)
 #'   \item tempo: tempo de reação do processo químico (variável resposta)
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -339,7 +339,7 @@ NULL
 #'   \item metodo: método de montagem (variável categórica com 4 níveis; fator de interesse principal)
 #'   \item tempo: tempo de montagem da componente
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -359,7 +359,7 @@ NULL
 #'   \item tempo: tempo de espera (variável categórica com 5 níveis; fator de interesse principal)
 #'   \item rendimento: rendimento do processo químico
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -377,7 +377,7 @@ NULL
 #'   \item carro: carro utilizado para a realização do experimento (variável categórica com 5 níveis; bloco)
 #'   \item quilometragem: quilometragem observada (variável resposta)
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -395,7 +395,7 @@ NULL
 #'   \item dia: dia em que o experimento foi conduzido (variável categórica com 4 níveis; bloco)
 #'   \item forca: forca do papel (variável resposta)
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -413,7 +413,7 @@ NULL
 #'   \item catalisador: nivel baixo (1 libra): -1; nivel alto (2 libras): +1
 #'   \item rendimento: rendimento do processo químico
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -431,7 +431,7 @@ NULL
 #'   \item fator B: variável categórica com 2 níveis
 #'   \item resp: variável resposta
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -449,7 +449,7 @@ NULL
 #'   \item fator B: variável categórica com 2 níveis
 #'   \item resp: variável resposta
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -467,7 +467,7 @@ NULL
 #'   \item fator B: variável categórica com 2 níveis
 #'   \item resp: variável resposta
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -485,7 +485,7 @@ NULL
 #'   \item pressão: variável categórica com 5 níveis (fator 2)
 #'   \item impureza: impureza do produto químico (variável resposta)
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -507,7 +507,7 @@ NULL
 #'   \item filtragem: taxa de filtragem (variável resposta)
 #'   \item comb_trat: combinação de tratamentos (ausência da letra indica nível baixo; presença, nível alto)
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -615,7 +615,7 @@ NULL
 #'   \item rendimento: variável resposta
 #'   \item comb_trat: combinação de tratamentos.
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -742,7 +742,7 @@ NULL
 #'   \item peca: peça utilizada para a medição
 #'   \item operador: operador que realiza a medição
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -761,7 +761,7 @@ NULL
 #'   \item operador (B): operador que realiza a medição
 #'   \item mamometro(C): manômetro específico usado pelo operador
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -781,7 +781,7 @@ NULL
 #'   \item C: fator C
 #'   \item D: fator D
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -799,7 +799,7 @@ NULL
 #'   \item carrinho: tipo de carrinho (variável categórica com 3 níveis)
 #'   \item volume
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -817,7 +817,7 @@ NULL
 #'   \item operador: fator aleatório com 3 níveis.
 #'   \item maquina: fator fixo com 4 níveis.
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -835,7 +835,7 @@ NULL
 #'   \item fornecedor: fator fixo com 3 níveis.
 #'   \item lote: fator aleatório com 4 níveis.
 #' }
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
 
@@ -854,5 +854,23 @@ NULL
 #'   \item vinho: vinhos participantes da competição (variável categória com 4 níveis).
 #' }
 #' @references  Kutner, M. H.,  Nachtsheim, C. J., Neter, J., Li, W. (2005). Applied Linear Statistical Models, 5th Edition, New York: McGraw-Hill.
+#'
+NULL
+
+
+#' Pureza de matéria prima
+#'
+#' @name turbinas2
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 14.1: Um fabricante de turbinas de aviões está interessado em estudar a taxa de queima de turbinas provenientes de três processos de produção. Quatro lotes de turbinas são escolhidas ao acaso a partir da saída de cada um dos três processos de interesse, e três determinações da velocidade de combustão são feitas em cada lote. Pde-se: análise adequadamente os dados provenientes desse experimento.
+#' @format Data frame com 36 linhas e 3 variáveis:
+#' \itemize{
+#'   \item queima: taxa de queira (variável resposta).
+#'   \item processo: processo de produção (fator fixo com 3 níveis).
+#'   \item lote: lote de matéria prima (fator aleatório com 4 níveis).
+#' }
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL

@@ -17,7 +17,7 @@ Data frame com 72 linhas e 4 variáveis:
 Exemplo 13.6: A queda de pressão medida através de uma válvula de expansão em uma turbina está sendo estudada. O engenheiro de projeto considera que os fatores temperatura do gás no lado de entrada (A), operador (B), e o manômetro específico usado pelo operador (C) são importantes para explicar a leitura da queda de pressão. Esses três fatores são arranjados em um delineamento fatorial, em que temperatura é considerado um fator fixo e operador e manômetro aleatório são considerados fatore aleatórios.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}

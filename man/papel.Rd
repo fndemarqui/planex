@@ -16,7 +16,7 @@ Data frame com 21 linhas e 3 variáveis:
 Exercício 4.42: Sete concentrações diferentes de madeira estão sendo estudados para determinar seu efeito sobre a força do papel produzido. No entanto, a planta piloto só pode produzir três corridas do experimento por dia. Como os dias podem afetar a força do papel produzido, um delineamento com blocos incompletos aleatorizados foi conduzido. Analise os dados desse experimento e apresente as conclusões práticas.
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 }
 \author{
 Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
