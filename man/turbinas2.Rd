@@ -3,7 +3,7 @@
 \docType{data}
 \name{turbinas2}
 \alias{turbinas2}
-\title{Pureza de matéria prima}
+\title{Taxa de queima de turbinas de aviões}
 \format{
 Data frame com 36 linhas e 3 variáveis:
 \itemize{
@@ -13,7 +13,7 @@ Data frame com 36 linhas e 3 variáveis:
 }
 }
 \description{
-Exercício 14.1: Um fabricante de turbinas de aviões está interessado em estudar a taxa de queima de turbinas provenientes de três processos de produção. Quatro lotes de turbinas são escolhidas ao acaso a partir da saída de cada um dos três processos de interesse, e três determinações da velocidade de combustão são feitas em cada lote. Pde-se: análise adequadamente os dados provenientes desse experimento.
+Exercício 14.1: Um fabricante de turbinas de aviões está interessado em estudar a taxa de queima de turbinas provenientes de três processos de produção. Quatro lotes de turbinas são escolhidas ao acaso a partir da saída de cada um dos três processos de interesse, e três determinações da velocidade de combustão são feitas em cada lote. Pede-se: análise adequadamente os dados provenientes desse experimento.
 }
 \references{
 Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
