@@ -154,7 +154,7 @@ NULL
 NULL
 
 
-#' Efeitos do tipo de bocal sobre medidas de formas
+#' Escapamento de corrente elétrica em um dispositivo SOS MOSFETS
 #'
 #' @name escapamento
 #' @docType data

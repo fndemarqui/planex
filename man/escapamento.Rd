@@ -3,7 +3,7 @@
 \docType{data}
 \name{escapamento}
 \alias{escapamento}
-\title{Efeitos do tipo de bocal sobre medidas de formas}
+\title{Escapamento de corrente elétrica em um dispositivo SOS MOSFETS}
 \format{
 Data frame com 25 linhas e três variáveis:
 \itemize{
