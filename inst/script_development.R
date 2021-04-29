@@ -25,7 +25,7 @@ usethis::use_git_ignore("inst/script_github.R")
 
 devtools::build_readme()
 devtools::build_site()
-usethis::use_github_action("fndemarqui/planex")
+usethis::use_github_action("planex")  # necessário remover pasta docs do .gitignore
 
 
 #tools::showNonASCIIfile("R/biblioteca.R")
