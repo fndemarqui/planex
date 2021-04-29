@@ -409,6 +409,7 @@ plotResiduals <- function(model){
       ylab("residuals")
     plot(p)
   }
+  plots <- list(p1, p2, p3)
 
 }
 

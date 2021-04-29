@@ -1,7 +1,5 @@
 #' Pacote planex - Planejamento de Experimentos.
 #'
-#' @description Funções para análise e base de dados dos exemplos e exercícios utilizados na disciplina de Planejamento de Experimentos.
-#'
 #' @docType package
 #' @name planex-package
 #' @aliases planex
