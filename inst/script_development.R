@@ -1,5 +1,15 @@
 
 
+# rodar apenas uma vez:
+usethis::use_agpl3_license()
+usethis::use_readme_rmd()
+usethis::use_pkgdown()
+usethis::use_git_config(user.name = "fndemarqui",              # seu nome
+                       user.email = "fndemarqui@gmail.com")   # seu email
+
+
+
+
 devtools::document()
 devtools::install()
 devtools::load_all()
@@ -10,6 +20,12 @@ devtools::build()
 
 usethis::use_git_ignore("inst/dados.txt")
 usethis::use_git_ignore("inst/script_github.R")
+
+
+
+devtools::build_readme()
+devtools::build_site()
+usethis::use_github_action("fndemarqui/planex")
 
 
 #tools::showNonASCIIfile("R/biblioteca.R")
