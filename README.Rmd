@@ -29,7 +29,7 @@ Você pode instalar a versão de desenvolvimento do pacote planex a partir do  [
 devtools::install_github("fndemarqui/planex")
 ```
 
-## Examplo
+## Exemplo
 
 ```{r saquinhos}
 library(planex)

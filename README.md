@@ -19,7 +19,7 @@ do [GitHub](https://github.com/) da seguinte forma:
 devtools::install_github("fndemarqui/planex")
 ```
 
-## Examplo
+## Exemplo
 
 ``` r
 library(planex)
