@@ -6,8 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-Funções para análise e base de dados dos exemplos e exercícios
-utilizados na disciplina de Planejamento de Experimentos.
+Funções e bancos de dados dos exemplos para a disciplina de Planejamento
+de Experimentos.
 
 ## Installation
 
