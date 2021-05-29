@@ -1,5 +1,9 @@
 
 
+usethis::use_git_ignore("inst/script_development.R")
+
+
+
 # rodar apenas uma vez:
 usethis::use_agpl3_license()
 usethis::use_readme_rmd()

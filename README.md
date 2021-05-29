@@ -6,8 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-Funções e bancos de dados dos exemplos para a disciplina de Planejamento
-de Experimentos.
+Funções e bancos de dados para a disciplina de Planejamento de
+Experimentos.
 
 ## Installation
 

@@ -10,12 +10,18 @@ Depends:
     ggplot2,
     R (>= 2.10)
 Imports: 
+  agricolae,
   car,
-  dplyr,
+  emmeans,
+  FrF2,
+  GAD,
+  gganimate,
+  gridExtra,
+  kableExtra,
+  multcomp,
   nortest,
-  rlang,
-  stringi,
-  stringr
+  Rfit,
+  tidyverse  
 Suggests: tidyverse  
 Encoding: UTF-8
 LazyData: true
