@@ -18,26 +18,43 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-Funções e bancos de dados para a disciplina de Planejamento de Experimentos.
+The goal of planex is to ...
 
 ## Installation
 
-Você pode instalar a versão de desenvolvimento do pacote planex a partir do  [GitHub](https://github.com/) da seguinte forma:
+You can install the released version of planex from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("planex")
+```
+
+And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("fndemarqui/planex")
 ```
+## Example
 
-## Exemplo
+This is a basic example which shows you how to solve a common problem:
 
-```{r saquinhos}
+```{r example}
 library(planex)
-data(saquinhos)
-
-mod <- aov(resistencia ~ concentracao, data = saquinhos)
-plotResiduals(mod)
-summary(mod)
-
+## basic example code
 ```
 
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+
+```{r cars}
+summary(cars)
+```
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>.
+
+You can also embed plots, for example:
+
+```{r pressure, echo = FALSE}
+plot(pressure)
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.

@@ -874,3 +874,39 @@ NULL
 #' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 #'
 NULL
+
+
+#' Densidade cozida de um ânodo de carbono.
+#'
+#' @name densidade
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Um experimento foi conduzido para determinar se a temperatura de queima ou a posição do forno afetam a densidade cozida de um ânodo de carbono.
+#' @format Data frame com 18 linhas e 3 variáveis:
+#' \itemize{
+#'   \item posicao: posição do forno - fator fixo com 2 níveis
+#'   \item temperatura: temperatura de queima (°C) - fator fixo com 3 níveis
+#'   \item densidade: densidade cozida do ânodo de carbono (variável resposta)
+#' }
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
+
+
+#' Tempo de vida de pilhas para dispositivos eletrônicos.
+#'
+#' @name pilhas
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Um experimento foi conduzido para estudar a vida (em horas) de duas marcas diferentes de baterias em três dispositivos diferentes (rádio, câmera e DVD player portátil). Um delineamento com dois fatores fixos cruzados foi conduzido para investigar os efeitos do tipo de dispositivo e da marca da pilha sobre o tempo de vida das pilhas.
+#' @format Data frame com 12 linhas e 3 variáveis:
+#' \itemize{
+#'   \item pilha: marca da pilha (A; B) - fator fixo com 2 níveis
+#'   \item dispositivo: tipo de dispositivo eletrônico (rádio, câmera e DVD player portátil) - fator fixo com 3 níveis
+#'   \item horas: tempo de vida em horas (variável resposta)
+#' }
+#' @references  Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL

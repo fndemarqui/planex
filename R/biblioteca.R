@@ -446,7 +446,7 @@ testResiduals <- function(model, normality.test = c("SW", "AD"),
   switch(test1,
          "SW" = print(stats::shapiro.test(resid)),
          "AD" = print(nortest::ad.test(resid))
-         )
+  )
 
   #--------------------------------------------------------------
 
@@ -462,28 +462,29 @@ testResiduals <- function(model, normality.test = c("SW", "AD"),
     return(tab)
   }
 
-  mf <- as.data.frame(stats::model.frame(model))
+  mf <- as.data.frame(stats::model.frame(model)) %>%
+    select(which(sapply(.,is.factor)))
   variable <- names(mf)
   k <- ncol(mf)
 
   if(test2 == "Bartlett"){
-    aux <- stats::bartlett.test(resid~mf[,2])
+    aux <- stats::bartlett.test(resid~mf[,1])
     tab <- tabBartlett(aux)
   }else{
-    aux <- car::leveneTest(resid~mf[,2])[1,]
+    aux <- car::leveneTest(resid~mf[,1])[1,]
     tab <- tabLevene(aux)
   }
 
-  if(k > 2){
+  if(k > 1){
 
     if(test2 == "Bartlett"){
-      for(i in 3:k){
+      for(i in 2:k){
         aux1 <- bartlett.test(resid~mf[,i])
         aux2 <- tabBartlett(aux1)
         tab <- rbind(tab, aux2)
       }
     }else{
-      for(i in 3:k){
+      for(i in 2:k){
         aux1 <- car::leveneTest(resid~mf[,i])[1,]
         aux2 <- tabLevene(aux1)
         tab <- rbind(tab, aux2)
@@ -491,7 +492,8 @@ testResiduals <- function(model, normality.test = c("SW", "AD"),
     }
 
   }
-  rownames(tab) <- variable[-1]
+  #rownames(tab) <- variable[-1]
+  rownames(tab) <- names(mf)
 
   cat("------------------------------------------", "\n")
   if(test2 == "Bartlett"){

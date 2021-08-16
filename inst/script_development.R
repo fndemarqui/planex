@@ -37,8 +37,8 @@ usethis::use_github_action("pkgdown")
 
 #tools::showNonASCIIfile("R/biblioteca.R")
 
-# turbinas2 <- read.table("inst/dados.txt", header=TRUE)
-# usethis::use_data(turbinas2, overwrite = TRUE)
+sabor <- read.table("inst/dados.txt", header=TRUE)
+usethis::use_data(sabor, overwrite = TRUE)
 
 # criar função is.balanced()....
 
