@@ -1,7 +1,7 @@
 Package: planex
 Type: Package
 Title: Planejamento e Análise de Experimentos
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: person(given = "Fabio", family = "Demarqui", email = "fndemarqui@est.ufmg.br", role = c("aut", "cre"))
 Description: Funções para análise e base de dados dos exemplos e exercícios utilizados na disciplina de Planejamento de Experimentos.
 License: AGPL (>= 3)
