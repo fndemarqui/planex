@@ -463,7 +463,7 @@ testResiduals <- function(model, normality.test = c("SW", "AD"),
   }
 
   mf <- as.data.frame(stats::model.frame(model)) %>%
-    select(which(sapply(.,is.factor)))
+    dplyr::selectselect(which(sapply(.,is.factor)))
   variable <- names(mf)
   k <- ncol(mf)
 
