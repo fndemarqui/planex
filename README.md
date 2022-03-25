@@ -23,8 +23,18 @@ devtools::install_github("fndemarqui/planex")
 
 ``` r
 library(planex)
+#> Loading required package: dplyr
+#> 
+#> Attaching package: 'dplyr'
+#> The following objects are masked from 'package:stats':
+#> 
+#>     filter, lag
+#> The following objects are masked from 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
 #> Loading required package: ggplot2
 data(saquinhos)
+saquinhos$concentracao <- as.factor(saquinhos$concentracao)
 mod <- aov(resistencia ~ concentracao, data = saquinhos)
 plotResiduals(mod)
 ```
@@ -32,10 +42,27 @@ plotResiduals(mod)
 <img src="man/figures/README-saquinhos-1.png" width="100%" /><img src="man/figures/README-saquinhos-2.png" width="100%" /><img src="man/figures/README-saquinhos-3.png" width="100%" /><img src="man/figures/README-saquinhos-4.png" width="100%" /><img src="man/figures/README-saquinhos-5.png" width="100%" />
 
 ``` r
+testResiduals(mod)
+#> 
+#>  Shapiro-Wilk normality test
+#> 
+#> data:  resid
+#> W = 0.96624, p-value = 0.5757
+#> 
+#> ------------------------------------------ 
+#> Bartlett test of Homogeneity of Variances: 
+#>              Bartlett's K-squared df   p.value
+#> concentracao             1.135246  3 0.7685731
+#> 
+#> ----------------------------------------------- 
+#> Durbin-Watson Test for Autocorrelated Errors: 
+#>  lag Autocorrelation D-W Statistic p-value
+#>    1      -0.1303884      2.181178   0.886
+#>  Alternative hypothesis: rho != 0
 summary(mod)
 #>              Df Sum Sq Mean Sq F value   Pr(>F)    
-#> concentracao  1  364.0   364.0   53.76 2.43e-07 ***
-#> Residuals    22  148.9     6.8                     
+#> concentracao  3  382.8  127.60   19.61 3.59e-06 ***
+#> Residuals    20  130.2    6.51                     
 #> ---
 #> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```

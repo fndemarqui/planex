@@ -34,7 +34,10 @@ devtools::install_github("fndemarqui/planex")
 ```{r saquinhos}
 library(planex)
 data(saquinhos)
+saquinhos$concentracao <- as.factor(saquinhos$concentracao)
 mod <- aov(resistencia ~ concentracao, data = saquinhos)
 plotResiduals(mod)
+testResiduals(mod)
 summary(mod)
 ```
+

@@ -5,6 +5,9 @@
 \alias{planex-package}
 \alias{planex}
 \title{Pacote planex - Planejamento de Experimentos.}
+\description{
+Funções e bancos de dados para a disciplina de Planejamento de Experimentos.
+}
 \references{
 Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
 

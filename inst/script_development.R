@@ -1,15 +1,15 @@
 
 
 usethis::use_git_ignore("inst/script_development.R")
+usethis::use_build_ignore("inst/script_development.R")
 
 
-
-# rodar apenas uma vez:
-usethis::use_agpl3_license()
-usethis::use_readme_rmd()
-usethis::use_pkgdown()
-usethis::use_git_config(user.name = "fndemarqui",              # seu nome
-                       user.email = "fndemarqui@gmail.com")   # seu email
+# # rodar apenas uma vez:
+# usethis::use_agpl3_license()
+# usethis::use_readme_rmd()
+# usethis::use_pkgdown()
+# usethis::use_git_config(user.name = "fndemarqui",              # seu nome
+#                        user.email = "fndemarqui@gmail.com")   # seu email
 
 
 

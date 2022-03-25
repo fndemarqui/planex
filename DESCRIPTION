@@ -7,6 +7,7 @@ Description: Funções para análise e base de dados dos exemplos e exercícios 
 License: AGPL (>= 3)
 URL: https://fndemarqui.github.io/planex/, https://github.com/fndemarqui/planex
 Depends:
+    dplyr,
     ggplot2,
     R (>= 2.10)
 Imports: 
@@ -20,9 +21,8 @@ Imports:
   kableExtra,
   multcomp,
   nortest,
-  Rfit,
-  tidyverse  
+  Rfit
 Suggests: tidyverse  
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
