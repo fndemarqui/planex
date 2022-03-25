@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,25 +33,19 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">planex</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.3</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="reference/index.html">Reference</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/fndemarqui/planex/">
+  <a href="https://github.com/fndemarqui/planex/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -66,35 +62,65 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="planex" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#planex" class="anchor"></a>planex</h1></div>
+<div class="section level1">
+<div class="page-header"><h1 id="planex">planex<a class="anchor" aria-label="anchor" href="#planex"></a>
+</h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>Funções e bancos de dados para a disciplina de Planejamento de Experimentos.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
-<p>Você pode instalar a versão de desenvolvimento do pacote planex a partir do <a href="https://github.com/">GitHub</a> da seguinte forma:</p>
+<p>Funções e bancos de dados para a disciplina de Planejamento de
+Experimentos.</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p>Você pode instalar a versão de desenvolvimento do pacote planex a
+partir do <a href="https://github.com/" class="external-link">GitHub</a> da seguinte
+forma:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"fndemarqui/planex"</span><span class="op">)</span></code></pre></div>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"fndemarqui/planex"</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="exemplo" class="section level2">
-<h2 class="hasAnchor">
-<a href="#exemplo" class="anchor"></a>Exemplo</h2>
+<div class="section level2">
+<h2 id="exemplo">Exemplo<a class="anchor" aria-label="anchor" href="#exemplo"></a>
+</h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/">planex</a></span><span class="op">)</span>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span>
+<span class="co">#&gt; Loading required package: dplyr</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Attaching package: 'dplyr'</span>
+<span class="co">#&gt; The following objects are masked from 'package:stats':</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;     filter, lag</span>
+<span class="co">#&gt; The following objects are masked from 'package:base':</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;     intersect, setdiff, setequal, union</span>
 <span class="co">#&gt; Loading required package: ggplot2</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">)</span>
-<span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html">aov</a></span><span class="op">(</span><span class="va">resistencia</span> <span class="op">~</span> <span class="va">concentracao</span>, data <span class="op">=</span> <span class="va">saquinhos</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">)</span>
+<span class="va">saquinhos</span><span class="op">$</span><span class="va">concentracao</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">$</span><span class="va">concentracao</span><span class="op">)</span>
+<span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">resistencia</span> <span class="op">~</span> <span class="va">concentracao</span>, data <span class="op">=</span> <span class="va">saquinhos</span><span class="op">)</span>
 <span class="fu"><a href="reference/plotResiduals.html">plotResiduals</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-saquinhos-1.png" width="100%"><img src="reference/figures/README-saquinhos-2.png" width="100%"><img src="reference/figures/README-saquinhos-3.png" width="100%"><img src="reference/figures/README-saquinhos-4.png" width="100%"><img src="reference/figures/README-saquinhos-5.png" width="100%"></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu"><a href="reference/testResiduals.html">testResiduals</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;  Shapiro-Wilk normality test</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; data:  resid</span>
+<span class="co">#&gt; W = 0.96624, p-value = 0.5757</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; ------------------------------------------ </span>
+<span class="co">#&gt; Bartlett test of Homogeneity of Variances: </span>
+<span class="co">#&gt;              Bartlett's K-squared df   p.value</span>
+<span class="co">#&gt; concentracao             1.135246  3 0.7685731</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; ----------------------------------------------- </span>
+<span class="co">#&gt; Durbin-Watson Test for Autocorrelated Errors: </span>
+<span class="co">#&gt;  lag Autocorrelation D-W Statistic p-value</span>
+<span class="co">#&gt;    1      -0.1303884      2.181178    0.84</span>
+<span class="co">#&gt;  Alternative hypothesis: rho != 0</span>
+<span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span>
 <span class="co">#&gt;              Df Sum Sq Mean Sq F value   Pr(&gt;F)    </span>
-<span class="co">#&gt; concentracao  1  364.0   364.0   53.76 2.43e-07 ***</span>
-<span class="co">#&gt; Residuals    22  148.9     6.8                     </span>
+<span class="co">#&gt; concentracao  3  382.8  127.60   19.61 3.59e-06 ***</span>
+<span class="co">#&gt; Residuals    20  130.2    6.51                     </span>
 <span class="co">#&gt; ---</span>
 <span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></code></pre></div>
 </div>
@@ -103,36 +129,50 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/fndemarqui/planex/">https://​github.com/​fndemarqui/​planex/​</a>
-</li>
+<li><a href="https://github.com/fndemarqui/planex/" class="external-link">Browse source code</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
 <li><small>AGPL (&gt;= 3)</small></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing planex</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Fabio Demarqui <br><small class="roles"> Author, maintainer </small>  </li>
 </ul>
 </div>
+
+
 
   </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Fabio Demarqui.</p>
+  <p></p>
+<p>Developed by Fabio Demarqui.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a>
+2.0.2.</p>
 </div>
 
       </footer>
@@ -140,6 +180,8 @@
 
   
 
+
+  
 
   </body>
 </html>
