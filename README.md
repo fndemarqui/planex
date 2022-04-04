@@ -57,7 +57,7 @@ testResiduals(mod)
 #> ----------------------------------------------- 
 #> Durbin-Watson Test for Autocorrelated Errors: 
 #>  lag Autocorrelation D-W Statistic p-value
-#>    1      -0.1303884      2.181178   0.886
+#>    1      -0.1303884      2.181178   0.872
 #>  Alternative hypothesis: rho != 0
 summary(mod)
 #>              Df Sum Sq Mean Sq F value   Pr(>F)    

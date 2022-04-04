@@ -1,5 +1,55 @@
 
 
+#' Rendimento de dois catalisadores
+#'
+#' @name catalisadores2
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo 10.5: Dois catalisadores estão sendo analisados para determinar como eles afetam o rendimento médio de um processo quı́mico. Especificamente, o catalisador 1 (mais caro) está correntemente em uso, mas o catalisador 2 (mais barato) é aceitável. Uma vez que o catalisador 2 é mais barato, ele deve ser adotado, desde que não altere o rendimento do processo.
+#' @format Data frame com 16 linhas e duas variáveis:
+#' \itemize{
+#'   \item catalisador: tipo de catalisador utilizado (C1 ou C2)
+#'   \item rendimento: rendimento do processo químico (variável resposta)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+#' Arsênio em agua potável
+#'
+#' @name arsenio
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo 10.6: A concentração de arsênio em suprimentos públicos de água potável é um reisco potencial de saúde. Um estudo reportou a concentração, em partes por bilhão (ppb), de arsênio em água potável para 10 comunidades metropolitanas de Fênix e 10 comunidades rurais do Arizona.
+#' @format Data frame com 20 linhas e duas variáveis:
+#' \itemize{
+#'   \item comunidade: tipo de comunidade onde a amostra de água foi coletada (metropolitana ou rural)
+#'   \item concentracao: concentração de arsênio presente na amostra (variável resposta)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+#' Resistência de vigas de aço
+#'
+#' @name vigas
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo 10.10: Um pesquisador tem interesse em comparar dois métodos, a saber Karlruhe (K) e Lehigh (L), para prever a resistência ao cisalhamento entre traves planas metálicas. Os dois métodos são aplicados a 9 traves especı́ficas.
+#' @format Data frame com 18 linhas e duas variáveis:
+#' \itemize{
+#'   \item metodo: método empregado(K ou L)
+#'   \item previsao: previsão de resistência ao cisalhamento das vigas de aço (variável resposta)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
 #' Resistência de saquinhos de papel
 #'
 #' @name saquinhos

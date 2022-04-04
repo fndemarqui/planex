@@ -7,3 +7,4 @@
 ^pkgdown$
 ^\.github$
 ^inst/script_development\.R$
+^inst/dados\.txt$
