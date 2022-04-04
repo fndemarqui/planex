@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 Funções e bancos de dados para a disciplina de Planejamento de Experimentos. 
 
-## Installation
+## Installation 
 
 Você pode instalar a versão de desenvolvimento do pacote planex a partir do  [GitHub](https://github.com/) da seguinte forma:
 
