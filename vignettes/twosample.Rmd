@@ -1,0 +1,93 @@
+---
+title: "Inferências envolvendo duas populações normais"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Inferências envolvendo duas populações normais}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Variâncias populacionais conhecidas
+
+Exemplo 10.1 (adaptado): Um engenheiro está interessado em desenvolver uma nova formulação para uma tinta. Duas formulações de tintas são testadas: a formulação 1, que tem uma química padrão, e a formulação 2, que possui um novo ingrediente para secagem (espera-se que essa nova formulação leve a redução do tempo médio de secagem). Com base em experimentos passados, o engenheiro sabe que o desivo-padrão do tempo de secagem é igual a 8 minutos, e que essa variabilidade não deve ser afetada pela adição do novo ingrediente. Dez espécimes são pintados com a formulação 1 e outros dez com a formulação 2, sendo a determinação da formulação utilizada para cada espécime feita de forma aleatória. Os dados desse experimento foram gerados artificialmente no R para fins de ilustração da parte computacional.
+
+
+
+
+
+```{r, message=FALSE}
+library(planex)
+library(tidyverse)
+
+# formato longo:
+glimpse(tintas)
+data(tintas)
+z.test(tempo~formulacao, sigma = 8, alternative = "greater", data = tintas)
+
+
+# formato largo:
+data(tintas2)
+glimpse(tintas2)
+
+with(tintas2,
+  z.test(x=F1, y=F2, sigma = 8, alternative = "greater")     
+)
+
+```
+
+Alternativamente:
+
+```{r}
+# mudando o nível de referência:
+tintas <- tintas %>%
+  mutate(
+    formulacao = factor(formulacao, levels = c("F2", "F1"))
+  )
+levels(tintas$formulacao)
+z.test(tempo~formulacao, sigma = 8, alternative = "less", data = tintas)
+
+with(tintas2,
+  z.test(x=F2, y=F1, sigma = 8, alternative = "less")     
+)
+```
+
+
+Exemplo 10.4 (adaptado): Testes de resistência à tensão foram feitos em dois tipos diferentes de estruturas de alumínio. Essas estruturas foram usadas na fabricação das asas de um avião comercial. De experiências passadas com o processo de fabricação dessas estruturas e com o procedimento de testes, os desvios-padrão são considerados conhecidos ($\sigma_{1} = 1$ e $\sigma_{2} = 1.5$, respectivamente). Os dados desse experimentos estão disponíveis no conjunto de dados aluminio do pacote planex. Obtenha um intervalo de confiança de 90% para a diferença das médias.
+
+```{r}
+
+library(planex)
+data(aluminio)
+
+z.test(resistencia ~ estrutura, sigma = c(1, 1.5), conf.level = 0.9, data = aluminio)
+
+
+# fazendo as contas passo a passo:
+
+sigma <- c(1, 1.5)
+n <- c(10, 12)
+alpha <- 0.1
+
+medias <- with(aluminio, tapply(resistencia, estrutura, mean))
+medias
+dbar <- medias[1]-medias[2]
+V <- (sigma[1]^2)/n[1] + (sigma[2]^2)/n[2]
+V
+
+ztab <- qnorm(alpha/2, lower.tail = FALSE)
+epsilon <- ztab*sqrt(V)
+li <- dbar - epsilon
+ls <- dbar + epsilon
+ic <- c(li, ls)
+ic
+
+
+```
+

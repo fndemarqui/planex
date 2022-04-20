@@ -6,3 +6,8 @@ inst/dados.txt
 inst/script_github.R
 
 inst/script_development.R
+inst/doc
+/doc/
+/Meta/
+inst/script_ggcomp.R
+inst/var_teste.R

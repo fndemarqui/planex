@@ -15,6 +15,38 @@
 #'
 NULL
 
+#' Resistência à tensão no alumínio
+#'
+#' @name aluminio
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo 10.4 (adaptado): Testes d resistência à tensão foram feitos em dois tipos diferentes de estruturas de alumínio. Essas estruturas foram usadas na fabricação das asas de um avião comercial. De experiências passadas com o processo de fabricação dessas estruturas e com o procedimento de testes, os desvios-padrão são considerados conhecidos (\eqn{\sigma_{1} = 1} e \eqn{\sigma_{2} = 1.5}, respectivamente).
+#' @format Data frame com 22 linhas e duas variáveis:
+#' \itemize{
+#'   \item resistencia: resistência à tensão da estrutura de alumínio
+#'   \item estrutura: tipo de estrutura (E1 ou E2)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+#' Tempo de secagem de tintas (formato largo do banco de dados)
+#'
+#' @name tintas2
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exemplo 10.1 (adaptado): Um engenheiro está interessado em desenvolver uma nova formulação para uma tinta. Duas formulações de tintas são testadas: a formulação 1, que tem uma química padrão, e a formulação 2, que possui um novo ingrediente para secagem (espera-se que essa nova formulação leve a redução do tempo médio de secagem). Com base em experimentos passados, o engenheiro sabe que o desivo-padrão do tempo de secagem é igual a 8 minutos, e que essa variabilidade não deve ser afetada pela adição do novo ingrediente. Dez espécimes são pintados com a formulação 1 e outros dez com a formulação 2, sendo a determinação da formulação utilizada para cada espécime feita de forma aleatória. Os dados desse experimento foram gerados artificialmente no R para fins de ilustração da parte computacional.
+#' @format Data frame com 10 linhas e duas variáveis:
+#' \itemize{
+#'   \item F1: tempo de secagem da tinta com formulação 1
+#'   \item F2: tempo de secagem da tinta com formulação 2
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
 
 
 #' Rendimento de dois catalisadores
