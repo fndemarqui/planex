@@ -7,6 +7,15 @@
     <loc>/LICENSE.html</loc>
   </url>
   <url>
+    <loc>/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>/articles/planex.html</loc>
+  </url>
+  <url>
+    <loc>/articles/twosample.html</loc>
+  </url>
+  <url>
     <loc>/authors.html</loc>
   </url>
   <url>
@@ -17,6 +26,9 @@
   </url>
   <url>
     <loc>/reference/acabamento.html</loc>
+  </url>
+  <url>
+    <loc>/reference/aluminio.html</loc>
   </url>
   <url>
     <loc>/reference/arsenio.html</loc>
@@ -187,6 +199,9 @@
     <loc>/reference/tintas.html</loc>
   </url>
   <url>
+    <loc>/reference/tintas2.html</loc>
+  </url>
+  <url>
     <loc>/reference/treatcomb2factors.html</loc>
   </url>
   <url>
@@ -200,6 +215,9 @@
   </url>
   <url>
     <loc>/reference/vinhos.html</loc>
+  </url>
+  <url>
+    <loc>/reference/z.test.html</loc>
   </url>
   <url>
     <loc>/reference/zarcao.html</loc>
