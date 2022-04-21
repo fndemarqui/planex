@@ -47,10 +47,10 @@ z.test.default <- function (x, y = NULL, alternative = c("two.sided", "less", "g
   }else{
     ztab <- qnorm(alpha, lower.tail = FALSE)
     if(alternative == "less"){
-      pvalue = pnorm(z0, lower.tail = FALSE)
+      pvalue = pnorm(z0)
       ci <- c(-Inf, xbar + ztab*sqrt(V))
     }else{
-      pvalue = pnorm(z0)
+      pvalue = pnorm(z0, lower.tail = FALSE)
       ci <- c(xbar - ztab*sqrt(V), Inf)
     }
   }
