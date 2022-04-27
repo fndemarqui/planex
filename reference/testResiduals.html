@@ -65,8 +65,8 @@
     <div id="ref-usage">
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">testResiduals</span><span class="op">(</span>
   <span class="va">model</span>,
-  normality.test <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"SW"</span>, <span class="st">"AD"</span><span class="op">)</span>,
-  var.test <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Bartlett"</span>, <span class="st">"Levene"</span><span class="op">)</span>
+  normality.test <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"sw"</span>, <span class="st">"ad"</span><span class="op">)</span>,
+  var.test <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"bartlett"</span>, <span class="st">"levene"</span><span class="op">)</span>
 <span class="op">)</span></code></pre></div>
     </div>
 
@@ -102,7 +102,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> W = 0.97606, p-value = 0.6117</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ------------------------------------------ </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Bartlett test of Homogeneity of Variances: </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Levene test of Homogeneity of Variances: </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>             Bartlett's K-squared df   p.value</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> temperatura             3.311821  2 0.1909182</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> tipo                    3.173694  2 0.2045696</span>
@@ -110,7 +110,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> ----------------------------------------------- </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> Durbin-Watson Test for Autocorrelated Errors: </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  lag Autocorrelation D-W Statistic p-value</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    1      -0.3751937      2.713482   0.382</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    1      -0.3751937      2.713482   0.406</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  Alternative hypothesis: rho != 0</span>
 <span class="r-in"></span>
 </code></pre></div>
@@ -127,7 +127,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
       </footer></div>
