@@ -6,8 +6,8 @@
 \usage{
 testResiduals(
   model,
-  normality.test = c("SW", "AD"),
-  var.test = c("Bartlett", "Levene")
+  normality.test = c("sw", "ad"),
+  var.test = c("bartlett", "levene")
 )
 }
 \arguments{

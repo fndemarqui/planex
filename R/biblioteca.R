@@ -65,6 +65,7 @@ as.factor2k <- function(x){
     warning("essa função deve ser usada apenas para fatores com 2 níveis!!!")
   }else{
     y <- as.numeric((x - mean(z))/(diff(z)/2))
+    class(y) <- "factor2k"
     return(y)
   }
 }
@@ -436,16 +437,18 @@ plotResiduals <- function(model){
 #' mod <- aov(tempo ~ temperatura*tipo, data=baterias)
 #' testResiduals(mod)
 #'
-testResiduals <- function(model, normality.test = c("SW", "AD"),
-                          var.test = c("Bartlett", "Levene")){
-  resid <- residuals(model)
+testResiduals <- function(model, normality.test = c("sw", "ad"),
+                          var.test = c("bartlett", "levene")){
 
+  resid <- residuals(model)
+  normality.test <- tolower(normality.test)
+  var.test <- tolower(var.test)
   test1 <- match.arg(normality.test)
   test2 <- match.arg(var.test)
 
   switch(test1,
-         "SW" = print(stats::shapiro.test(resid)),
-         "AD" = print(nortest::ad.test(resid))
+         "sw" = print(stats::shapiro.test(resid)),
+         "ad" = print(nortest::ad.test(resid))
   )
 
   #--------------------------------------------------------------
@@ -463,11 +466,11 @@ testResiduals <- function(model, normality.test = c("SW", "AD"),
   }
 
   mf <- as.data.frame(stats::model.frame(model)) %>%
-    dplyr::select(which(sapply(.,is.factor)))
+    dplyr::select(which(sapply(.,is.factor)), which(sapply(.,is.factor2k)))
   variable <- names(mf)
   k <- ncol(mf)
 
-  if(test2 == "Bartlett"){
+  if(test2 == "bartlett"){
     aux <- stats::bartlett.test(resid~mf[,1])
     tab <- tabBartlett(aux)
   }else{
@@ -477,7 +480,7 @@ testResiduals <- function(model, normality.test = c("SW", "AD"),
 
   if(k > 1){
 
-    if(test2 == "Bartlett"){
+    if(test2 == "bartlett"){
       for(i in 2:k){
         aux1 <- bartlett.test(resid~mf[,i])
         aux2 <- tabBartlett(aux1)
@@ -507,4 +510,9 @@ testResiduals <- function(model, normality.test = c("SW", "AD"),
   cat("-----------------------------------------------", "\n")
   cat("Durbin-Watson Test for Autocorrelated Errors:", "\n")
   print(car::durbinWatsonTest(model))
+}
+
+
+is.factor2k <- function(x){
+  return(class(x) == "factor2k")
 }
