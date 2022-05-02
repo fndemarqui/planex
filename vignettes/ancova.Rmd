@@ -1,0 +1,33 @@
+---
+title: "Análise de Variância e Covariância (ANCOVA)"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Análise de Variância e Covariância (ANCOVA)}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r}
+library(planex)
+library(tidyverse)
+
+data(fibras)
+glimpse(fibras)
+
+fibras <- fibras %>%
+  mutate(
+    maquina = as.factor(maquina)
+  )
+
+fit <- aov(forca ~ diametro + maquina, data = fibras)
+testResiduals(fit)
+plotResiduals(fit)
+```
+

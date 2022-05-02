@@ -48,8 +48,8 @@ usethis::use_github_action("pkgdown")
 
 #tools::showNonASCIIfile("R/biblioteca.R")
 
-vigas <- read.table("inst/dados.txt", header=TRUE)
-usethis::use_data(tintas, overwrite = TRUE)
+colesterol <- read.table("inst/dados.txt", header=TRUE)
+usethis::use_data(alimentacao, overwrite = TRUE)
 
 # criar função is.balanced()....
 

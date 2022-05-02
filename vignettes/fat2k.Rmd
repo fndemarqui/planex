@@ -1,0 +1,31 @@
+---
+title: "Delineamentos $2^k$ fatoriais"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Delineamentos $2^k$ fatoriais}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r}
+library(planex)
+library(tidyverse)
+
+library(planex)
+library(tidyverse)
+
+data(rendimento2k)
+glimpse(rendimento2k)
+
+fit <- aov(rendimento ~ reagente*catalisador, data=rendimento2k)
+testResiduals(fit)
+plotResiduals(fit)
+```
+

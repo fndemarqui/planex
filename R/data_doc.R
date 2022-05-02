@@ -1,4 +1,55 @@
 
+
+#' Nível de colesterol no sangue
+#'
+#' @name colesterol
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 10.41: Quinze homens adultos, entre as idades de 35 e 50 anos, participaram de um estudo para avaliar o efeito da dieta e de exercícios no nível de colesterol no sangue. O colesterol total foi medido para cada indivíduo inicialmente e depois de 3 meses de participação em um programa de exercícios aeróbicos e de mudanças para uma dieta de baixo teor de gordura.
+#' @format Data frame com 30 linhas e duas variáveis:
+#' \itemize{
+#'   \item medida: quando o peso do participante foi medido
+#'   \item nivel: nível de colesterol no sangue
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+#' Programa de modificação alimentar
+#'
+#' @name alimentacao
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 10.43: Dez indivíduos participaram de um programa de modificação alimentar para estimular a perda de peso. Os pesos dos participantes foram registrados antes e depois da participação no programa.
+#' @format Data frame com 20 linhas e duas variáveis:
+#' \itemize{
+#'   \item medida: quando o peso do participante foi medido
+#'   \item peso: peso do participante
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
+#' Ataque químico para remoção de silicone em semicondutores
+#'
+#' @name semicondutores2
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 10.19: Na fabricação de semicondutores, o ataque químico por via úmida é freuentemente usado para remover silicone da parte posterior das pastilhas antes da metalização. A taxa de ataque é uma característica importante nesse processo e é sabido que ela segue uma distribuição normal. Duas soluções para ataque químico foram comparadas, utilizando-se duas amostras aleatórias de 10 pastilhas para cada solução.
+#' @format Data frame com 10 linhas e duas variáveis:
+#' \itemize{
+#'   \item solucao: tipo de solução empregada
+#'   \item taxa: taxa de ataque químico (10e-3 polegada/min)
+#' }
+#' @references  Montgomery, D. C., Runger, G. C. (2015) Estatística Aplicada e Probabilidade para Engenheiros, 5ª. Edição, Rio de Janeiro: LTC.
+#'
+NULL
+
+
 #' Tempo de secagem de tintas
 #'
 #' @name tintas

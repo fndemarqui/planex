@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-## Variâncias populacionais conhecidas
+## Comparações de médias quando as variâncias populacionais conhecidas
 
 Exemplo 10.1 (adaptado): Um engenheiro está interessado em desenvolver uma nova formulação para uma tinta. Duas formulações de tintas são testadas: a formulação 1, que tem uma química padrão, e a formulação 2, que possui um novo ingrediente para secagem (espera-se que essa nova formulação leve a redução do tempo médio de secagem). Com base em experimentos passados, o engenheiro sabe que o desivo-padrão do tempo de secagem é igual a 8 minutos, e que essa variabilidade não deve ser afetada pela adição do novo ingrediente. Dez espécimes são pintados com a formulação 1 e outros dez com a formulação 2, sendo a determinação da formulação utilizada para cada espécime feita de forma aleatória. Os dados desse experimento foram gerados artificialmente no R para fins de ilustração da parte computacional.
 
@@ -88,6 +88,132 @@ ls <- dbar + epsilon
 ic <- c(li, ls)
 ic
 
+```
+
+## Comparações de variâncias
+
+Sejam $X_{11}, ..., X_{1n_{1}}$ a.a. de $X_{1}\sim N(\mu_{1};\sigma_{1}^{2})$ e $X_{21}, ..., X_{2n_{2}}$ a.a. de $X_{2}\sim N(\mu_{1};\sigma_{1}^{2})$, com $X_{1}$ e $X_{2}$ independentes, com $\mu_{1},\mu_{2}, \sigma_{1}^{2}$ e $\sigma_{2}^{2}$ desconhecidos.
+
+Considere as hipóteses:
+
+\begin{eqnarray}
+    {
+     \left\{\begin{array}{lcc}
+        H_{0}: \sigma_{1}^{2}/\sigma_{2}^{2}=1 \\
+        H_{1}: \sigma_{1}^{2}/\sigma_{2}^{2} \neq 1
+    \end{array}\right.
+    }    \nonumber
+\end{eqnarray}
+
+Então, sob $H_{0}$ segue que $\sigma_{1}^{2}=\sigma_{2}^{2}=\sigma^{2}$. Logo,
+
+\begin{eqnarray}
+    \frac{(n_{1}-1)S_{1}^{2}}{\sigma^{2}} \sim \chi_{n_{1}-1} ~~~ \mbox{   e   } ~~~ \frac{(n_{2}-1)S_{2}^{2}}{\sigma^{2}} \sim \chi_{n_{2}-1}  \nonumber
+\end{eqnarray}
+
+Consequentemente,
+
+\begin{eqnarray}
+    F_{0}=\frac{S_{1}^{2}}{S_{2}^{2}} \sim F_{(n_{1}-1;n_{2}-1)} \nonumber
+\end{eqnarray}
+
+Assim, $RC=\{f_{0}:f_{0}<f_{(\frac{\alpha}{2};n_{1}-1;n_{2}-1)} \mbox{ ou } f_{0}>f_{(1-\frac{\alpha}{2};n_{1}-1;n_{2}-1)}\}$, em que
+
+\begin{eqnarray}
+  f_{0}=\frac{s_{1}^{2}}{s_{2}^{2}} \nonumber
+\end{eqnarray}
+
+é o valor observado da estatística do teste.
+
+Cálculo do p-valor:
+
+\begin{eqnarray}
+  \alpha^{*} = 2 \times \min\{p_{1}, p_{2}\}, \nonumber
+\end{eqnarray}
+
+em que $p_{1}= P(F_{0}< f_0)$, $p_{2}= P(F_{0} > f_0)$.
+
+Regiões críticas/cálculo de p-valores associadas testes de hipóteses com alternativas unilaterias são obtidas adaptando-se a região crítica apresentada acima.
+
+Sabemos que
+\begin{eqnarray}
+    F=\frac{\sigma_{1}^{2}S_{2}^{2}}{\sigma_{2}^{2}S_{1}^{2}} \sim F_{(n_{2}-1;n_{1}-1)}. \nonumber
+\end{eqnarray}
+
+Logo, intervalos de confiança de $100(1-\alpha)\%$ para 
+    $\sigma_{1}^{2}/\sigma_{2}^{2}$ são obtidos da seguinte forma:
+
+\begin{eqnarray}
+  1-\alpha &=& P\left(f_{\frac{\alpha}{2}; n_{2}-1, n_{1}-1} < \frac{\sigma_{1}^{2}S_{2}^{2}}{\sigma_{2}^{2}S_{1}^{2}} < f_{1-\frac{\alpha}{2}; n_{2}-1, n_{1}-1} \right) \nonumber \\
+  &=& P\left(\frac{S_{1}^{2}}{S_{2}^{2}}f_{\frac{\alpha}{2}; n_{2}-1, n_{1}-1} < \frac{\sigma_{1}^{2}}{\sigma_{2}^{2}} < \frac{S_{1}^{2}}{S_{2}^{2}}f_{1-\frac{\alpha}{2}; n_{2}-1, n_{1}-1} \right), \nonumber 
+\end{eqnarray}
+
+Intervalos de confiança unilaterais são obtidos de maneira direta a partir do desenvolvimento apresentado acima.
+
+
+```{example}
+Exemplo 10.5: Dois catalisadores estão sendo analisados para determinar como eles afetam o rendimento médio de um processo quı́mico. Especificamente, o catalisador 1 (mais caro) está correntemente em uso, mas o catalisador 2 (mais barato) é aceitável. Uma vez que o catalisador 2 é mais barato, ele deve ser adotado, desde que não altere o rendimento do processo.
+```
+
+
+```{r}
+library(planex)
+library(planex)
+
+data(catalisadores2)
+catalisadores2
+
+# testando a igualdade das variâncias:
+with(catalisadores2, var.test(C1, C2))
+
+
+```
+
+Trabalhando com os dados em formato de pilha:
+
+```{r}
+cat <- catalisadores2 %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "catalisador",
+    values_to = "rendimento"
+  )
+
+ggplot(cat, aes(x=catalisador, y = rendimento)) +
+  geom_boxplot()
+
+var.test(rendimento~catalisador, data = cat)
+
+```
+
+## Comparações de médias quando as variâncias populacionais iguais e desconhecidas
+
+```{r}
+t.test(rendimento~catalisador, data = cat, var.equal = TRUE)
+```
+
+
+
+```{r}
+
+data(arsenio)
+arsenio
+
+arsenio <- arsenio %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "comunidade",
+    values_to = "concentracao"
+  )
+arsenio
+
+ggplot(arsenio, aes(x=comunidade, y=concentracao)) +
+  geom_boxplot()
+
+var.test(concentracao~comunidade, data=arsenio)
+
+t.test(concentracao~comunidade, data=arsenio)
+t.test(concentracao~comunidade, data=arsenio, var.equal = TRUE)
 
 ```
 
