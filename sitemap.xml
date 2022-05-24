@@ -7,6 +7,12 @@
     <loc>/LICENSE.html</loc>
   </url>
   <url>
+    <loc>/articles/ancova.html</loc>
+  </url>
+  <url>
+    <loc>/articles/fat2k.html</loc>
+  </url>
+  <url>
     <loc>/articles/index.html</loc>
   </url>
   <url>
@@ -26,6 +32,12 @@
   </url>
   <url>
     <loc>/reference/acabamento.html</loc>
+  </url>
+  <url>
+    <loc>/reference/algodao.html</loc>
+  </url>
+  <url>
+    <loc>/reference/alimentacao.html</loc>
   </url>
   <url>
     <loc>/reference/aluminio.html</loc>
@@ -62,6 +74,9 @@
   </url>
   <url>
     <loc>/reference/chumbo.html</loc>
+  </url>
+  <url>
+    <loc>/reference/colesterol.html</loc>
   </url>
   <url>
     <loc>/reference/corrente.html</loc>
@@ -176,6 +191,9 @@
   </url>
   <url>
     <loc>/reference/semicondutores1rep.html</loc>
+  </url>
+  <url>
+    <loc>/reference/semicondutores2.html</loc>
   </url>
   <url>
     <loc>/reference/table2kunrep.html</loc>
