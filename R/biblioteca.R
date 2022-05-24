@@ -499,7 +499,7 @@ testResiduals <- function(model, normality.test = c("sw", "ad"),
   rownames(tab) <- names(mf)
 
   cat("------------------------------------------", "\n")
-  if(test2 == "Bartlett"){
+  if(test2 == "bartlett"){
     cat("Bartlett test of Homogeneity of Variances:", "\n")
   }else{
     cat("Levene test of Homogeneity of Variances:", "\n")

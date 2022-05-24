@@ -1,3 +1,19 @@
+#' Nível de colesterol no sangue
+#'
+#' @name algodao
+#' @docType data
+#' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
+#' @keywords datasets
+#' @description Exercício 3.10: Um engenheiro está estudando se a resistência de um novo tipo de fibra sintética pode ser usada para a confecção de camisetas masculinas. Sabendo que a resistência é, em geral, afetada pelo percentual de algodão utilizado na mistura do material da fibra, o engenheiro decidiu conduzir um experimento com 5 níveis (percentuais) de algodão e 5 repetições para cada nível.
+#' @format Data frame com 25 linhas e duas variáveis:
+#' \itemize{
+#'   \item percentual: percentual de algodão utilizado na mistura do material da fibra
+#'   \item resistencia: resistência da fibra sintética (variável resposta).
+#' }
+#' @references Montgomery, D. C. (2016). Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#'
+NULL
+
 
 
 #' Nível de colesterol no sangue

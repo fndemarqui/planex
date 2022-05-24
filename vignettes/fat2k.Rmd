@@ -1,8 +1,8 @@
 ---
-title: "Delineamentos $2^k$ fatoriais"
+title: "Delineamentos 2^k fatoriais"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Delineamentos $2^k$ fatoriais}
+  %\VignetteIndexEntry{Delineamentos 2^k fatoriais}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
