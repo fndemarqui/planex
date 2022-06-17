@@ -318,6 +318,10 @@ treatcomb2factors <- function(data){
   }
   df <- as.data.frame(df, k)
   names(df) <- LETTERS[1:k]
+  df <- df %>%
+    mutate_all(
+      as.factor2k
+    )
   data <- cbind(data, df)
   return(data)
 }
@@ -515,4 +519,52 @@ testResiduals <- function(model, normality.test = c("sw", "ad"),
 
 is.factor2k <- function(x){
   return(class(x) == "factor2k")
+}
+
+
+#' Daneil probability plot
+#' @aliases gg_daniel
+#' @export
+#' @description ggplot implementation for the Daniel probability plot
+#' @param tb a data frame containing the output of the table2kunrep function
+#' @param alpha significance level for Lenth's method
+#' @return the Daniel probability plot.
+#'
+#' @examples
+#' \donttest{
+#' library(planex)
+#' library(tidyverse)
+#'
+#' data(filtragem)
+#'
+#' filtragem <- filtragem %>%
+#'   mutate_at(
+#'     c("temperatura", "pressao", "concentracao", "agitacao"),
+#'     as.factor2k) %>%
+#'   rename(
+#'     A = temperatura,
+#'     B = pressao,
+#'     C = concentracao,
+#'     D = agitacao
+#'   )
+#'
+#' mod <- lm(filtragem ~ A*B*C*D, data=filtragem)
+#' tb <- table2kunrep(mod)
+#' gg_daniel(tb)
+#'}
+#'
+gg_daniel <- function(tb, alpha = 0.05){
+  ME <- DoE.base::ME.Lenth(tb$effects, alpha = alpha)$ME
+  tb <- tb %>%
+    mutate(
+      important = abs(effects) > ME,
+      labels = rownames(tb),
+      labels = ifelse(important, labels, ""),
+      scores = qqnorm(tb$effects, plot = FALSE)$x,
+    )
+  ggplot(tb, aes(sample = effects, label = labels)) +
+    stat_qq() + stat_qq_line(color="blue") +
+    ggtitle("Daniel probability plot") +
+    geom_text(aes(x = scores, y = effects, hjust = -0.5,vjust = 0.5)) +
+    labs(y = "effects", x = "normal scores")
 }
