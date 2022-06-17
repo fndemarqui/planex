@@ -26,7 +26,7 @@ usethis::use_build_ignore("inst/dados.txt")
 devtools::document()
 devtools::install()
 devtools::load_all()
-#devtools::check()
+# devtools::check()
 
 devtools::build_manual()
 devtools::build()

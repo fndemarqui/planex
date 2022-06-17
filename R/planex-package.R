@@ -4,7 +4,7 @@
 #' @name planex-package
 #' @aliases planex
 #' @description Funções e bancos de dados para a disciplina de Planejamento de Experimentos.
-#' @importFrom stats bartlett.test coef pf qf residuals update
+#' @importFrom stats bartlett.test coef pf qf residuals update effects pnorm qnorm qqnorm
 #' @references
 #'
 #' Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.

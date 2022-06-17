@@ -59,15 +59,18 @@ interactionTest <- function(object){
 #'
 #'
 as.factor2k <- function(x){
-  x <- as.numeric(x)
   z <- unique(x)
   if(length(z) != 2){
     warning("essa função deve ser usada apenas para fatores com 2 níveis!!!")
+  }else if(is.character(x) | is.factor(x)){
+    y <- ifelse(x == z[1], -1, 1)
   }else{
+    x <- as.numeric(x)
     y <- as.numeric((x - mean(z))/(diff(z)/2))
-    class(y) <- "factor2k"
-    return(y)
   }
+  attributes(y) <- list(levels = c(-1, 1))
+  class(y) <- c("factor2k", "integer")
+  return(y)
 }
 
 

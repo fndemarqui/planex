@@ -9,7 +9,16 @@
 #'
 z.test <- function(object, ...) UseMethod("z.test")
 
-
+#' z.test default implementation
+#'
+#' @aliases z.test.default
+#' @param x x
+#' @param y y
+#' @param alternative alternative
+#' @param mu mu
+#' @param sigma sigma
+#' @param conf.level conf.level
+#' @param data data
 #' @export
 z.test.default <- function (x, y = NULL, alternative = c("two.sided", "less", "greater"),
                             mu = 0, sigma, conf.level = 0.95,
@@ -64,7 +73,17 @@ z.test.default <- function (x, y = NULL, alternative = c("two.sided", "less", "g
   return(output)
 }
 
+#' z.test formula implementation
+#'
+#' @aliases z.test.formula
+#' @param formula formula
+#' @param alternative alternative
+#' @param mu mu
+#' @param sigma sigma
+#' @param conf.level conf.level
+#' @param data data
 #' @export
+#'
 z.test.formula <- function (formula, alternative = c("two.sided", "less", "greater"),
                             mu = 0, sigma, conf.level = 0.95,
                             data = NULL){
