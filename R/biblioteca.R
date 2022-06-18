@@ -571,3 +571,63 @@ gg_daniel <- function(tb, alpha = 0.05){
     geom_text(aes(x = scores, y = effects, hjust = -0.5,vjust = 0.5)) +
     labs(y = "effects", x = "normal scores")
 }
+
+
+
+
+#' Table of signs for 2^k factorial designs
+#' @aliases table_signs
+#' @export
+#' @description This functions provides the table of signs for factorial designs with up to k = 10 factors
+#' @param tb a data frame containing the output of the table2kunrep function
+#' @return a data.frame corresponding to the table of signs
+#'
+#' @examples
+#' \donttest{
+#' library(planex)
+#' library(tidyverse)
+#'
+#' table_signs(3)
+#'
+#'}
+#'
+
+table_signs <- function(k){
+
+  f <- function(x){
+    return(ifelse(x==-1, "-", "+"))
+  }
+
+  fcts <- list()
+  for(i in 1:k){
+    fcts[[i]] <- c(-1,1)
+  }
+  names(fcts) <- LETTERS[1:k]
+  df <- expand.grid(fcts)
+  tb <- switch(k,
+               "2" = model.matrix(~ (.)^2, data = df),
+               "3" = model.matrix(~ (.)^3, data = df),
+               "4" = model.matrix(~ (.)^4, data = df),
+               "5" = model.matrix(~ (.)^5, data = df),
+               "6" = model.matrix(~ (.)^6, data = df),
+               "7" = model.matrix(~ (.)^7, data = df),
+               "8" = model.matrix(~ (.)^8, data = df),
+               "9" = model.matrix(~ (.)^9, data = df),
+               "10" = model.matrix(~ (.)^10, data = df),
+  ) %>%
+    as.data.frame() %>%
+    rename(
+      "(1)" = "(Intercept)"
+    ) %>%
+    mutate_all(
+      f
+    )
+
+  tb$comb <- apply(tb[,2:(k+1)], 1, function(i){paste(letters[1:k][i=="+"], collapse = "")})
+
+  tb <- tb %>%
+    mutate(
+      comb = ifelse(comb == "", "(1)", comb)
+    )
+  return(tb)
+}

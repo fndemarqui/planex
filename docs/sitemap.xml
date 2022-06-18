@@ -202,6 +202,9 @@
     <loc>/reference/table2kunrep.html</loc>
   </url>
   <url>
+    <loc>/reference/table_signs.html</loc>
+  </url>
+  <url>
     <loc>/reference/teares.html</loc>
   </url>
   <url>
@@ -236,6 +239,12 @@
   </url>
   <url>
     <loc>/reference/vinhos.html</loc>
+  </url>
+  <url>
+    <loc>/reference/z.test.default.html</loc>
+  </url>
+  <url>
+    <loc>/reference/z.test.formula.html</loc>
   </url>
   <url>
     <loc>/reference/z.test.html</loc>
