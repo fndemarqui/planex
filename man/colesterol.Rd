@@ -7,8 +7,8 @@
 \format{
 Data frame com 30 linhas e duas variáveis:
 \itemize{
-  \item medida: quando o peso do participante foi medido
-  \item nivel: nível de colesterol no sangue
+\item medida: quando o peso do participante foi medido
+\item nivel: nível de colesterol no sangue
 }
 }
 \description{

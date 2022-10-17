@@ -7,9 +7,9 @@
 \format{
 Data frame com 12 linhas e 3 variáveis:
 \itemize{
-  \item peca: peça que será submetida à medição (fator 1)
-  \item operador: operador operar o equipamento (fator 2)
-  \item dimensao: dimensão da peça (variável resposta)
+\item peca: peça que será submetida à medição (fator 1)
+\item operador: operador operar o equipamento (fator 2)
+\item dimensao: dimensão da peça (variável resposta)
 }
 }
 \description{

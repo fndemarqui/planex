@@ -7,9 +7,9 @@
 \format{
 Data frame com 36 linhas e 3 variáveis:
 \itemize{
-  \item queima: taxa de queira (variável resposta).
-  \item processo: processo de produção (fator fixo com 3 níveis).
-  \item lote: lote de matéria prima (fator aleatório com 4 níveis).
+\item queima: taxa de queira (variável resposta).
+\item processo: processo de produção (fator fixo com 3 níveis).
+\item lote: lote de matéria prima (fator aleatório com 4 níveis).
 }
 }
 \description{

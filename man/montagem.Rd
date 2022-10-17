@@ -7,11 +7,11 @@
 \format{
 Data frame com 16 linhas e 5 variáveis:
 \itemize{
-  \item ordem: ordem de montagem (variável categórica com 4 níveis; bloco 1)
-  \item operador: operador selecionado (variável categórica com 4 níveis; bloco 2)
-  \item local:  local de trabaho (variável categórica com 4 níveis; bloco 3)
-  \item metodo: método de montagem (variável categórica com 4 níveis; fator de interesse principal)
-  \item tempo: tempo de montagem da componente
+\item ordem: ordem de montagem (variável categórica com 4 níveis; bloco 1)
+\item operador: operador selecionado (variável categórica com 4 níveis; bloco 2)
+\item local:  local de trabaho (variável categórica com 4 níveis; bloco 3)
+\item metodo: método de montagem (variável categórica com 4 níveis; fator de interesse principal)
+\item tempo: tempo de montagem da componente
 }
 }
 \description{

@@ -7,10 +7,10 @@
 \format{
 Data frame com 16 linhas e quatro variáveis:
 \itemize{
-  \item recuperacao: recuperação de chumbo (%) - variável resposta
-  \item TA: tempo de agitação (fator 1 - nível baixo: 5e-6; nível alto: 5e-5)
-  \item pH: pH (fator 2 - nível baixo: 6; nível alto: 8)
-  \item CR: concentração de reagente (fator 3 - nível baixo: 10; nível alto: 30)
+\item recuperacao: recuperação de chumbo (\%) - variável resposta
+\item TA: tempo de agitação (fator 1 - nível baixo: 5e-6; nível alto: 5e-5)
+\item pH: pH (fator 2 - nível baixo: 6; nível alto: 8)
+\item CR: concentração de reagente (fator 3 - nível baixo: 10; nível alto: 30)
 }
 }
 \description{

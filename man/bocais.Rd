@@ -7,9 +7,9 @@
 \format{
 Data frame com 30 linhas e três variáveis:
 \itemize{
-  \item medida: medida da forma (variável resposta)
-  \item bocal: tipo de bocal (variável categórica com 5 níveis; fator de interesse)
-  \item velocidade: velocidade do jato de saída, em m/s; (bloco; fator de interesse secundário)
+\item medida: medida da forma (variável resposta)
+\item bocal: tipo de bocal (variável categórica com 5 níveis; fator de interesse)
+\item velocidade: velocidade do jato de saída, em m/s; (bloco; fator de interesse secundário)
 }
 }
 \description{

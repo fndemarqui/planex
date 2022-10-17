@@ -7,8 +7,8 @@
 \format{
 Data frame com 8 linhas e 2 variáveis:
 \itemize{
-  \item filtragem: taxa de filtragem (variável resposta)
-  \item comb_trat: combinação de tratamentos (ausência da letra indica nível baixo; presença, nível alto)
+\item filtragem: taxa de filtragem (variável resposta)
+\item comb_trat: combinação de tratamentos (ausência da letra indica nível baixo; presença, nível alto)
 }
 }
 \description{

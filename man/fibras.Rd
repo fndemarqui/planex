@@ -7,9 +7,9 @@
 \format{
 Data frame com 15 linhas e 3 variáveis:
 \itemize{
-  \item força: força da fibra de monofilamento (variável resposta)
-  \item maquina: máquina utilizada na produção das fibras de monofilamento (variável categórica com três níveis; fator de interesse principal)
-  \item diametro:  diâmetro da fibra de monofilamento (covariável; interesse secundário)
+\item força: força da fibra de monofilamento (variável resposta)
+\item maquina: máquina utilizada na produção das fibras de monofilamento (variável categórica com três níveis; fator de interesse principal)
+\item diametro:  diâmetro da fibra de monofilamento (covariável; interesse secundário)
 }
 }
 \description{

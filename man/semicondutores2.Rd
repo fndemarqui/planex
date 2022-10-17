@@ -7,8 +7,8 @@
 \format{
 Data frame com 10 linhas e duas variáveis:
 \itemize{
-  \item solucao: tipo de solução empregada
-  \item taxa: taxa de ataque químico (10e-3 polegada/min)
+\item solucao: tipo de solução empregada
+\item taxa: taxa de ataque químico (10e-3 polegada/min)
 }
 }
 \description{

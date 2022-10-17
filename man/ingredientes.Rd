@@ -7,10 +7,10 @@
 \format{
 Data frame com 20 linhas e 4 variáveis:
 \itemize{
-  \item ingrediente: ingrediente utilizado no processo químico (fator de interesse principal; 5 níveis)
-  \item dia: dia de execução do experimento (bloco1 - fator de interesse secundário)
-  \item lote: lote de materia prima (bloco2 - fator de interesse secundário)
-  \item tempo: tempo de reação do processo químico (variável resposta)
+\item ingrediente: ingrediente utilizado no processo químico (fator de interesse principal; 5 níveis)
+\item dia: dia de execução do experimento (bloco1 - fator de interesse secundário)
+\item lote: lote de materia prima (bloco2 - fator de interesse secundário)
+\item tempo: tempo de reação do processo químico (variável resposta)
 }
 }
 \description{

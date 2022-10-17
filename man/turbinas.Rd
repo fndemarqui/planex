@@ -7,10 +7,10 @@
 \format{
 Data frame com 72 linhas e 4 variáveis:
 \itemize{
-  \item queda: queda de pressão medida
-  \item temperatura (A): temperatura do gás no lado de entrada
-  \item operador (B): operador que realiza a medição
-  \item mamometro(C): manômetro específico usado pelo operador
+\item queda: queda de pressão medida
+\item temperatura (A): temperatura do gás no lado de entrada
+\item operador (B): operador que realiza a medição
+\item mamometro(C): manômetro específico usado pelo operador
 }
 }
 \description{

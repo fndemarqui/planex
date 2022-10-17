@@ -7,8 +7,8 @@
 \format{
 Data frame com 18 linhas e duas variáveis:
 \itemize{
-  \item metodo: método empregado(K ou L)
-  \item previsao: previsão de resistência ao cisalhamento das vigas de aço (variável resposta)
+\item metodo: método empregado(K ou L)
+\item previsao: previsão de resistência ao cisalhamento das vigas de aço (variável resposta)
 }
 }
 \description{

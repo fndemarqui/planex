@@ -7,8 +7,8 @@
 \format{
 Data frame com 20 linhas e duas variáveis:
 \itemize{
-  \item medida: quando o peso do participante foi medido
-  \item peso: peso do participante
+\item medida: quando o peso do participante foi medido
+\item peso: peso do participante
 }
 }
 \description{

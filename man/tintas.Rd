@@ -7,8 +7,8 @@
 \format{
 Data frame com 20 linhas e duas variáveis:
 \itemize{
-  \item formulacao: formulação utilizada na produção da tinta (F1 ou F2)
-  \item tempo: tempo de secagem da tinta (variável resposta)
+\item formulacao: formulação utilizada na produção da tinta (F1 ou F2)
+\item tempo: tempo de secagem da tinta (variável resposta)
 }
 }
 \description{

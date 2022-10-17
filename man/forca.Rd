@@ -7,9 +7,9 @@
 \format{
 Data frame com 24 linhas e 3 variáveis:
 \itemize{
-  \item forca: variável resposta.
-  \item operador: fator aleatório com 3 níveis.
-  \item maquina: fator fixo com 4 níveis.
+\item forca: variável resposta.
+\item operador: fator aleatório com 3 níveis.
+\item maquina: fator fixo com 4 níveis.
 }
 }
 \description{

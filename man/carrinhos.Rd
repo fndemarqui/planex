@@ -7,9 +7,9 @@
 \format{
 Data frame com 8 linhas e 5 variáveis:
 \itemize{
-  \item tempo: variável resposta (em minutos)
-  \item carrinho: tipo de carrinho (variável categórica com 3 níveis)
-  \item volume
+\item tempo: variável resposta (em minutos)
+\item carrinho: tipo de carrinho (variável categórica com 3 níveis)
+\item volume
 }
 }
 \description{

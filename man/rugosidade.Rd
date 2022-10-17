@@ -7,10 +7,10 @@
 \format{
 Data frame com 16 linhas e 4 variáveis:
 \itemize{
-  \item rugosidade: rugosidade (variável resposta)
-  \item alimentacao: taxa de alimentacao (variável categórica com 2 níveis; fator 1)
-  \item profundidade: profundade do corte (variável categórica com 2 níveis; fator 2)
-  \item angulo:  ângulo da ferramenta (variável categórica com 2 níveis; fator 3)
+\item rugosidade: rugosidade (variável resposta)
+\item alimentacao: taxa de alimentacao (variável categórica com 2 níveis; fator 1)
+\item profundidade: profundade do corte (variável categórica com 2 níveis; fator 2)
+\item angulo:  ângulo da ferramenta (variável categórica com 2 níveis; fator 3)
 }
 }
 \description{

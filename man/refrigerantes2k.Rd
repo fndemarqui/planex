@@ -7,8 +7,8 @@
 \format{
 Data frame com 32 linhas e duas variáveis:
 \itemize{
-  \item pontuacao: pontuacao atribuida à amostra de refrigerante (variável resposta)
-  \item comb_trat: combinação de tratamentos na ordenação de Yates.
+\item pontuacao: pontuacao atribuida à amostra de refrigerante (variável resposta)
+\item comb_trat: combinação de tratamentos na ordenação de Yates.
 }
 }
 \description{

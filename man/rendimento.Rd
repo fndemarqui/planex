@@ -7,11 +7,11 @@
 \format{
 Data frame com 25 linhas e 5 variáveis:
 \itemize{
-  \item lote: lote de materia prima utilizado no preparo das formulações (variável categórica com 5 níveis; bloco 1)
-  \item acido: concentracao de ácido utilizado no processo (variável categórica com 5 níveis; bloco 2)
-  \item catalisador:  concentração de catalisador utilizado no processo (variável categórica com 5 níveis; bloco 3)
-  \item tempo: tempo de espera (variável categórica com 5 níveis; fator de interesse principal)
-  \item rendimento: rendimento do processo químico
+\item lote: lote de materia prima utilizado no preparo das formulações (variável categórica com 5 níveis; bloco 1)
+\item acido: concentracao de ácido utilizado no processo (variável categórica com 5 níveis; bloco 2)
+\item catalisador:  concentração de catalisador utilizado no processo (variável categórica com 5 níveis; bloco 3)
+\item tempo: tempo de espera (variável categórica com 5 níveis; fator de interesse principal)
+\item rendimento: rendimento do processo químico
 }
 }
 \description{

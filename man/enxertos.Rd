@@ -7,9 +7,9 @@
 \format{
 Data frame com 24 linhas e 3 variáveis:
 \itemize{
-  \item pressao: pressão de extrusão (em libras; fator de interesse principal)
-  \item lote: lote de materia prima (bloco - fator de interesse secundário)
-  \item saliencia: saliência (variável resposta)
+\item pressao: pressão de extrusão (em libras; fator de interesse principal)
+\item lote: lote de materia prima (bloco - fator de interesse secundário)
+\item saliencia: saliência (variável resposta)
 }
 }
 \description{

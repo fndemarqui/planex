@@ -7,8 +7,8 @@
 \format{
 Data frame com 10 linhas e duas variáveis:
 \itemize{
-  \item F1: tempo de secagem da tinta com formulação 1
-  \item F2: tempo de secagem da tinta com formulação 2
+\item F1: tempo de secagem da tinta com formulação 1
+\item F2: tempo de secagem da tinta com formulação 2
 }
 }
 \description{

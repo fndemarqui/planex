@@ -7,8 +7,8 @@
 \format{
 Data frame com 24 linhas e duas variáveis:
 \itemize{
-  \item resistencia: resistência dos saquinhos (variável resposta)
-  \item concentracao: concentração de madeira de lei (variável categórica com quadro níveis; fator de interesse)
+\item resistencia: resistência dos saquinhos (variável resposta)
+\item concentracao: concentração de madeira de lei (variável categórica com quadro níveis; fator de interesse)
 }
 }
 \description{

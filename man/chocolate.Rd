@@ -7,8 +7,8 @@
 \format{
 Data frame com 36 linhas e duas variáveis:
 \itemize{
-  \item capacidade: capacidade antioxidante do plasma sanguíneo (variável resposta)
-  \item tipo: tipo de chocolate consumido (variável categórica com quadro níveis; fator de interesse)
+\item capacidade: capacidade antioxidante do plasma sanguíneo (variável resposta)
+\item tipo: tipo de chocolate consumido (variável categórica com quadro níveis; fator de interesse)
 }
 }
 \description{

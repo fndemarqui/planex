@@ -7,8 +7,8 @@
 \format{
 Data frame com 25 linhas e duas variáveis:
 \itemize{
-  \item producao: produção do tear em 1b/min. (variável resposta)
-  \item tear: variável indicadora dos teares selecionados aleatoriamente da linha de produção (variável categórica com quadro níveis; fator de interesse)
+\item producao: produção do tear em 1b/min. (variável resposta)
+\item tear: variável indicadora dos teares selecionados aleatoriamente da linha de produção (variável categórica com quadro níveis; fator de interesse)
 }
 }
 \description{

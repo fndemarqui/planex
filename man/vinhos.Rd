@@ -7,9 +7,9 @@
 \format{
 Data frame com 24 linhas e 3 variáveis:
 \itemize{
-  \item score: pontuação atribuída ao vinho.
-  \item juiz: degustador do vinho (variável categórica com 6 níveis).
-  \item vinho: vinhos participantes da competição (variável categória com 4 níveis).
+\item score: pontuação atribuída ao vinho.
+\item juiz: degustador do vinho (variável categórica com 6 níveis).
+\item vinho: vinhos participantes da competição (variável categória com 4 níveis).
 }
 }
 \description{

@@ -7,9 +7,9 @@
 \format{
 Data frame com 18 linhas e 3 variáveis:
 \itemize{
-  \item posicao: posição do forno - fator fixo com 2 níveis
-  \item temperatura: temperatura de queima (°C) - fator fixo com 3 níveis
-  \item densidade: densidade cozida do ânodo de carbono (variável resposta)
+\item posicao: posição do forno - fator fixo com 2 níveis
+\item temperatura: temperatura de queima (°C) - fator fixo com 3 níveis
+\item densidade: densidade cozida do ânodo de carbono (variável resposta)
 }
 }
 \description{

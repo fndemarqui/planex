@@ -7,8 +7,8 @@
 \format{
 Data frame com 16 linhas e duas variáveis:
 \itemize{
-  \item polegadas: polegadas de tecido queimado na amostra de teste de tamamnho padrão
-  \item combtrat: combinação de tratamentos
+\item polegadas: polegadas de tecido queimado na amostra de teste de tamamnho padrão
+\item combtrat: combinação de tratamentos
 }
 }
 \description{

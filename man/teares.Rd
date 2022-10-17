@@ -7,8 +7,8 @@
 \format{
 Data frame com 16 linhas e duas variáveis:
 \itemize{
-  \item resistencia: resistência dos tecidos (variável resposta)
-  \item tear: variável indicadora dos teares selecionados aleatoriamente da linha de produção (variável categórica com quadro níveis; fator de interesse)
+\item resistencia: resistência dos tecidos (variável resposta)
+\item tear: variável indicadora dos teares selecionados aleatoriamente da linha de produção (variável categórica com quadro níveis; fator de interesse)
 }
 }
 \description{

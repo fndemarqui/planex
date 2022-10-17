@@ -7,9 +7,9 @@
 \format{
 Data frame com 18 linhas e três variáveis:
 \itemize{
-  \item densidade: variável resposta
-  \item posicao: posição da fornalha (fator 1; dois níveis)
-  \item temperatura: temperatura da fornalha (fator 2; 3 níveis: 800, 825 e 850 °C)
+\item densidade: variável resposta
+\item posicao: posição da fornalha (fator 1; dois níveis)
+\item temperatura: temperatura da fornalha (fator 2; 3 níveis: 800, 825 e 850 °C)
 }
 }
 \description{

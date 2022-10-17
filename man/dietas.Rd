@@ -7,8 +7,8 @@
 \format{
 Data frame com 79 linhas e duas variáveis:
 \itemize{
-  \item teor: teor de proteína do leite (variável resposta)
-  \item dieta: tipo de dieta (variável categórica com três níveis; fator de interesse)
+\item teor: teor de proteína do leite (variável resposta)
+\item dieta: tipo de dieta (variável categórica com três níveis; fator de interesse)
 }
 }
 \description{

@@ -7,9 +7,9 @@
 \format{
 Data frame com 21 linhas e 3 variáveis:
 \itemize{
-  \item concentracao: concentração de madeira (variável categórica com 7 níveis; fator de interesse principal)
-  \item dia: dia em que o experimento foi conduzido (variável categórica com 4 níveis; bloco)
-  \item forca: forca do papel (variável resposta)
+\item concentracao: concentração de madeira (variável categórica com 7 níveis; fator de interesse principal)
+\item dia: dia em que o experimento foi conduzido (variável categórica com 4 níveis; bloco)
+\item forca: forca do papel (variável resposta)
 }
 }
 \description{

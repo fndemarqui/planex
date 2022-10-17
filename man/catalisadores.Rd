@@ -7,9 +7,9 @@
 \format{
 Data frame com 12 linhas e 3 variáveis:
 \itemize{
-  \item lote: lote de materia prima utilizada no processo (variável categórica com 4 níveis; bloco)
-  \item catalisador: catalisador utilizado no processo (variável categórica com 4 níveis; fator de interesse principal)
-  \item tempo: tempo de reação do processo químico (variável resposta)
+\item lote: lote de materia prima utilizada no processo (variável categórica com 4 níveis; bloco)
+\item catalisador: catalisador utilizado no processo (variável categórica com 4 níveis; fator de interesse principal)
+\item tempo: tempo de reação do processo químico (variável resposta)
 }
 }
 \description{

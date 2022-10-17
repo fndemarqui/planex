@@ -7,9 +7,9 @@
 \format{
 Data frame com 36 linhas e 3 variáveis:
 \itemize{
-  \item tempo: tempo de vida das baterias (em horas; variável resposta)
-  \item tipo: tipo de material utilizado para a fabricação da bateria (variável categórica com três níveis; fator de interesse principal)
-  \item temperatura: temperatura (em ºF) na qual a bateria será exposta (variável categórica com três níveis; fator de interesse principal)
+\item tempo: tempo de vida das baterias (em horas; variável resposta)
+\item tipo: tipo de material utilizado para a fabricação da bateria (variável categórica com três níveis; fator de interesse principal)
+\item temperatura: temperatura (em ºF) na qual a bateria será exposta (variável categórica com três níveis; fator de interesse principal)
 }
 }
 \description{

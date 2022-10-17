@@ -7,9 +7,9 @@
 \format{
 Data frame com 8 linhas e 3 variáveis:
 \itemize{
-  \item fator A: variável categórica com 2 níveis
-  \item fator B: variável categórica com 2 níveis
-  \item resp: variável resposta
+\item fator A: variável categórica com 2 níveis
+\item fator B: variável categórica com 2 níveis
+\item resp: variável resposta
 }
 }
 \description{

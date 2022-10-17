@@ -7,8 +7,8 @@
 \format{
 Data frame com 22 linhas e duas variáveis:
 \itemize{
-  \item resistencia: resistência à tensão da estrutura de alumínio
-  \item estrutura: tipo de estrutura (E1 ou E2)
+\item resistencia: resistência à tensão da estrutura de alumínio
+\item estrutura: tipo de estrutura (E1 ou E2)
 }
 }
 \description{

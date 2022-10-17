@@ -7,8 +7,8 @@
 \format{
 Data frame com 20 linhas e duas variáveis:
 \itemize{
-  \item comunidade: tipo de comunidade onde a amostra de água foi coletada (metropolitana ou rural)
-  \item concentracao: concentração de arsênio presente na amostra (variável resposta)
+\item comunidade: tipo de comunidade onde a amostra de água foi coletada (metropolitana ou rural)
+\item concentracao: concentração de arsênio presente na amostra (variável resposta)
 }
 }
 \description{

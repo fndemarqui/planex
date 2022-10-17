@@ -7,8 +7,8 @@
 \format{
 Data frame com 22 linhas e duas variáveis:
 \itemize{
-  \item densidade: densidade do tijolo (variável resposta)
-  \item temperatura: temperatura do forno, em ºF; (variável categórica com quatro níveis; fator de interesse)
+\item densidade: densidade do tijolo (variável resposta)
+\item temperatura: temperatura do forno, em ºF; (variável categórica com quatro níveis; fator de interesse)
 }
 }
 \description{

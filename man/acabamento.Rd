@@ -7,9 +7,9 @@
 \format{
 Data frame com 18 linhas e três variáveis:
 \itemize{
-  \item acabamento: variável resposta
-  \item tinta: tipo de tinta utilzada (fator 1; dois níveis)
-  \item tempo: tempo de secagem (fator 2; 3 níveis: 20min, 25min e 30min)
+\item acabamento: variável resposta
+\item tinta: tipo de tinta utilzada (fator 1; dois níveis)
+\item tempo: tempo de secagem (fator 2; 3 níveis: 20min, 25min e 30min)
 }
 }
 \description{

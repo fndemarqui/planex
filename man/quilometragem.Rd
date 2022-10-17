@@ -7,9 +7,9 @@
 \format{
 Data frame com 20 linhas e 3 variáveis:
 \itemize{
-  \item aditivo: aditivo utilizado (variável categórica com 5 níveis; fator de interesse principal)
-  \item carro: carro utilizado para a realização do experimento (variável categórica com 5 níveis; bloco)
-  \item quilometragem: quilometragem observada (variável resposta)
+\item aditivo: aditivo utilizado (variável categórica com 5 níveis; fator de interesse principal)
+\item carro: carro utilizado para a realização do experimento (variável categórica com 5 níveis; bloco)
+\item quilometragem: quilometragem observada (variável resposta)
 }
 }
 \description{

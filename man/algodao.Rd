@@ -7,8 +7,8 @@
 \format{
 Data frame com 25 linhas e duas variáveis:
 \itemize{
-  \item percentual: percentual de algodão utilizado na mistura do material da fibra
-  \item resistencia: resistência da fibra sintética (variável resposta).
+\item percentual: percentual de algodão utilizado na mistura do material da fibra
+\item resistencia: resistência da fibra sintética (variável resposta).
 }
 }
 \description{

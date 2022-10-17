@@ -7,8 +7,8 @@
 \format{
 Data frame com 16 linhas e duas variáveis:
 \itemize{
-  \item catalisador: tipo de catalisador utilizado (C1 ou C2)
-  \item rendimento: rendimento do processo químico (variável resposta)
+\item catalisador: tipo de catalisador utilizado (C1 ou C2)
+\item rendimento: rendimento do processo químico (variável resposta)
 }
 }
 \description{

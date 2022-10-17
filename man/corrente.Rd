@@ -7,9 +7,9 @@
 \format{
 Data frame com 20 linhas e três variáveis:
 \itemize{
-  \item corrente: variável resposta
-  \item polissilicone: tratamento com polissiliconte (fator 1; dois níveis - 1e-20; 2e-20)
-  \item recozimento: recozimento (fator 2; 5 níveis: 900/60, 900/180, 950/60, 1000/15, 1000/30 - temperatura/tempo)
+\item corrente: variável resposta
+\item polissilicone: tratamento com polissiliconte (fator 1; dois níveis - 1e-20; 2e-20)
+\item recozimento: recozimento (fator 2; 5 níveis: 900/60, 900/180, 950/60, 1000/15, 1000/30 - temperatura/tempo)
 }
 }
 \description{

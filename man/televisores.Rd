@@ -7,9 +7,9 @@
 \format{
 Data frame com 18 linhas e três variáveis:
 \itemize{
-  \item corrente: variável resposta (em microampères)
-  \item vidro: tipo de vidro (fator 1; 2 níveis)
-  \item fosforo: tipo de fósforo (fator 2; 3 níveis)
+\item corrente: variável resposta (em microampères)
+\item vidro: tipo de vidro (fator 1; 2 níveis)
+\item fosforo: tipo de fósforo (fator 2; 3 níveis)
 }
 }
 \description{

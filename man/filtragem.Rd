@@ -7,12 +7,12 @@
 \format{
 Data frame com 16 linhas e 5 variáveis:
 \itemize{
-  \item temperatura: taxa de agitação (variável categórica com 2 níveis; fator4)
-  \item pressao: taxa de agitação (variável categórica com 2 níveis; fator4)
-  \item concentracao: taxa de agitação (variável categórica com 2 níveis; fator4)
-  \item agitacao: taxa de agitação (variável categórica com 2 níveis; fator4)
-  \item filtragem: taxa de filtragem (variável resposta)
-  \item comb_trat: combinação de tratamentos (ausência da letra indica nível baixo; presença, nível alto)
+\item temperatura: taxa de agitação (variável categórica com 2 níveis; fator4)
+\item pressao: taxa de agitação (variável categórica com 2 níveis; fator4)
+\item concentracao: taxa de agitação (variável categórica com 2 níveis; fator4)
+\item agitacao: taxa de agitação (variável categórica com 2 níveis; fator4)
+\item filtragem: taxa de filtragem (variável resposta)
+\item comb_trat: combinação de tratamentos (ausência da letra indica nível baixo; presença, nível alto)
 }
 }
 \description{

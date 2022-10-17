@@ -7,9 +7,9 @@
 \format{
 Data frame com 25 linhas e três variáveis:
 \itemize{
-  \item escapamento: escapamento de corrente elétrica (variável resposta)
-  \item comprimento: comprimento do canal (variável categórica com 4 níveis; fator de interesse)
-  \item largura: largura do canal (bloco; fator de interesse secundário)
+\item escapamento: escapamento de corrente elétrica (variável resposta)
+\item comprimento: comprimento do canal (variável categórica com 4 níveis; fator de interesse)
+\item largura: largura do canal (bloco; fator de interesse secundário)
 }
 }
 \description{

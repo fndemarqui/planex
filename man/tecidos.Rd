@@ -7,9 +7,9 @@
 \format{
 Data frame com 20 linhas e 3 variáveis:
 \itemize{
-  \item resistencia: resistência do tecido (variável resposta)
-  \item produto: tipo de produto químico (variável categórica com quadro níveis; fator de interesse)
-  \item amostra: amostra de tecido utilizada no experimento (bloco; fator de interesse secundário)
+\item resistencia: resistência do tecido (variável resposta)
+\item produto: tipo de produto químico (variável categórica com quadro níveis; fator de interesse)
+\item amostra: amostra de tecido utilizada no experimento (bloco; fator de interesse secundário)
 }
 }
 \description{

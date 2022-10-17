@@ -7,9 +7,9 @@
 \format{
 Data frame com 18 linhas e três variáveis:
 \itemize{
-  \item adesao: adesao da tinta (variável resposta)
-  \item tipo: tipo de zarcao (variável categórica com 3 níveis; fator 1)
-  \item metodo: método de aplicação do zarcao (variável categórica com 2 níveis; fator 2)
+\item adesao: adesao da tinta (variável resposta)
+\item tipo: tipo de zarcao (variável categórica com 3 níveis; fator 1)
+\item metodo: método de aplicação do zarcao (variável categórica com 2 níveis; fator 2)
 }
 }
 \description{

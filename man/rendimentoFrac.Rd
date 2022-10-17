@@ -7,11 +7,11 @@
 \format{
 Data frame com 8 linhas e 5 variáveis:
 \itemize{
-  \item rendimento: variável resposta
-  \item A: fator A
-  \item B: fator B
-  \item C: fator C
-  \item D: fator D
+\item rendimento: variável resposta
+\item A: fator A
+\item B: fator B
+\item C: fator C
+\item D: fator D
 }
 }
 \description{

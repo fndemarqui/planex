@@ -7,9 +7,9 @@
 \format{
 Data frame com 15 linhas e 3 variáveis:
 \itemize{
-  \item temperatura: variável categórica com 3 níveis (fator 1)
-  \item pressão: variável categórica com 5 níveis (fator 2)
-  \item impureza: impureza do produto químico (variável resposta)
+\item temperatura: variável categórica com 3 níveis (fator 1)
+\item pressão: variável categórica com 5 níveis (fator 2)
+\item impureza: impureza do produto químico (variável resposta)
 }
 }
 \description{

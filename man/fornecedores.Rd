@@ -7,9 +7,9 @@
 \format{
 Data frame com 36 linhas e 3 variáveis:
 \itemize{
-  \item pureza: variável resposta.
-  \item fornecedor: fator fixo com 3 níveis.
-  \item lote: fator aleatório com 4 níveis.
+\item pureza: variável resposta.
+\item fornecedor: fator fixo com 3 níveis.
+\item lote: fator aleatório com 4 níveis.
 }
 }
 \description{
