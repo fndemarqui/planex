@@ -92,53 +92,53 @@
 </h2>
 <p>Você pode instalar a versão de desenvolvimento do pacote planex a partir do <a href="https://github.com/" class="external-link">GitHub</a> da seguinte forma:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
-<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"fndemarqui/planex"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"fndemarqui/planex"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="exemplo">Exemplo<a class="anchor" aria-label="anchor" href="#exemplo"></a>
 </h2>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span>
-<span class="co">#&gt; Loading required package: dplyr</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: 'dplyr'</span>
-<span class="co">#&gt; The following objects are masked from 'package:stats':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     filter, lag</span>
-<span class="co">#&gt; The following objects are masked from 'package:base':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     intersect, setdiff, setequal, union</span>
-<span class="co">#&gt; Loading required package: ggplot2</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">)</span>
-<span class="va">saquinhos</span><span class="op">$</span><span class="va">concentracao</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">$</span><span class="va">concentracao</span><span class="op">)</span>
-<span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">resistencia</span> <span class="op">~</span> <span class="va">concentracao</span>, data <span class="op">=</span> <span class="va">saquinhos</span><span class="op">)</span>
-<span class="fu"><a href="reference/plotResiduals.html">plotResiduals</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; Loading required package: dplyr</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Attaching package: 'dplyr'</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     filter, lag</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span>
+<span><span class="co">#&gt; Loading required package: ggplot2</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">)</span></span>
+<span><span class="va">saquinhos</span><span class="op">$</span><span class="va">concentracao</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">$</span><span class="va">concentracao</span><span class="op">)</span></span>
+<span><span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">resistencia</span> <span class="op">~</span> <span class="va">concentracao</span>, data <span class="op">=</span> <span class="va">saquinhos</span><span class="op">)</span></span>
+<span><span class="fu"><a href="reference/plotResiduals.html">plotResiduals</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-saquinhos-1.png" width="100%"><img src="reference/figures/README-saquinhos-2.png" width="100%"><img src="reference/figures/README-saquinhos-3.png" width="100%"><img src="reference/figures/README-saquinhos-4.png" width="100%"><img src="reference/figures/README-saquinhos-5.png" width="100%"></p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="reference/testResiduals.html">testResiduals</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;  Shapiro-Wilk normality test</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; data:  resid</span>
-<span class="co">#&gt; W = 0.96624, p-value = 0.5757</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ------------------------------------------ </span>
-<span class="co">#&gt; Bartlett test of Homogeneity of Variances: </span>
-<span class="co">#&gt;              Bartlett's K-squared df   p.value</span>
-<span class="co">#&gt; concentracao             1.135246  3 0.7685731</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ----------------------------------------------- </span>
-<span class="co">#&gt; Durbin-Watson Test for Autocorrelated Errors: </span>
-<span class="co">#&gt;  lag Autocorrelation D-W Statistic p-value</span>
-<span class="co">#&gt;    1      -0.1303884      2.181178   0.864</span>
-<span class="co">#&gt;  Alternative hypothesis: rho != 0</span>
-<span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span>
-<span class="co">#&gt;              Df Sum Sq Mean Sq F value   Pr(&gt;F)    </span>
-<span class="co">#&gt; concentracao  3  382.8  127.60   19.61 3.59e-06 ***</span>
-<span class="co">#&gt; Residuals    20  130.2    6.51                     </span>
-<span class="co">#&gt; ---</span>
-<span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="reference/testResiduals.html">testResiduals</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;  Shapiro-Wilk normality test</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; data:  resid</span></span>
+<span><span class="co">#&gt; W = 0.96624, p-value = 0.5757</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ------------------------------------------ </span></span>
+<span><span class="co">#&gt; Bartlett test of Homogeneity of Variances: </span></span>
+<span><span class="co">#&gt;              Bartlett's K-squared df   p.value</span></span>
+<span><span class="co">#&gt; concentracao             1.135246  3 0.7685731</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ----------------------------------------------- </span></span>
+<span><span class="co">#&gt; Durbin-Watson Test for Autocorrelated Errors: </span></span>
+<span><span class="co">#&gt;  lag Autocorrelation D-W Statistic p-value</span></span>
+<span><span class="co">#&gt;    1      -0.1303884      2.181178   0.864</span></span>
+<span><span class="co">#&gt;  Alternative hypothesis: rho != 0</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span>
+<span><span class="co">#&gt;              Df Sum Sq Mean Sq F value   Pr(&gt;F)    </span></span>
+<span><span class="co">#&gt; concentracao  3  382.8  127.60   19.61 3.59e-06 ***</span></span>
+<span><span class="co">#&gt; Residuals    20  130.2    6.51                     </span></span>
+<span><span class="co">#&gt; ---</span></span>
+<span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span></code></pre></div>
 </div>
 </div>
   </div>
@@ -187,7 +187,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>

@@ -69,7 +69,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">gg_daniel</span><span class="op">(</span><span class="va">tb</span>, alpha <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">gg_daniel</span><span class="op">(</span><span class="va">tb</span>, alpha <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -91,33 +91,33 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \donttest{</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">filtragem</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">filtragem</span> <span class="op">&lt;-</span> <span class="va">filtragem</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate_all.html" class="external-link">mutate_at</a></span><span class="op">(</span></span>
-<span class="r-in">    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"temperatura"</span>, <span class="st">"pressao"</span>, <span class="st">"concentracao"</span>, <span class="st">"agitacao"</span><span class="op">)</span>,</span>
-<span class="r-in">    <span class="va">as.factor2k</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
-<span class="r-in">  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span></span>
-<span class="r-in">    A <span class="op">=</span> <span class="va">temperatura</span>,</span>
-<span class="r-in">    B <span class="op">=</span> <span class="va">pressao</span>,</span>
-<span class="r-in">    C <span class="op">=</span> <span class="va">concentracao</span>,</span>
-<span class="r-in">    D <span class="op">=</span> <span class="va">agitacao</span></span>
-<span class="r-in">  <span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">filtragem</span> <span class="op">~</span> <span class="va">A</span><span class="op">*</span><span class="va">B</span><span class="op">*</span><span class="va">C</span><span class="op">*</span><span class="va">D</span>, data<span class="op">=</span><span class="va">filtragem</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">tb</span> <span class="op">&lt;-</span> <span class="fu"><a href="table2kunrep.html">table2kunrep</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">filtragem</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">filtragem</span> <span class="op">&lt;-</span> <span class="va">filtragem</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate_all.html" class="external-link">mutate_at</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"temperatura"</span>, <span class="st">"pressao"</span>, <span class="st">"concentracao"</span>, <span class="st">"agitacao"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    <span class="va">as.factor2k</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html" class="external-link">rename</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    A <span class="op">=</span> <span class="va">temperatura</span>,</span></span>
+<span class="r-in"><span>    B <span class="op">=</span> <span class="va">pressao</span>,</span></span>
+<span class="r-in"><span>    C <span class="op">=</span> <span class="va">concentracao</span>,</span></span>
+<span class="r-in"><span>    D <span class="op">=</span> <span class="va">agitacao</span></span></span>
+<span class="r-in"><span>  <span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">filtragem</span> <span class="op">~</span> <span class="va">A</span><span class="op">*</span><span class="va">B</span><span class="op">*</span><span class="va">C</span><span class="op">*</span><span class="va">D</span>, data<span class="op">=</span><span class="va">filtragem</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">tb</span> <span class="op">&lt;-</span> <span class="fu"><a href="table2kunrep.html">table2kunrep</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in as.vector(tab["Sum Sq"])[1:length(effects), ]:</span> incorrect number of dimensions</span>
-<span class="r-in"><span class="fu">gg_daniel</span><span class="op">(</span><span class="va">tb</span><span class="op">)</span></span>
+<span class="r-in"><span><span class="fu">gg_daniel</span><span class="op">(</span><span class="va">tb</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Registered S3 method overwritten by 'DoE.base':</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   method           from       </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>   factorize.factor conf.design</span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in median(abs(b)):</span> object 'tb' not found</span>
-<span class="r-in"><span class="co"># }</span></span>
-<span class="r-in"></span>
+<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -132,7 +132,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

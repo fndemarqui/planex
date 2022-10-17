@@ -69,7 +69,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">Fpower</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.05</span>, nlev <span class="op">=</span> <span class="cn">NULL</span>, nreps <span class="op">=</span> <span class="cn">NULL</span>, Delta <span class="op">=</span> <span class="cn">NULL</span>, sigma <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">Fpower</span><span class="op">(</span>alpha <span class="op">=</span> <span class="fl">0.05</span>, nlev <span class="op">=</span> <span class="cn">NULL</span>, nreps <span class="op">=</span> <span class="cn">NULL</span>, Delta <span class="op">=</span> <span class="cn">NULL</span>, sigma <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -103,8 +103,8 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># one-way ANOVA:</span></span>
-<span class="r-in"><span class="fu">Fpower</span><span class="op">(</span>alpha<span class="op">=</span><span class="fl">.05</span>, nlev<span class="op">=</span><span class="fl">3</span>, nreps<span class="op">=</span><span class="fl">2</span><span class="op">:</span><span class="fl">10</span>, Delta<span class="op">=</span><span class="fl">40</span>, sigma<span class="op">=</span><span class="fl">25</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># one-way ANOVA:</span></span></span>
+<span class="r-in"><span><span class="fu">Fpower</span><span class="op">(</span>alpha<span class="op">=</span><span class="fl">.05</span>, nlev<span class="op">=</span><span class="fl">3</span>, nreps<span class="op">=</span><span class="fl">2</span><span class="op">:</span><span class="fl">10</span>, Delta<span class="op">=</span><span class="fl">40</span>, sigma<span class="op">=</span><span class="fl">25</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   nreps ntotal df2     power</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1     2      6   3 0.1358291</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2     3      9   6 0.2590387</span>
@@ -115,9 +115,9 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 7     8     24  21 0.7632712</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 8     9     27  24 0.8210086</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 9    10     30  27 0.8663743</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># two-way ANOVA:</span></span>
-<span class="r-in"><span class="fu">Fpower</span><span class="op">(</span>alpha<span class="op">=</span><span class="fl">.05</span>, nlev<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span><span class="op">)</span>, nreps<span class="op">=</span><span class="fl">2</span><span class="op">:</span><span class="fl">10</span>, Delta<span class="op">=</span><span class="fl">40</span>, sigma<span class="op">=</span><span class="fl">25</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># two-way ANOVA:</span></span></span>
+<span class="r-in"><span><span class="fu">Fpower</span><span class="op">(</span>alpha<span class="op">=</span><span class="fl">.05</span>, nlev<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span><span class="op">)</span>, nreps<span class="op">=</span><span class="fl">2</span><span class="op">:</span><span class="fl">10</span>, Delta<span class="op">=</span><span class="fl">40</span>, sigma<span class="op">=</span><span class="fl">25</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   nreps ntotal df2    powerA    powerB    powerAB</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1     2     18   9 0.5417938 0.5417938 0.06665484</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2     3     27  18 0.8030922 0.8030922 0.08190816</span>
@@ -128,11 +128,11 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> 7     8     72  63 0.9990238 0.9990238 0.16465631</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 8     9     81  72 0.9997073 0.9997073 0.18270041</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 9    10     90  81 0.9999150 0.9999150 0.20112995</span>
-<span class="r-in"></span>
-<span class="r-in"><span class="co"># tree-way ANOVA:</span></span>
-<span class="r-in"><span class="fu">Fpower</span><span class="op">(</span>alpha<span class="op">=</span><span class="fl">.05</span>, nlev<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">3</span><span class="op">)</span>, nreps<span class="op">=</span><span class="fl">2</span><span class="op">:</span><span class="fl">10</span>, Delta<span class="op">=</span><span class="fl">40</span>, sigma<span class="op">=</span><span class="fl">25</span><span class="op">)</span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># tree-way ANOVA:</span></span></span>
+<span class="r-in"><span><span class="fu">Fpower</span><span class="op">(</span>alpha<span class="op">=</span><span class="fl">.05</span>, nlev<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">3</span>, <span class="fl">3</span><span class="op">)</span>, nreps<span class="op">=</span><span class="fl">2</span><span class="op">:</span><span class="fl">10</span>, Delta<span class="op">=</span><span class="fl">40</span>, sigma<span class="op">=</span><span class="fl">25</span><span class="op">)</span></span></span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>This function cannot handle designs with more than two factors!!!</span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -147,7 +147,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer></div>

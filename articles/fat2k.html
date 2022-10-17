@@ -95,61 +95,63 @@
     
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span>
-<span class="co">#&gt; Loading required package: dplyr</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: 'dplyr'</span>
-<span class="co">#&gt; The following objects are masked from 'package:stats':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     filter, lag</span>
-<span class="co">#&gt; The following objects are masked from 'package:base':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     intersect, setdiff, setequal, union</span>
-<span class="co">#&gt; Loading required package: ggplot2</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
-<span class="co">#&gt; ── <span style="font-weight: bold;">Attaching packages</span> ─────────────────────────────────────── tidyverse 1.3.1 ──</span>
-<span class="co">#&gt; <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">tibble </span> 3.1.7     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">purrr  </span> 0.3.4</span>
-<span class="co">#&gt; <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">tidyr  </span> 1.2.0     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">stringr</span> 1.4.0</span>
-<span class="co">#&gt; <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">readr  </span> 2.1.2     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">forcats</span> 0.5.1</span>
-<span class="co">#&gt; ── <span style="font-weight: bold;">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──</span>
-<span class="co">#&gt; <span style="color: #BB0000;">✖</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">filter()</span> masks <span style="color: #0000BB;">stats</span>::filter()</span>
-<span class="co">#&gt; <span style="color: #BB0000;">✖</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">lag()</span>    masks <span style="color: #0000BB;">stats</span>::lag()</span>
-
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span>
-
-<span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">rendimento2k</span><span class="op">)</span>
-<span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">rendimento2k</span><span class="op">)</span>
-<span class="co">#&gt; Rows: 12</span>
-<span class="co">#&gt; Columns: 3</span>
-<span class="co">#&gt; $ rendimento  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 28, 36, 18, 31, 25, 32, 19, 30, 27, 32, 23, 29</span>
-<span class="co">#&gt; $ reagente    <span style="color: #949494; font-style: italic;">&lt;factor2k&gt;</span> -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1</span>
-<span class="co">#&gt; $ catalisador <span style="color: #949494; font-style: italic;">&lt;factor2k&gt;</span> -1, -1, 1, 1, -1, -1, 1, 1, -1, -1, 1, 1</span>
-
-<span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">rendimento</span> <span class="op">~</span> <span class="va">reagente</span><span class="op">*</span><span class="va">catalisador</span>, data<span class="op">=</span><span class="va">rendimento2k</span><span class="op">)</span>
-<span class="fu"><a href="../reference/testResiduals.html">testResiduals</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;  Shapiro-Wilk normality test</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; data:  resid</span>
-<span class="co">#&gt; W = 0.906, p-value = 0.1895</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ------------------------------------------ </span>
-<span class="co">#&gt; Bartlett test of Homogeneity of Variances: </span>
-<span class="co">#&gt;             Bartlett's K-squared df   p.value</span>
-<span class="co">#&gt; reagente             0.169806150  1 0.6802841</span>
-<span class="co">#&gt; catalisador          0.002058164  1 0.9638148</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt; ----------------------------------------------- </span>
-<span class="co">#&gt; Durbin-Watson Test for Autocorrelated Errors: </span>
-<span class="co">#&gt;  lag Autocorrelation D-W Statistic p-value</span>
-<span class="co">#&gt;    1      -0.2978723      2.507092    0.29</span>
-<span class="co">#&gt;  Alternative hypothesis: rho != 0</span>
-<span class="fu"><a href="../reference/plotResiduals.html">plotResiduals</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; Loading required package: dplyr</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Attaching package: 'dplyr'</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:stats':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     filter, lag</span></span>
+<span><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span>
+<span><span class="co">#&gt; Loading required package: ggplot2</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; ── <span style="font-weight: bold;">Attaching packages</span></span></span>
+<span><span class="co">#&gt; ───────────────────────────────────────</span></span>
+<span><span class="co">#&gt; tidyverse 1.3.2 ──</span></span>
+<span><span class="co">#&gt; <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">tibble </span> 3.1.8     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">purrr  </span> 0.3.5</span></span>
+<span><span class="co">#&gt; <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">tidyr  </span> 1.2.1     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">stringr</span> 1.4.1</span></span>
+<span><span class="co">#&gt; <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">readr  </span> 2.1.3     <span style="color: #00BB00;">✔</span> <span style="color: #0000BB;">forcats</span> 0.5.2</span></span>
+<span><span class="co">#&gt; ── <span style="font-weight: bold;">Conflicts</span> ────────────────────────────────────────── tidyverse_conflicts() ──</span></span>
+<span><span class="co">#&gt; <span style="color: #BB0000;">✖</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">filter()</span> masks <span style="color: #0000BB;">stats</span>::filter()</span></span>
+<span><span class="co">#&gt; <span style="color: #BB0000;">✖</span> <span style="color: #0000BB;">dplyr</span>::<span style="color: #00BB00;">lag()</span>    masks <span style="color: #0000BB;">stats</span>::lag()</span></span>
+<span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">rendimento2k</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="va">rendimento2k</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Rows: 12</span></span>
+<span><span class="co">#&gt; Columns: 3</span></span>
+<span><span class="co">#&gt; $ rendimento  <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 28, 36, 18, 31, 25, 32, 19, 30, 27, 32, 23, 29</span></span>
+<span><span class="co">#&gt; $ reagente    <span style="color: #949494; font-style: italic;">&lt;factor2k&gt;</span> -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1</span></span>
+<span><span class="co">#&gt; $ catalisador <span style="color: #949494; font-style: italic;">&lt;factor2k&gt;</span> -1, -1, 1, 1, -1, -1, 1, 1, -1, -1, 1, 1</span></span>
+<span></span>
+<span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">rendimento</span> <span class="op">~</span> <span class="va">reagente</span><span class="op">*</span><span class="va">catalisador</span>, data<span class="op">=</span><span class="va">rendimento2k</span><span class="op">)</span></span>
+<span><span class="fu"><a href="../reference/testResiduals.html">testResiduals</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;  Shapiro-Wilk normality test</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; data:  resid</span></span>
+<span><span class="co">#&gt; W = 0.906, p-value = 0.1895</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ------------------------------------------ </span></span>
+<span><span class="co">#&gt; Bartlett test of Homogeneity of Variances: </span></span>
+<span><span class="co">#&gt;             Bartlett's K-squared df   p.value</span></span>
+<span><span class="co">#&gt; reagente             0.169806150  1 0.6802841</span></span>
+<span><span class="co">#&gt; catalisador          0.002058164  1 0.9638148</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; ----------------------------------------------- </span></span>
+<span><span class="co">#&gt; Durbin-Watson Test for Autocorrelated Errors: </span></span>
+<span><span class="co">#&gt;  lag Autocorrelation D-W Statistic p-value</span></span>
+<span><span class="co">#&gt;    1      -0.2978723      2.507092   0.322</span></span>
+<span><span class="co">#&gt;  Alternative hypothesis: rho != 0</span></span>
+<span><span class="fu"><a href="../reference/plotResiduals.html">plotResiduals</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span></code></pre></div>
 <p><img src="fat2k_files/figure-html/unnamed-chunk-2-1.png" width="700"><img src="fat2k_files/figure-html/unnamed-chunk-2-2.png" width="700"><img src="fat2k_files/figure-html/unnamed-chunk-2-3.png" width="700"><img src="fat2k_files/figure-html/unnamed-chunk-2-4.png" width="700"></p>
-<pre><code><span class="co">#&gt; Don't know how to automatically pick scale for object of type factor2k. Defaulting to continuous.</span></code></pre>
+<pre><code><span><span class="co">#&gt; Don't know how to automatically pick scale for object of type factor2k. Defaulting to continuous.</span></span></code></pre>
 <p><img src="fat2k_files/figure-html/unnamed-chunk-2-5.png" width="700"></p>
-<pre><code><span class="co">#&gt; Don't know how to automatically pick scale for object of type factor2k. Defaulting to continuous.</span></code></pre>
+<pre><code><span><span class="co">#&gt; Don't know how to automatically pick scale for object of type factor2k. Defaulting to continuous.</span></span></code></pre>
 <p><img src="fat2k_files/figure-html/unnamed-chunk-2-6.png" width="700"></p>
   </div>
 
@@ -168,7 +170,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.</p>
 </div>
 
       </footer>
