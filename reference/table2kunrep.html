@@ -92,7 +92,38 @@
 <span class="r-in"><span><span class="va">semicondutores1rep</span> <span class="op">&lt;-</span> <span class="fu"><a href="treatcomb2factors.html">treatcomb2factors</a></span><span class="op">(</span><span class="va">semicondutores1rep</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">rendimento</span> <span class="op">~</span> <span class="va">A</span><span class="op">*</span><span class="va">B</span><span class="op">*</span><span class="va">C</span><span class="op">*</span><span class="va">D</span><span class="op">*</span><span class="va">E</span>, data <span class="op">=</span> <span class="va">semicondutores1rep</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">table2kunrep</span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in as.vector(tab["Sum Sq"])[1:length(effects), ]:</span> incorrect number of dimensions</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>           effects         SS  SSPC    PRD</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A         11.8125 1116.28125  9.57  38.69</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B         33.9375 9214.03125 79.00 111.16</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C          9.6875  750.78125  6.44  31.73</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> D         -0.8125    5.28125  0.05  -2.66</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> E          0.4375    1.53125  0.01   1.43</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:B        7.9375  504.03125  4.32  26.00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:C        0.4375    1.53125  0.01   1.43</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B:C        0.0625    0.03125  0.00   0.20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:D       -0.0625    0.03125  0.00  -0.20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B:D       -0.6875    3.78125  0.03  -2.25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C:D        0.8125    5.28125  0.05   2.66</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:E        0.9375    7.03125  0.06   3.07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B:E        0.5625    2.53125  0.02   1.84</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C:E        0.3125    0.78125  0.01   1.02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> D:E       -1.1875   11.28125  0.10  -3.89</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:B:C     -0.4375    1.53125  0.01  -1.43</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:B:D      0.3125    0.78125  0.01   1.02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:C:D     -0.4375    1.53125  0.01  -1.43</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B:C:D      0.4375    1.53125  0.01   1.43</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:B:E     -0.1875    0.28125  0.00  -0.61</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:C:E      0.3125    0.78125  0.01   1.02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B:C:E      0.9375    7.03125  0.06   3.07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:D:E      0.8125    5.28125  0.05   2.66</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B:D:E      0.1875    0.28125  0.00   0.61</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> C:D:E     -0.8125    5.28125  0.05  -2.66</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:B:C:D   -0.0625    0.03125  0.00  -0.20</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:B:C:E    0.1875    0.28125  0.00   0.61</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:B:D:E    0.9375    7.03125  0.06   3.07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:C:D:E   -0.3125    0.78125  0.01  -1.02</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> B:C:D:E   -0.9375    7.03125  0.06  -3.07</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> A:B:C:D:E -0.1875    0.28125  0.00  -0.61</span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
