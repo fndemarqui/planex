@@ -349,7 +349,7 @@ table2kunrep <- function(object){
   effects <- 2*coef(object)[-1]
   rd <- round(100*(effects/coef(object)[1]), 2)
   tab <- suppressWarnings(stats::anova(object))
-  SS <- as.vector(tab["Sum Sq"])[1:length(effects),]
+  SS <- as.vector(tab$"Sum Sq")[1:length(effects)]
   pc <- round(100*(SS/sum(SS)), 2)
   df <- data.frame(effects = effects, SS = SS, SSPC = pc, PRD = rd)
   return(df)
