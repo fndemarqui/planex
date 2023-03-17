@@ -42,14 +42,15 @@ devtools::build_vignettes()
 devtools::build_site()
 usethis::use_github_action("pkgdown")
 
+#usethis::use_vignette("vigas", "Teste t pareado e blocos completos aleatorizados")
 
 # usethis::use_vignette("planex", "Introdução ao pacote planex")
 
 
 #tools::showNonASCIIfile("R/biblioteca.R")
 
-algodao <- read.table("inst/dados.txt", header=TRUE)
-usethis::use_data(algodao, overwrite = TRUE)
+# algodao <- read.table("inst/dados.txt", header=TRUE)
+# usethis::use_data(algodao, overwrite = TRUE)
 
 # criar função is.balanced()....
 

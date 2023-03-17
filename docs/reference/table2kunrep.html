@@ -43,6 +43,9 @@
     <li>
       <a href="../articles/twosample.html">Inferências envolvendo duas populações normais</a>
     </li>
+    <li>
+      <a href="../articles/vigas.html">Teste t pareado e blocos completos aleatorizados</a>
+    </li>
   </ul></li>
       </ul><ul class="nav navbar-nav navbar-right"><li>
   <a href="https://github.com/fndemarqui/planex/" class="external-link">
@@ -69,7 +72,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">table2kunrep</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">table2kunrep</span><span class="op">(</span><span class="va">object</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -87,11 +90,11 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">semicondutores1rep</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">semicondutores1rep</span> <span class="op">&lt;-</span> <span class="fu"><a href="treatcomb2factors.html">treatcomb2factors</a></span><span class="op">(</span><span class="va">semicondutores1rep</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">rendimento</span> <span class="op">~</span> <span class="va">A</span><span class="op">*</span><span class="va">B</span><span class="op">*</span><span class="va">C</span><span class="op">*</span><span class="va">D</span><span class="op">*</span><span class="va">E</span>, data <span class="op">=</span> <span class="va">semicondutores1rep</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">table2kunrep</span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">semicondutores1rep</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">semicondutores1rep</span> <span class="op">&lt;-</span> <span class="fu"><a href="treatcomb2factors.html">treatcomb2factors</a></span><span class="op">(</span><span class="va">semicondutores1rep</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">rendimento</span> <span class="op">~</span> <span class="va">A</span><span class="op">*</span><span class="va">B</span><span class="op">*</span><span class="va">C</span><span class="op">*</span><span class="va">D</span><span class="op">*</span><span class="va">E</span>, data <span class="op">=</span> <span class="va">semicondutores1rep</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">table2kunrep</span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>           effects         SS  SSPC    PRD</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> A         11.8125 1116.28125  9.57  38.69</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> B         33.9375 9214.03125 79.00 111.16</span>
@@ -124,7 +127,7 @@
 <span class="r-out co"><span class="r-pr">#&gt;</span> A:C:D:E   -0.3125    0.78125  0.01  -1.02</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> B:C:D:E   -0.9375    7.03125  0.06  -3.07</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> A:B:C:D:E -0.1875    0.28125  0.00  -0.61</span>
-<span class="r-in"></span>
+<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -139,7 +142,7 @@
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.4.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer></div>

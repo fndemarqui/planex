@@ -1,0 +1,43 @@
+---
+title: "Teste t pareado e blocos completos aleatorizados"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Teste t pareado e blocos completos aleatorizados}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Um pesquisador tem interesse em comparar dois métodos, a saber Karlruhe (K) e Lehigh (L), para prever a resistência ao cisalhamento entre traves planas metálicas. Os dois métodos são aplicados a 9 traves especı́ficas.
+
+
+
+```{r, message = FALSE}
+
+library(tidyverse)
+library(planex)
+
+data(vigas)
+glimpse(vigas)
+
+df <- vigas %>%
+  mutate(
+    viga = as.factor(1:nrow(vigas))
+  ) %>%
+  pivot_longer(
+    cols = 1:2,
+    names_to = "metodo",
+    values_to = "resistencia"
+  )
+
+fit <- aov(resistencia ~ viga + metodo, data = df)
+summary(fit)
+with(vigas, t.test(K,L, paired  = "TRUE"))
+
+```
