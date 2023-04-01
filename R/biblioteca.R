@@ -565,10 +565,10 @@ gg_daniel <- function(tb, alpha = 0.05){
       labels = ifelse(important, labels, ""),
       scores = qqnorm(tb$effects, plot = FALSE)$x,
     )
-  ggplot(tb, aes(sample = effects, label = labels)) +
+  ggplot(tb, aes(sample = effects)) +
     stat_qq() + stat_qq_line(color="blue") +
     ggtitle("Daniel probability plot") +
-    geom_text(aes(x = scores, y = effects, hjust = -0.5,vjust = 0.5)) +
+    geom_text(aes(x = scores, y = effects, hjust = -0.5,vjust = 0.5, label = labels)) +
     labs(y = "effects", x = "normal scores")
 }
 
