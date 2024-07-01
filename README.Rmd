@@ -41,3 +41,19 @@ testResiduals(mod)
 summary(mod)
 ```
 
+Realizando as comparações múltiplas:
+
+```{r}
+library(agricolae)
+library(multcomp)
+library(emmeans)
+
+comp1 <- HSD.test(mod, "concentracao", group = FALSE)
+comp2 <- glht(mod, linfct = mcp(concentracao = "Tukey"))
+comp3 <- emmeans(mod, pairwise ~ concentracao, adjust = "tukey")
+
+comp1$comparison
+summary(comp2)
+comp3$contrasts
+```
+

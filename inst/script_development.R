@@ -37,10 +37,10 @@ usethis::use_build_ignore("inst/script_github.R")
 
 
 
-#devtools::build_readme()
+devtools::build_readme()
 devtools::build_vignettes()
 devtools::build_site()
-usethis::use_github_action("pkgdown")
+#usethis::use_github_action("pkgdown")
 
 #usethis::use_vignette("vigas", "Teste t pareado e blocos completos aleatorizados")
 

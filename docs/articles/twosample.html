@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inferências envolvendo duas populações normais • planex</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -63,6 +63,9 @@
     </li>
     <li>
       <a href="../articles/vigas.html">Teste t pareado e blocos completos aleatorizados</a>
+    </li>
+    <li>
+      <a href="../articles/wilcoxn.html">Alternativas Não-Paramétricas ao Teste t</a>
     </li>
   </ul>
 </li>
@@ -123,8 +126,9 @@ ilustração da parte computacional.</p>
 <span><span class="co">#&gt; Rows: 20</span></span>
 <span><span class="co">#&gt; Columns: 2</span></span>
 <span><span class="co">#&gt; $ formulacao <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "F1", "F2", "F1", "F2", "F1", "F2", "F1", "F2", "F1", "F2",…</span></span>
-<span><span class="co">#&gt; $ tempo      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 130.76740, 99.18879, 127.96217, 105.37315, 124.36982, 108.1…</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">tintas</span><span class="op">)</span></span>
+<span><span class="co">#&gt; $ tempo      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 130.76740, 99.18879, 127.96217, 105.37315, 124.36982, 108.1…</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">tintas</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/z.test.html">z.test</a></span><span class="op">(</span><span class="va">tempo</span><span class="op">~</span><span class="va">formulacao</span>, sigma <span class="op">=</span> <span class="fl">8</span>, alternative <span class="op">=</span> <span class="st">"greater"</span>, data <span class="op">=</span> <span class="va">tintas</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  Two-sample z-test</span></span>
@@ -136,8 +140,9 @@ ilustração da parte computacional.</p>
 <span><span class="co">#&gt;  3.848103      Inf</span></span>
 <span><span class="co">#&gt; sample estimates:</span></span>
 <span><span class="co">#&gt; mean in group F1 mean in group F2 </span></span>
-<span><span class="co">#&gt;         122.2223         112.4894</span></span>
-<span></span>
+<span><span class="co">#&gt;         122.2223         112.4894</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span></span>
 <span><span class="co"># formato largo:</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">tintas2</span><span class="op">)</span></span>
@@ -145,8 +150,9 @@ ilustração da parte computacional.</p>
 <span><span class="co">#&gt; Rows: 10</span></span>
 <span><span class="co">#&gt; Columns: 2</span></span>
 <span><span class="co">#&gt; $ F1 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 130.7674, 127.9622, 124.3698, 104.6982, 135.3703, 130.9753, 109.996…</span></span>
-<span><span class="co">#&gt; $ F2 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 99.18879, 105.37315, 108.18680, 121.52813, 104.04994, 114.23531, 12…</span></span>
-<span></span>
+<span><span class="co">#&gt; $ F2 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 99.18879, 105.37315, 108.18680, 121.52813, 104.04994, 114.23531, 12…</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">tintas2</span>,</span>
 <span>  <span class="fu"><a href="../reference/z.test.html">z.test</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">F1</span>, y<span class="op">=</span><span class="va">F2</span>, sigma <span class="op">=</span> <span class="fl">8</span>, alternative <span class="op">=</span> <span class="st">"greater"</span><span class="op">)</span>     </span>
 <span><span class="op">)</span></span>
@@ -162,15 +168,16 @@ ilustração da parte computacional.</p>
 <span><span class="co">#&gt; mean in group F1 mean in group F2 </span></span>
 <span><span class="co">#&gt;         122.2223         112.4894</span></span></code></pre></div>
 <p>Alternativamente:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># mudando o nível de referência:</span></span>
 <span><span class="va">tintas</span> <span class="op">&lt;-</span> <span class="va">tintas</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span>
 <span>    formulacao <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">formulacao</span>, levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"F2"</span>, <span class="st">"F1"</span><span class="op">)</span><span class="op">)</span></span>
 <span>  <span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/levels.html" class="external-link">levels</a></span><span class="op">(</span><span class="va">tintas</span><span class="op">$</span><span class="va">formulacao</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] "F2" "F1"</span></span>
-<span><span class="fu"><a href="../reference/z.test.html">z.test</a></span><span class="op">(</span><span class="va">tempo</span><span class="op">~</span><span class="va">formulacao</span>, sigma <span class="op">=</span> <span class="fl">8</span>, alternative <span class="op">=</span> <span class="st">"less"</span>, data <span class="op">=</span> <span class="va">tintas</span><span class="op">)</span></span>
+<span><span class="co">#&gt; [1] "F2" "F1"</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/z.test.html">z.test</a></span><span class="op">(</span><span class="va">tempo</span><span class="op">~</span><span class="va">formulacao</span>, sigma <span class="op">=</span> <span class="fl">8</span>, alternative <span class="op">=</span> <span class="st">"less"</span>, data <span class="op">=</span> <span class="va">tintas</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  Two-sample z-test</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -181,8 +188,9 @@ ilustração da parte computacional.</p>
 <span><span class="co">#&gt;       -Inf -3.848103</span></span>
 <span><span class="co">#&gt; sample estimates:</span></span>
 <span><span class="co">#&gt; mean in group F2 mean in group F1 </span></span>
-<span><span class="co">#&gt;         112.4894         122.2223</span></span>
-<span></span>
+<span><span class="co">#&gt;         112.4894         122.2223</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">tintas2</span>,</span>
 <span>  <span class="fu"><a href="../reference/z.test.html">z.test</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">F2</span>, y<span class="op">=</span><span class="va">F1</span>, sigma <span class="op">=</span> <span class="fl">8</span>, alternative <span class="op">=</span> <span class="st">"less"</span><span class="op">)</span>     </span>
 <span><span class="op">)</span></span>
@@ -206,7 +214,7 @@ conhecidos (<span class="math inline">\(\sigma_{1} = 1\)</span> e <span class="m
 dados desse experimentos estão disponíveis no conjunto de dados aluminio
 do pacote planex. Obtenha um intervalo de confiança de 90% para a
 diferença das médias.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">aluminio</span><span class="op">)</span></span>
@@ -222,8 +230,9 @@ diferença das médias.</p>
 <span><span class="co">#&gt;  12.00449 13.76840</span></span>
 <span><span class="co">#&gt; sample estimates:</span></span>
 <span><span class="co">#&gt; mean in group E1 mean in group E2 </span></span>
-<span><span class="co">#&gt;         87.77779         74.89135</span></span>
-<span></span>
+<span><span class="co">#&gt;         87.77779         74.89135</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span></span>
 <span><span class="co"># fazendo as contas passo a passo:</span></span>
 <span></span>
@@ -234,12 +243,14 @@ diferença das médias.</p>
 <span><span class="va">medias</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">aluminio</span>, <span class="fu"><a href="https://rdrr.io/r/base/tapply.html" class="external-link">tapply</a></span><span class="op">(</span><span class="va">resistencia</span>, <span class="va">estrutura</span>, <span class="va">mean</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="va">medias</span></span>
 <span><span class="co">#&gt;       E1       E2 </span></span>
-<span><span class="co">#&gt; 87.77779 74.89135</span></span>
-<span><span class="va">dbar</span> <span class="op">&lt;-</span> <span class="va">medias</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">-</span><span class="va">medias</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span></span>
+<span><span class="co">#&gt; 87.77779 74.89135</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">dbar</span> <span class="op">&lt;-</span> <span class="va">medias</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">-</span><span class="va">medias</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span></span>
 <span><span class="va">V</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">sigma</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">/</span><span class="va">n</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span> <span class="op">+</span> <span class="op">(</span><span class="va">sigma</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">/</span><span class="va">n</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span></span>
 <span><span class="va">V</span></span>
-<span><span class="co">#&gt; [1] 0.2875</span></span>
-<span></span>
+<span><span class="co">#&gt; [1] 0.2875</span></span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="va">ztab</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">qnorm</a></span><span class="op">(</span><span class="va">alpha</span><span class="op">/</span><span class="fl">2</span>, lower.tail <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">epsilon</span> <span class="op">&lt;-</span> <span class="va">ztab</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="va">V</span><span class="op">)</span></span>
 <span><span class="va">li</span> <span class="op">&lt;-</span> <span class="va">dbar</span> <span class="op">-</span> <span class="va">epsilon</span></span>
@@ -312,7 +323,7 @@ n_{2}-1, n_{1}-1} &lt; \frac{\sigma_{1}^{2}}{\sigma_{2}^{2}} &lt;
 <p>Intervalos de confiança unilaterais são obtidos de maneira direta a
 partir do desenvolvimento apresentado acima.</p>
 <pre class="example"><code>Exemplo 10.5: Dois catalisadores estão sendo analisados para determinar como eles afetam o rendimento médio de um processo quı́mico. Especificamente, o catalisador 1 (mais caro) está correntemente em uso, mas o catalisador 2 (mais barato) é aceitável. Uma vez que o catalisador 2 é mais barato, ele deve ser adotado, desde que não altere o rendimento do processo.</code></pre>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://fndemarqui.github.io/planex/" class="external-link">planex</a></span><span class="op">)</span></span>
 <span></span>
@@ -326,8 +337,9 @@ partir do desenvolvimento apresentado acima.</p>
 <span><span class="co">#&gt; 5 91.79 97.19</span></span>
 <span><span class="co">#&gt; 6 89.07 97.04</span></span>
 <span><span class="co">#&gt; 7 94.72 91.07</span></span>
-<span><span class="co">#&gt; 8 89.21 92.75</span></span>
-<span></span>
+<span><span class="co">#&gt; 8 89.21 92.75</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="co"># testando a igualdade das variâncias:</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">catalisadores2</span>, <span class="fu"><a href="https://rdrr.io/r/stats/var.test.html" class="external-link">var.test</a></span><span class="op">(</span><span class="va">C1</span>, <span class="va">C2</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -342,7 +354,7 @@ partir do desenvolvimento apresentado acima.</p>
 <span><span class="co">#&gt; ratio of variances </span></span>
 <span><span class="co">#&gt;          0.6390651</span></span></code></pre></div>
 <p>Trabalhando com os dados em formato de pilha:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">cat</span> <span class="op">&lt;-</span> <span class="va">catalisadores2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html" class="external-link">pivot_longer</a></span><span class="op">(</span></span>
 <span>    cols <span class="op">=</span> <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything</a></span><span class="op">(</span><span class="op">)</span>,</span>
@@ -353,7 +365,7 @@ partir do desenvolvimento apresentado acima.</p>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">cat</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">catalisador</span>, y <span class="op">=</span> <span class="va">rendimento</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html" class="external-link">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="twosample_files/figure-html/unnamed-chunk-7-1.png" width="700"></p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/var.test.html" class="external-link">var.test</a></span><span class="op">(</span><span class="va">rendimento</span><span class="op">~</span><span class="va">catalisador</span>, data <span class="op">=</span> <span class="va">cat</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -372,7 +384,7 @@ partir do desenvolvimento apresentado acima.</p>
 <h2 id="comparações-de-médias-quando-as-variâncias-populacionais-iguais-e-desconhecidas">Comparações de médias quando as variâncias populacionais iguais e
 desconhecidas<a class="anchor" aria-label="anchor" href="#compara%C3%A7%C3%B5es-de-m%C3%A9dias-quando-as-vari%C3%A2ncias-populacionais-iguais-e-desconhecidas"></a>
 </h2>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">rendimento</span><span class="op">~</span><span class="va">catalisador</span>, data <span class="op">=</span> <span class="va">cat</span>, var.equal <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  Two Sample t-test</span></span>
@@ -385,7 +397,7 @@ desconhecidas<a class="anchor" aria-label="anchor" href="#compara%C3%A7%C3%B5es-
 <span><span class="co">#&gt; sample estimates:</span></span>
 <span><span class="co">#&gt; mean in group C1 mean in group C2 </span></span>
 <span><span class="co">#&gt;          92.2550          92.7325</span></span></code></pre></div>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">arsenio</span><span class="op">)</span></span>
 <span><span class="va">arsenio</span></span>
@@ -399,8 +411,9 @@ desconhecidas<a class="anchor" aria-label="anchor" href="#compara%C3%A7%C3%B5es-
 <span><span class="co">#&gt; 7      12    20</span></span>
 <span><span class="co">#&gt; 8      25    12</span></span>
 <span><span class="co">#&gt; 9      15     1</span></span>
-<span><span class="co">#&gt; 10      7    18</span></span>
-<span></span>
+<span><span class="co">#&gt; 10      7    18</span></span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="va">arsenio</span> <span class="op">&lt;-</span> <span class="va">arsenio</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html" class="external-link">pivot_longer</a></span><span class="op">(</span></span>
 <span>    cols <span class="op">=</span> <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html" class="external-link">everything</a></span><span class="op">(</span><span class="op">)</span>,</span>
@@ -430,12 +443,13 @@ desconhecidas<a class="anchor" aria-label="anchor" href="#compara%C3%A7%C3%B5es-
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">17</span> metrop               15</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">18</span> rural                 1</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">19</span> metrop                7</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">20</span> rural                18</span></span>
-<span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">20</span> rural                18</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">arsenio</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">comunidade</span>, y<span class="op">=</span><span class="va">concentracao</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html" class="external-link">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="twosample_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/var.test.html" class="external-link">var.test</a></span><span class="op">(</span><span class="va">concentracao</span><span class="op">~</span><span class="va">comunidade</span>, data<span class="op">=</span><span class="va">arsenio</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -448,8 +462,9 @@ desconhecidas<a class="anchor" aria-label="anchor" href="#compara%C3%A7%C3%B5es-
 <span><span class="co">#&gt;  0.06143758 0.99581888</span></span>
 <span><span class="co">#&gt; sample estimates:</span></span>
 <span><span class="co">#&gt; ratio of variances </span></span>
-<span><span class="co">#&gt;          0.2473473</span></span>
-<span></span>
+<span><span class="co">#&gt;          0.2473473</span></span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">concentracao</span><span class="op">~</span><span class="va">comunidade</span>, data<span class="op">=</span><span class="va">arsenio</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  Welch Two Sample t-test</span></span>
@@ -461,8 +476,9 @@ desconhecidas<a class="anchor" aria-label="anchor" href="#compara%C3%A7%C3%B5es-
 <span><span class="co">#&gt;  -26.694067  -3.305933</span></span>
 <span><span class="co">#&gt; sample estimates:</span></span>
 <span><span class="co">#&gt; mean in group metrop  mean in group rural </span></span>
-<span><span class="co">#&gt;                 12.5                 27.5</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">concentracao</span><span class="op">~</span><span class="va">comunidade</span>, data<span class="op">=</span><span class="va">arsenio</span>, var.equal <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">#&gt;                 12.5                 27.5</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/stats/t.test.html" class="external-link">t.test</a></span><span class="op">(</span><span class="va">concentracao</span><span class="op">~</span><span class="va">comunidade</span>, data<span class="op">=</span><span class="va">arsenio</span>, var.equal <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  Two Sample t-test</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -494,7 +510,7 @@ desconhecidas<a class="anchor" aria-label="anchor" href="#compara%C3%A7%C3%B5es-
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.</p>
 </div>
 
       </footer>

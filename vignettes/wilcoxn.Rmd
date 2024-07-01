@@ -1,0 +1,156 @@
+---
+title: "Alternativas Não-Paramétricas ao Teste t"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Alternativas Não-Paramétricas ao Teste t}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introdução
+
+Os chamados testes não-paramétricos são mais flexíveis do que os testes paramétricos, uma vez que não requerem a especificação de uma distribuição de probabilidades especifica para o conjunto de dados. Entretanto, os testes paramétricos nos permitem fazer inferências mais precisas quando as suposições necessárias para a realização de nossas inferências são satisfeitas pelos dados.  
+
+O teste t para uma ou duas amostras depende da suposição de normalidade dos dados. Quando tal é suposição é violada, uma alternativa é utilizarmos algum teste não-paramétrico. Na sequência estudaremos alguns testes não-paramétricos bastante utilizados na prática quando o teste t se mostra inapropriado. São eles:
+
+i) Teste dos postos assinalados de Wilcoxon.
+ii) Teste da soma dos postos de Wilcoxon para amostras independentes (equivalente ao teste de Mann-Whitney).
+iii) Teste de Wilcoxon para amostras pareadas.
+
+Conforme vermos mais adiante, ts testes mencionados acima podem ser realizados no *software* R utilizando-se a função `stats::wilcox.test()`.
+
+## Teste dos postos assinalados de Wilcoxon.
+
+O teste dos postos assinalados de Wilcoxon corresponde ao equivalente não-paramétrico do teste t envolvendo uma única amostra. 
+
+Considere uma amostra $X_{1}, \cdots, X_{n}$. A aplicação do teste dos postos assinalados de Wilcoxon depende das seguintes suposições:
+
+i) Os $X_{i}$'s são mutuamente independentes.
+ii) Os $X_{i}$'s são variáveis aleatórias contínuas que possuem uma distribuição de probabilidades simétrica em torno de um parâmetro de locação $\theta$.
+
+
+Considere uma amostra $X_{1}, \cdots, X_{n}$ de uma variável aleatória contínua $X$, e $Y_{1}, \cdots, Y_{m}$ uma amostra aleatória de uma variável aleatória contínua $Y$.
+
+### Teste da soma dos postos de Wilcoxon para amostras independentes
+
+O teste da soma dos postos de Wilcoxon para amostras independentes pode ser empregado em situações nas quais temos o interesse em testar a hipótese de que as duas populações investigadas diferem em locação, isto é, se ambas as populações possuem a mesma mediana ou média, ou se uma das populações tende a ter valores maiores (menores) que a outra.
+
+
+```{r setup}
+#| message: false
+
+library(planex)
+library(tidyverse)
+
+data(catalisadores)
+glimpse(catalisadores2)
+
+cat <- catalisadores2 %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "catalisador",
+    values_to = "rendimento"
+  ) |>
+  mutate(
+    catalisador = as.factor(catalisador)
+  )
+
+ggplot(cat, aes(x=catalisador, y = rendimento)) +
+  geom_boxplot()
+
+
+fit <- aov(rendimento ~ catalisador, data = cat)
+
+# testando a suposição de normalidade:
+shapiro.test(residuals(fit))
+
+# Testando a igualdade das variâncias:
+var.test(rendimento ~ catalisador, data = cat)
+
+# testando a igualdade das médias:
+t.test(rendimento ~ catalisador, data = cat, var.equal = TRUE)
+
+# alternativa não-paramétrica do teste t:
+wilcox.test(rendimento ~ catalisador, data = cat, conf.int = TRUE)
+```
+
+
+## Arsenio
+
+```{r}
+#| label: arsenio
+
+data(arsenio)
+arsenio
+
+arsenio <- arsenio %>%
+  pivot_longer(
+    cols = everything(),
+    names_to = "comunidade",
+    values_to = "concentracao"
+  )
+arsenio
+
+ggplot(arsenio, aes(x=comunidade, y=concentracao)) +
+  geom_boxplot()
+
+
+# verificando a suposição de normalidade:
+fit <- aov(concentracao ~ comunidade, data = arsenio)
+shapiro.test(residuals(fit))
+
+
+# testando a igualdade das variâncias:
+var.test(concentracao ~ comunidade, data = arsenio)
+
+# testando a igualdade das médias:
+t.test(concentracao ~ comunidade, data = arsenio)
+
+# alternativa não-paramétrica do teste t:
+wilcox.test(concentracao ~ comunidade, data = arsenio)
+
+```
+
+## Vigas
+
+```{r}
+#| label: vigas
+#| error: false
+
+data(vigas)
+glimpse(vigas)
+
+# obtendo a diferença par a par:
+vigas <- vigas |>
+  mutate(
+    d = K - L
+  )
+
+#visualizando:
+head(vigas)
+
+# obtendo as médias das colunas:
+apply(vigas, 2, mean)
+
+
+# testando a suposição de normalidade:
+shapiro.test(vigas$d)
+
+# realizando o teste t de duas maneiras equivalentes:
+t.test(vigas$d)
+with(vigas, t.test(K, L, paired = TRUE))
+
+# alternativa não-paramétrica do teste t-pareado:
+with(vigas, wilcox.test(K, L, paired = TRUE, conf.int = TRUE))
+wilcox.test(vigas$d, conf.int = TRUE)
+
+
+```
+

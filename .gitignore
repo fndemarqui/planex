@@ -11,3 +11,7 @@ inst/doc
 /Meta/
 inst/script_ggcomp.R
 inst/var_teste.R
+.Rdata
+.httr-oauth
+.DS_Store
+.quarto

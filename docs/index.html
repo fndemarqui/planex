@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Planejamento e Análise de Experimentos • planex</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
@@ -64,6 +64,9 @@
     <li>
       <a href="articles/vigas.html">Teste t pareado e blocos completos aleatorizados</a>
     </li>
+    <li>
+      <a href="articles/wilcoxn.html">Alternativas Não-Paramétricas ao Teste t</a>
+    </li>
   </ul>
 </li>
       </ul>
@@ -114,13 +117,14 @@
 <span><span class="co">#&gt; The following objects are masked from 'package:base':</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;     intersect, setdiff, setequal, union</span></span>
-<span><span class="co">#&gt; Loading required package: ggplot2</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Loading required package: ggplot2</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">)</span></span>
 <span><span class="va">saquinhos</span><span class="op">$</span><span class="va">concentracao</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">$</span><span class="va">concentracao</span><span class="op">)</span></span>
 <span><span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">resistencia</span> <span class="op">~</span> <span class="va">concentracao</span>, data <span class="op">=</span> <span class="va">saquinhos</span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/plotResiduals.html">plotResiduals</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-saquinhos-1.png" width="100%"><img src="reference/figures/README-saquinhos-2.png" width="100%"><img src="reference/figures/README-saquinhos-3.png" width="100%"><img src="reference/figures/README-saquinhos-4.png" width="100%"><img src="reference/figures/README-saquinhos-5.png" width="100%"></p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/testResiduals.html">testResiduals</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  Shapiro-Wilk normality test</span></span>
@@ -136,14 +140,84 @@
 <span><span class="co">#&gt; ----------------------------------------------- </span></span>
 <span><span class="co">#&gt; Durbin-Watson Test for Autocorrelated Errors: </span></span>
 <span><span class="co">#&gt;  lag Autocorrelation D-W Statistic p-value</span></span>
-<span><span class="co">#&gt;    1      -0.1303884      2.181178   0.864</span></span>
-<span><span class="co">#&gt;  Alternative hypothesis: rho != 0</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span>
+<span><span class="co">#&gt;    1      -0.1303884      2.181178   0.886</span></span>
+<span><span class="co">#&gt;  Alternative hypothesis: rho != 0</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span>
 <span><span class="co">#&gt;              Df Sum Sq Mean Sq F value   Pr(&gt;F)    </span></span>
 <span><span class="co">#&gt; concentracao  3  382.8  127.60   19.61 3.59e-06 ***</span></span>
 <span><span class="co">#&gt; Residuals    20  130.2    6.51                     </span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span></code></pre></div>
+<p>Realizando as comparações múltiplas:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">agricolae</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://multcomp.R-forge.R-project.org" class="external-link">multcomp</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; Loading required package: mvtnorm</span></span>
+<span><span class="co">#&gt; Loading required package: survival</span></span>
+<span><span class="co">#&gt; Loading required package: TH.data</span></span>
+<span><span class="co">#&gt; Loading required package: MASS</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Attaching package: 'MASS'</span></span>
+<span><span class="co">#&gt; The following object is masked from 'package:dplyr':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     select</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Attaching package: 'TH.data'</span></span>
+<span><span class="co">#&gt; The following object is masked from 'package:MASS':</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;     geyser</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rvlenth.github.io/emmeans/" class="external-link">emmeans</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; Welcome to emmeans.</span></span>
+<span><span class="co">#&gt; Caution: You lose important information if you filter this package's results.</span></span>
+<span><span class="co">#&gt; See '? untidy'</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="va">comp1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/agricolae/man/HSD.test.html" class="external-link">HSD.test</a></span><span class="op">(</span><span class="va">mod</span>, <span class="st">"concentracao"</span>, group <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
+<span><span class="va">comp2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/multcomp/man/glht.html" class="external-link">glht</a></span><span class="op">(</span><span class="va">mod</span>, linfct <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/multcomp/man/glht.html" class="external-link">mcp</a></span><span class="op">(</span>concentracao <span class="op">=</span> <span class="st">"Tukey"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">comp3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rvlenth.github.io/emmeans/reference/emmeans.html" class="external-link">emmeans</a></span><span class="op">(</span><span class="va">mod</span>, <span class="va">pairwise</span> <span class="op">~</span> <span class="va">concentracao</span>, adjust <span class="op">=</span> <span class="st">"tukey"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">comp1</span><span class="op">$</span><span class="va">comparison</span></span>
+<span><span class="co">#&gt;         difference pvalue signif.       LCL         UCL</span></span>
+<span><span class="co">#&gt; 10 - 15  -1.333333 0.8022         -5.455896  2.78922925</span></span>
+<span><span class="co">#&gt; 10 - 20  -5.500000 0.0066      ** -9.622563 -1.37743741</span></span>
+<span><span class="co">#&gt; 10 - 5    5.666667 0.0051      **  1.544104  9.78922925</span></span>
+<span><span class="co">#&gt; 15 - 20  -4.166667 0.0470       * -8.289229 -0.04410408</span></span>
+<span><span class="co">#&gt; 15 - 5    7.000000 0.0007     ***  2.877437 11.12256259</span></span>
+<span><span class="co">#&gt; 20 - 5   11.166667 0.0000     ***  7.044104 15.28922925</span></span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">comp2</span><span class="op">)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt;   Simultaneous Tests for General Linear Hypotheses</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Multiple Comparisons of Means: Tukey Contrasts</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Fit: aov(formula = resistencia ~ concentracao, data = saquinhos)</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; Linear Hypotheses:</span></span>
+<span><span class="co">#&gt;              Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
+<span><span class="co">#&gt; 10 - 5 == 0     5.667      1.473   3.847  0.00537 ** </span></span>
+<span><span class="co">#&gt; 15 - 5 == 0     7.000      1.473   4.753  &lt; 0.001 ***</span></span>
+<span><span class="co">#&gt; 20 - 5 == 0    11.167      1.473   7.581  &lt; 0.001 ***</span></span>
+<span><span class="co">#&gt; 15 - 10 == 0    1.333      1.473   0.905  0.80224    </span></span>
+<span><span class="co">#&gt; 20 - 10 == 0    5.500      1.473   3.734  0.00669 ** </span></span>
+<span><span class="co">#&gt; 20 - 15 == 0    4.167      1.473   2.829  0.04673 *  </span></span>
+<span><span class="co">#&gt; ---</span></span>
+<span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
+<span><span class="co">#&gt; (Adjusted p values reported -- single-step method)</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">comp3</span><span class="op">$</span><span class="va">contrasts</span></span>
+<span><span class="co">#&gt;  contrast                        estimate   SE df t.ratio p.value</span></span>
+<span><span class="co">#&gt;  concentracao5 - concentracao10     -5.67 1.47 20  -3.847  0.0051</span></span>
+<span><span class="co">#&gt;  concentracao5 - concentracao15     -7.00 1.47 20  -4.753  0.0007</span></span>
+<span><span class="co">#&gt;  concentracao5 - concentracao20    -11.17 1.47 20  -7.581  &lt;.0001</span></span>
+<span><span class="co">#&gt;  concentracao10 - concentracao15    -1.33 1.47 20  -0.905  0.8022</span></span>
+<span><span class="co">#&gt;  concentracao10 - concentracao20    -5.50 1.47 20  -3.734  0.0066</span></span>
+<span><span class="co">#&gt;  concentracao15 - concentracao20    -4.17 1.47 20  -2.829  0.0470</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; P value adjustment: tukey method for comparing a family of 4 estimates</span></span></code></pre></div>
 </div>
 </div>
   </div>
@@ -192,7 +266,7 @@
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.9.</p>
 </div>
 
       </footer>
