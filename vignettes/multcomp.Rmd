@@ -1,0 +1,165 @@
+---
+title: "Comparações Multiplas"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Comparações Multiplas}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r}
+#| label: setup
+#| message: false
+#| 
+library(tidyverse)
+library(planex)
+library(emmeans)
+library(multcomp)
+```
+
+# Delineamentos com um fator
+
+```{r}
+data(saquinhos)
+glimpse(saquinhos)
+
+saquinhos <- saquinhos |>
+  mutate(
+    concentracao = as.factor(concentracao)
+  )
+
+mod <- aov(resistencia ~ concentracao, data = saquinhos)
+summary(mod)
+```
+
+
+## Pacote emmeans
+
+```{r}
+comp <- emmeans(mod, pairwise ~ concentracao)
+comp
+
+# Tukey (default):
+pairs(comp)
+
+# mínima diferença significativa de Fisher:
+pairs(comp, adjust = "none")
+
+# Bonferroni
+pairs(comp, adjust = "bonferroni")
+
+# Dunnet (considerando concentracao de 20% como referencia):
+contrast(comp, method = "dunnett", ref = 4)
+```
+
+
+## Pacote multcomp
+
+```{r}
+comp <- glht(mod, linfct = mcp(concentracao = "Tukey"))
+comp
+
+# Tukey (default):
+summary(comp)
+
+# mínima diferença significativa de Fisher:
+summary(comp, test = adjusted(type = "none"))
+
+# Bonferroni
+summary(comp, test = adjusted(type = "bonferroni"))
+
+# Dunnett:
+saquinhos <- saquinhos |>
+  mutate(
+    concentracao = relevel(concentracao, ref = "20")
+  )
+mod <- aov(resistencia ~ concentracao, data = saquinhos)
+dunnett <- glht(mod, linfct = mcp(concentracao = "Dunnett"))
+summary(dunnett)
+
+```
+
+# Delineamentos com dois fatores
+
+
+```{r}
+# alterando a classe para factor:
+baterias <- baterias %>%
+  mutate(
+    across(c("tipo", "temperatura"), as.factor)
+  )
+
+# sumarizando:
+mod <- aov(tempo ~ temperatura*tipo, data=baterias)
+summary(mod)
+```
+
+Comparações múltiplas para delineamentos com dois fatores e efeito de interação significativo.
+
+## Pacote emmeans
+
+```{r}
+comp <- emmeans(mod, pairwise ~ tipo|temperatura)
+comp
+summary(comp)
+
+comp <- emmeans(mod, pairwise ~ temperatura|tipo)
+comp
+summary(comp)
+
+# forma mais eficiente:
+comp <- emmeans(mod, pairwise ~ tipo*temperatura)
+comp    
+
+pairs(comp, simple = "tipo")   
+pairs(comp, simple = "temperatura")  
+```
+
+Exemplo envolvendo delineamento com dois fatores fixos cruzados e efeito de interação não significativo
+
+```{r}
+data(zarcao)
+
+zarcao <- zarcao %>%
+  mutate(
+    tipo = as.factor(tipo)
+  )
+  
+mod <- aov(adesao ~ tipo*metodo, data=zarcao)
+
+emmeans(mod, pairwise ~ tipo)
+emmeans(mod, pairwise ~ metodo)
+
+```
+
+
+# Delineamentos com 3 fatores fixos cruzados
+
+```{r}
+data(refrigerantes)
+glimpse(refrigerantes)
+
+mod <- aov(desvio ~ carbonatacao*pressao*velocidade, 
+           data=refrigerantes)
+summary(mod)
+```
+
+
+## Pacote emmeans
+
+```{r}
+comp <- emmeans(mod, pairwise ~ carbonatacao*pressao*velocidade)
+comp
+
+# comparando níveis de carbonatação dentro de cada combinação dos níveis dos demais fatores
+pairs(comp, simple = list(c("pressao", "velocidade"), "carbonatacao"))
+```
+
+

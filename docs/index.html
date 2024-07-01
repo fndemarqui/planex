@@ -59,6 +59,9 @@
       <a href="articles/fat2k.html">Delineamentos 2^k fatoriais</a>
     </li>
     <li>
+      <a href="articles/multcomp.html">Comparações Multiplas</a>
+    </li>
+    <li>
       <a href="articles/twosample.html">Inferências envolvendo duas populações normais</a>
     </li>
     <li>
@@ -140,7 +143,7 @@
 <span><span class="co">#&gt; ----------------------------------------------- </span></span>
 <span><span class="co">#&gt; Durbin-Watson Test for Autocorrelated Errors: </span></span>
 <span><span class="co">#&gt;  lag Autocorrelation D-W Statistic p-value</span></span>
-<span><span class="co">#&gt;    1      -0.1303884      2.181178   0.886</span></span>
+<span><span class="co">#&gt;    1      -0.1303884      2.181178   0.848</span></span>
 <span><span class="co">#&gt;  Alternative hypothesis: rho != 0</span></span></code></pre></div>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span>
@@ -198,12 +201,12 @@
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Linear Hypotheses:</span></span>
 <span><span class="co">#&gt;              Estimate Std. Error t value Pr(&gt;|t|)    </span></span>
-<span><span class="co">#&gt; 10 - 5 == 0     5.667      1.473   3.847  0.00537 ** </span></span>
+<span><span class="co">#&gt; 10 - 5 == 0     5.667      1.473   3.847  0.00490 ** </span></span>
 <span><span class="co">#&gt; 15 - 5 == 0     7.000      1.473   4.753  &lt; 0.001 ***</span></span>
 <span><span class="co">#&gt; 20 - 5 == 0    11.167      1.473   7.581  &lt; 0.001 ***</span></span>
-<span><span class="co">#&gt; 15 - 10 == 0    1.333      1.473   0.905  0.80224    </span></span>
-<span><span class="co">#&gt; 20 - 10 == 0    5.500      1.473   3.734  0.00669 ** </span></span>
-<span><span class="co">#&gt; 20 - 15 == 0    4.167      1.473   2.829  0.04673 *  </span></span>
+<span><span class="co">#&gt; 15 - 10 == 0    1.333      1.473   0.905  0.80221    </span></span>
+<span><span class="co">#&gt; 20 - 10 == 0    5.500      1.473   3.734  0.00648 ** </span></span>
+<span><span class="co">#&gt; 20 - 15 == 0    4.167      1.473   2.829  0.04677 *  </span></span>
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span>
 <span><span class="co">#&gt; (Adjusted p values reported -- single-step method)</span></span></code></pre></div>
