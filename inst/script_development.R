@@ -41,7 +41,7 @@ devtools::build_readme()
 devtools::build_vignettes()
 devtools::build_site()
 
-#usethis::use_git("update readme multiple comparisons")
+# usethis::use_git("multcomp vignette")
 
 
 #usethis::use_github_action("pkgdown")

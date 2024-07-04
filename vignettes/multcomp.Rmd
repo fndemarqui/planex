@@ -120,6 +120,22 @@ comp
 
 pairs(comp, simple = "tipo")   
 pairs(comp, simple = "temperatura")  
+
+# cálculo do p-valor para o teste de Tukey (tipo 1 -  tipo 2):
+ptukey(abs(-1.143)*sqrt(2), nmeans = 3, df = 27, lower.tail = FALSE)
+ptukey(abs(-1.143)*sqrt(2), nmeans = 9, df = 27, lower.tail = FALSE)
+
+# teste da mínima diferença significativa de Fisher:
+summary(comp, adjust = "none")
+pairs(comp, simple = "tipo", adjust = "none")   
+pairs(comp, simple = "temperatura", adjust = "none")  
+
+
+# teste com correção de Bonferroni:
+summary(comp, adjust = "bonferroni")
+pairs(comp, simple = "tipo", adjust = "bonferroni")   
+pairs(comp, simple = "temperatura", adjust = "bonferroni") 
+
 ```
 
 Exemplo envolvendo delineamento com dois fatores fixos cruzados e efeito de interação não significativo
