@@ -938,7 +938,7 @@ NULL
 #' @docType data
 #' @author Fábio N. Demarqui \email{fndemarqui@est.ufmg.br}
 #' @keywords datasets
-#' @description Exercício 8.1: Um engenheiro realizou um experimento com o objetivo de melhorar o rendimento de um processo químico. Quadro fatores foram selecionados e, por questões orçamentárias, o engenheiro optou por utilizar o delineamento $2^{4-1}$. Apresente a análise dos dados desse experimento.
+#' @description Exercício 8.1: Um engenheiro realizou um experimento com o objetivo de melhorar o rendimento de um processo químico. Quadro fatores foram selecionados e, por questões orçamentárias, o engenheiro optou por utilizar o delineamento \eqn{2^{4-1}}. Apresente a análise dos dados desse experimento.
 #' @format Data frame com 8 linhas e 5 variáveis:
 #' \itemize{
 #'   \item rendimento: variável resposta

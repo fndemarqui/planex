@@ -27,6 +27,7 @@ library(multcomp)
 # Delineamentos com um fator
 
 ```{r}
+#| label: saquinhos
 data(saquinhos)
 glimpse(saquinhos)
 
@@ -43,7 +44,8 @@ summary(mod)
 ## Pacote emmeans
 
 ```{r}
-comp <- emmeans(mod, pairwise ~ concentracao)
+#| label: emmeans
+comp <- emmeans(mod,  ~ concentracao)
 comp
 
 # Tukey (default):
@@ -56,13 +58,15 @@ pairs(comp, adjust = "none")
 pairs(comp, adjust = "bonferroni")
 
 # Dunnet (considerando concentracao de 20% como referencia):
-contrast(comp, method = "dunnett", ref = 4)
+dunnett <- emmeans(mod, dunnett ~ concentracao)
+dunnett
 ```
 
 
 ## Pacote multcomp
 
 ```{r}
+#| labels: multcomp
 comp <- glht(mod, linfct = mcp(concentracao = "Tukey"))
 comp
 
@@ -106,35 +110,16 @@ Comparações múltiplas para delineamentos com dois fatores e efeito de intera�
 ## Pacote emmeans
 
 ```{r}
-comp <- emmeans(mod, pairwise ~ tipo|temperatura)
-comp
-summary(comp)
+medias <- emmeans(mod, ~ tipo*temperatura)
+medias
 
-comp <- emmeans(mod, pairwise ~ temperatura|tipo)
-comp
-summary(comp)
+pairs(medias)
 
-# forma mais eficiente:
-comp <- emmeans(mod, pairwise ~ tipo*temperatura)
-comp    
+tipo <- emmeans(mod, ~ tipo|temperatura)
+pairs(tipo)
 
-pairs(comp, simple = "tipo")   
-pairs(comp, simple = "temperatura")  
-
-# cálculo do p-valor para o teste de Tukey (tipo 1 -  tipo 2):
-ptukey(abs(-1.143)*sqrt(2), nmeans = 3, df = 27, lower.tail = FALSE)
-ptukey(abs(-1.143)*sqrt(2), nmeans = 9, df = 27, lower.tail = FALSE)
-
-# teste da mínima diferença significativa de Fisher:
-summary(comp, adjust = "none")
-pairs(comp, simple = "tipo", adjust = "none")   
-pairs(comp, simple = "temperatura", adjust = "none")  
-
-
-# teste com correção de Bonferroni:
-summary(comp, adjust = "bonferroni")
-pairs(comp, simple = "tipo", adjust = "bonferroni")   
-pairs(comp, simple = "temperatura", adjust = "bonferroni") 
+temperatura <- emmeans(mod, ~ temperatura|tipo)
+pairs(temperatura)  
 
 ```
 

@@ -13,3 +13,4 @@
 ^inst/script_github\.R$
 ^inst/script_ggcomp\.R$
 ^inst/var_teste\.R$
+^inst$

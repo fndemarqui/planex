@@ -322,8 +322,8 @@ treatcomb2factors <- function(data){
   df <- as.data.frame(df, k)
   names(df) <- LETTERS[1:k]
   df <- df %>%
-    mutate_all(
-      as.factor2k
+    mutate(
+      across(everything(), as.factor2k)
     )
   data <- cbind(data, df)
   return(data)
@@ -347,11 +347,12 @@ treatcomb2factors <- function(data){
 #'
 table2kunrep <- function(object){
   effects <- 2*coef(object)[-1]
-  rd <- round(100*(effects/coef(object)[1]), 2)
+  #rd <- round(100*(effects/coef(object)[1]), 2)
   tab <- suppressWarnings(stats::anova(object))
   SS <- as.vector(tab$"Sum Sq")[1:length(effects)]
   pc <- round(100*(SS/sum(SS)), 2)
-  df <- data.frame(effects = effects, SS = SS, SSPC = pc, PRD = rd)
+  #df <- data.frame(effects = effects, SS = SS, SSPC = pc, PRD = rd)
+  df <- data.frame(effects = effects, SS = SS, SSPC = pc)
   return(df)
 }
 
@@ -377,7 +378,7 @@ plotResiduals <- function(model){
 
   k <- ceiling(1 + log(length(residuals(model)),2))
 
-  p0 <- ggplot(model, aes(x=1:length(.resid), y=.resid)) +
+  p0 <- ggplot(model, aes(x=1:length(.data$.resid), y=.data$.resid)) +
     geom_point() +
     geom_line() +
     geom_line(aes(y=0), color="blue") +
@@ -385,19 +386,19 @@ plotResiduals <- function(model){
     ylab("Residuals")
   plot(p0)
 
-  p1 <- ggplot(model, aes(x = .resid)) +
+  p1 <- ggplot(model, aes(x = .data$.resid)) +
    geom_histogram(bins = k, color="white") +
    xlab("Residuals") +
    ylab("Frequency")
   plot(p1)
 
-  p2 <- ggplot(model, aes(sample = .resid)) +
+  p2 <- ggplot(model, aes(sample = .data$.resid)) +
     stat_qq() + stat_qq_line(color="blue") +
     ggtitle("Normal Q-Q plot")
   plot(p2)
 
 
-  p3 <- ggplot(model, aes(.fitted, .resid)) +
+  p3 <- ggplot(model, aes(.data$.fitted, .data$.resid)) +
     geom_point() +
     geom_line(aes(y=0), color="blue") +
     #stat_smooth(method="loess", se = TRUE) +
@@ -409,7 +410,7 @@ plotResiduals <- function(model){
   mf <- as.data.frame(stats::model.frame(model))
   variable <- names(mf)
   for(i in 2:ncol(mf)){
-    p <- ggplot(model, aes(x = mf[,i] , y = .resid)) +
+    p <- ggplot(model, aes(x = mf[,i] , y = .data$.resid)) +
       geom_jitter(position=position_jitter(0.1)) +
       #geom_line(aes(y=0), color="blue") +
       geom_hline(yintercept = 0, color = "blue") +
@@ -560,15 +561,15 @@ gg_daniel <- function(tb, alpha = 0.05){
   ME <- DoE.base::ME.Lenth(tb$effects, alpha = alpha)$ME
   tb <- tb %>%
     mutate(
-      important = abs(effects) > ME,
+      important = abs(.data$effects) > ME,
       labels = rownames(tb),
-      labels = ifelse(important, labels, ""),
+      labels = ifelse(.data$important, labels, ""),
       scores = qqnorm(tb$effects, plot = FALSE)$x,
     )
-  ggplot(tb, aes(sample = effects)) +
+  ggplot(tb, aes(sample = .data$effects)) +
     stat_qq() + stat_qq_line(color="blue") +
     ggtitle("Daniel probability plot") +
-    geom_text(aes(x = scores, y = effects, hjust = -0.5,vjust = 0.5, label = labels)) +
+    geom_text(aes(x = .data$scores, y = .data$effects, hjust = -0.5,vjust = 0.5, label = labels)) +
     labs(y = "effects", x = "normal scores")
 }
 
@@ -578,8 +579,8 @@ gg_daniel <- function(tb, alpha = 0.05){
 #' Table of signs for 2^k factorial designs
 #' @aliases table_signs
 #' @export
-#' @description This functions provides the table of signs for factorial designs with up to k = 10 factors
-#' @param tb a data frame containing the output of the table2kunrep function
+#' @description This functions provides the table of signs for factorial designs with up to k = 10 factors.
+#' @param k an integer specifying the number of factors to be considred.
 #' @return a data.frame corresponding to the table of signs
 #'
 #' @examples
@@ -619,15 +620,15 @@ table_signs <- function(k){
     rename(
       "(1)" = "(Intercept)"
     ) %>%
-    mutate_all(
-      f
+    mutate(
+      across(everything(), f)
     )
 
   tb$comb <- apply(tb[,2:(k+1)], 1, function(i){paste(letters[1:k][i=="+"], collapse = "")})
 
   tb <- tb %>%
     mutate(
-      comb = ifelse(comb == "", "(1)", comb)
+      comb = ifelse(.data$comb == "", "(1)", .data$comb)
     )
   return(tb)
 }

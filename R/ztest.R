@@ -51,7 +51,7 @@ z.test.default <- function (x, y = NULL, alternative = c("two.sided", "less", "g
 
   alpha <- 1 - conf.level
   if(alternative == "two.sided"){
-    pvalue = pnorm(abs(z0), lower.tail = FALSE)
+    pvalue = 2*pnorm(abs(z0), lower.tail = FALSE)
     ci <- xbar + qnorm(c(alpha/2, 1-alpha/2))*sqrt(V)
   }else{
     ztab <- qnorm(alpha, lower.tail = FALSE)
@@ -112,7 +112,7 @@ z.test.formula <- function (formula, alternative = c("two.sided", "less", "great
 
   alpha <- 1 - conf.level
   if(alternative == "two.sided"){
-    pvalue = pnorm(abs(z0), lower.tail = FALSE)
+    pvalue = 2*pnorm(abs(z0), lower.tail = FALSE)
     ci <- d + qnorm(c(alpha/2, 1-alpha/2))*sqrt(V)
   }else{
     ztab <- qnorm(alpha, lower.tail = FALSE)

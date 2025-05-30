@@ -7,13 +7,13 @@
 table_signs(k)
 }
 \arguments{
-\item{tb}{a data frame containing the output of the table2kunrep function}
+\item{k}{an integer specifying the number of factors to be considred.}
 }
 \value{
 a data.frame corresponding to the table of signs
 }
 \description{
-This functions provides the table of signs for factorial designs with up to k = 10 factors
+This functions provides the table of signs for factorial designs with up to k = 10 factors.
 }
 \examples{
 \donttest{
