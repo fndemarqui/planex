@@ -8,9 +8,11 @@
 ^\.github$
 ^inst/script_development\.R$
 ^inst/dados\.txt$
-^doc$
 ^Meta$
 ^inst/script_github\.R$
 ^inst/script_ggcomp\.R$
 ^inst/var_teste\.R$
-^inst$
+..Rcheck
+^inst/stuff\.R$
+^doc$
+^inst/stuff$

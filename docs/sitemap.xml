@@ -1,264 +1,95 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>/articles/ancova.html</loc>
-  </url>
-  <url>
-    <loc>/articles/fat2k.html</loc>
-  </url>
-  <url>
-    <loc>/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>/articles/multcomp.html</loc>
-  </url>
-  <url>
-    <loc>/articles/planex.html</loc>
-  </url>
-  <url>
-    <loc>/articles/twosample.html</loc>
-  </url>
-  <url>
-    <loc>/articles/vigas.html</loc>
-  </url>
-  <url>
-    <loc>/articles/wilcoxn.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/Fpower.html</loc>
-  </url>
-  <url>
-    <loc>/reference/acabamento.html</loc>
-  </url>
-  <url>
-    <loc>/reference/algodao.html</loc>
-  </url>
-  <url>
-    <loc>/reference/alimentacao.html</loc>
-  </url>
-  <url>
-    <loc>/reference/aluminio.html</loc>
-  </url>
-  <url>
-    <loc>/reference/arsenio.html</loc>
-  </url>
-  <url>
-    <loc>/reference/as.factor2k.html</loc>
-  </url>
-  <url>
-    <loc>/reference/baterias.html</loc>
-  </url>
-  <url>
-    <loc>/reference/bocais.html</loc>
-  </url>
-  <url>
-    <loc>/reference/brilho.html</loc>
-  </url>
-  <url>
-    <loc>/reference/capacidade.html</loc>
-  </url>
-  <url>
-    <loc>/reference/carrinhos.html</loc>
-  </url>
-  <url>
-    <loc>/reference/catalisadores.html</loc>
-  </url>
-  <url>
-    <loc>/reference/catalisadores2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/chocolate.html</loc>
-  </url>
-  <url>
-    <loc>/reference/chumbo.html</loc>
-  </url>
-  <url>
-    <loc>/reference/colesterol.html</loc>
-  </url>
-  <url>
-    <loc>/reference/corrente.html</loc>
-  </url>
-  <url>
-    <loc>/reference/densidade.html</loc>
-  </url>
-  <url>
-    <loc>/reference/dietas.html</loc>
-  </url>
-  <url>
-    <loc>/reference/enxertos.html</loc>
-  </url>
-  <url>
-    <loc>/reference/escapamento.html</loc>
-  </url>
-  <url>
-    <loc>/reference/fibras.html</loc>
-  </url>
-  <url>
-    <loc>/reference/filtragem.html</loc>
-  </url>
-  <url>
-    <loc>/reference/filtragemFrac.html</loc>
-  </url>
-  <url>
-    <loc>/reference/fogo.html</loc>
-  </url>
-  <url>
-    <loc>/reference/forca.html</loc>
-  </url>
-  <url>
-    <loc>/reference/fornecedores.html</loc>
-  </url>
-  <url>
-    <loc>/reference/gg_daniel.html</loc>
-  </url>
-  <url>
-    <loc>/reference/impureza.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/ingredientes.html</loc>
-  </url>
-  <url>
-    <loc>/reference/interacao1.html</loc>
-  </url>
-  <url>
-    <loc>/reference/interacao2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/interacao3.html</loc>
-  </url>
-  <url>
-    <loc>/reference/interactionPlot.html</loc>
-  </url>
-  <url>
-    <loc>/reference/interactionTest.html</loc>
-  </url>
-  <url>
-    <loc>/reference/medicoes.html</loc>
-  </url>
-  <url>
-    <loc>/reference/moinho.html</loc>
-  </url>
-  <url>
-    <loc>/reference/montagem.html</loc>
-  </url>
-  <url>
-    <loc>/reference/papel.html</loc>
-  </url>
-  <url>
-    <loc>/reference/pilhas.html</loc>
-  </url>
-  <url>
-    <loc>/reference/planex-package.html</loc>
-  </url>
-  <url>
-    <loc>/reference/plotResiduals.html</loc>
-  </url>
-  <url>
-    <loc>/reference/propulsores.html</loc>
-  </url>
-  <url>
-    <loc>/reference/queima.html</loc>
-  </url>
-  <url>
-    <loc>/reference/quilometragem.html</loc>
-  </url>
-  <url>
-    <loc>/reference/refrigerantes.html</loc>
-  </url>
-  <url>
-    <loc>/reference/refrigerantes2k.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rendimento.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rendimento2k.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rendimentoFrac.html</loc>
-  </url>
-  <url>
-    <loc>/reference/rugosidade.html</loc>
-  </url>
-  <url>
-    <loc>/reference/saquinhos.html</loc>
-  </url>
-  <url>
-    <loc>/reference/semicondutores.html</loc>
-  </url>
-  <url>
-    <loc>/reference/semicondutores1rep.html</loc>
-  </url>
-  <url>
-    <loc>/reference/semicondutores2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/table2kunrep.html</loc>
-  </url>
-  <url>
-    <loc>/reference/table_signs.html</loc>
-  </url>
-  <url>
-    <loc>/reference/teares.html</loc>
-  </url>
-  <url>
-    <loc>/reference/tecidos.html</loc>
-  </url>
-  <url>
-    <loc>/reference/televisores.html</loc>
-  </url>
-  <url>
-    <loc>/reference/testResiduals.html</loc>
-  </url>
-  <url>
-    <loc>/reference/tijolos.html</loc>
-  </url>
-  <url>
-    <loc>/reference/tintas.html</loc>
-  </url>
-  <url>
-    <loc>/reference/tintas2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/treatcomb2factors.html</loc>
-  </url>
-  <url>
-    <loc>/reference/turbinas.html</loc>
-  </url>
-  <url>
-    <loc>/reference/turbinas2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/vigas.html</loc>
-  </url>
-  <url>
-    <loc>/reference/vinhos.html</loc>
-  </url>
-  <url>
-    <loc>/reference/z.test.default.html</loc>
-  </url>
-  <url>
-    <loc>/reference/z.test.formula.html</loc>
-  </url>
-  <url>
-    <loc>/reference/z.test.html</loc>
-  </url>
-  <url>
-    <loc>/reference/zarcao.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/articles/ancova.html</loc></url>
+<url><loc>/articles/fat2k.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/articles/multcomp.html</loc></url>
+<url><loc>/articles/planex.html</loc></url>
+<url><loc>/articles/twosample.html</loc></url>
+<url><loc>/articles/vigas.html</loc></url>
+<url><loc>/articles/wilcoxn.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/reference/Fpower.html</loc></url>
+<url><loc>/reference/acabamento.html</loc></url>
+<url><loc>/reference/algodao.html</loc></url>
+<url><loc>/reference/alimentacao.html</loc></url>
+<url><loc>/reference/aluminio.html</loc></url>
+<url><loc>/reference/arsenio.html</loc></url>
+<url><loc>/reference/as.factor2k.html</loc></url>
+<url><loc>/reference/baterias.html</loc></url>
+<url><loc>/reference/bocais.html</loc></url>
+<url><loc>/reference/brilho.html</loc></url>
+<url><loc>/reference/capacidade.html</loc></url>
+<url><loc>/reference/carrinhos.html</loc></url>
+<url><loc>/reference/catalisadores.html</loc></url>
+<url><loc>/reference/catalisadores2.html</loc></url>
+<url><loc>/reference/chocolate.html</loc></url>
+<url><loc>/reference/chumbo.html</loc></url>
+<url><loc>/reference/colesterol.html</loc></url>
+<url><loc>/reference/corrente.html</loc></url>
+<url><loc>/reference/densidade.html</loc></url>
+<url><loc>/reference/dietas.html</loc></url>
+<url><loc>/reference/enxertos.html</loc></url>
+<url><loc>/reference/escapamento.html</loc></url>
+<url><loc>/reference/fibras.html</loc></url>
+<url><loc>/reference/filtragem.html</loc></url>
+<url><loc>/reference/filtragemFrac.html</loc></url>
+<url><loc>/reference/fogo.html</loc></url>
+<url><loc>/reference/forca.html</loc></url>
+<url><loc>/reference/fornecedores.html</loc></url>
+<url><loc>/reference/gg_daniel.html</loc></url>
+<url><loc>/reference/impureza.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/ingredientes.html</loc></url>
+<url><loc>/reference/interacao1.html</loc></url>
+<url><loc>/reference/interacao2.html</loc></url>
+<url><loc>/reference/interacao3.html</loc></url>
+<url><loc>/reference/interactionPlot.html</loc></url>
+<url><loc>/reference/interactionTest.html</loc></url>
+<url><loc>/reference/medicoes.html</loc></url>
+<url><loc>/reference/moinho.html</loc></url>
+<url><loc>/reference/montagem.html</loc></url>
+<url><loc>/reference/papel.html</loc></url>
+<url><loc>/reference/perm.test-methods.html</loc></url>
+<url><loc>/reference/perm.test.html</loc></url>
+<url><loc>/reference/pilhas.html</loc></url>
+<url><loc>/reference/planex-package.html</loc></url>
+<url><loc>/reference/plotResiduals.html</loc></url>
+<url><loc>/reference/print-methods.html</loc></url>
+<url><loc>/reference/print.summary.perm.test.aov.html</loc></url>
+<url><loc>/reference/propulsores.html</loc></url>
+<url><loc>/reference/queima.html</loc></url>
+<url><loc>/reference/quilometragem.html</loc></url>
+<url><loc>/reference/refrigerantes.html</loc></url>
+<url><loc>/reference/refrigerantes2k.html</loc></url>
+<url><loc>/reference/rendimento.html</loc></url>
+<url><loc>/reference/rendimento2k.html</loc></url>
+<url><loc>/reference/rendimentoFrac.html</loc></url>
+<url><loc>/reference/rugosidade.html</loc></url>
+<url><loc>/reference/saquinhos.html</loc></url>
+<url><loc>/reference/semicondutores.html</loc></url>
+<url><loc>/reference/semicondutores1rep.html</loc></url>
+<url><loc>/reference/semicondutores2.html</loc></url>
+<url><loc>/reference/summary.perm.test.aov.html</loc></url>
+<url><loc>/reference/table2kunrep.html</loc></url>
+<url><loc>/reference/table_signs.html</loc></url>
+<url><loc>/reference/teares.html</loc></url>
+<url><loc>/reference/tecidos.html</loc></url>
+<url><loc>/reference/televisores.html</loc></url>
+<url><loc>/reference/testResiduals.html</loc></url>
+<url><loc>/reference/tijolos.html</loc></url>
+<url><loc>/reference/tintas.html</loc></url>
+<url><loc>/reference/tintas2.html</loc></url>
+<url><loc>/reference/treatcomb2factors.html</loc></url>
+<url><loc>/reference/turbinas.html</loc></url>
+<url><loc>/reference/turbinas2.html</loc></url>
+<url><loc>/reference/vigas.html</loc></url>
+<url><loc>/reference/vinhos.html</loc></url>
+<url><loc>/reference/z.test-methods.html</loc></url>
+<url><loc>/reference/z.test.default.html</loc></url>
+<url><loc>/reference/z.test.html</loc></url>
+<url><loc>/reference/zarcao.html</loc></url>
 </urlset>
+

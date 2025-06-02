@@ -20,7 +20,7 @@ This function draws the interaction plot for factorial designs with up to 4 fact
 library(planex)
 library(tidyverse)
 
-# Exemplo da impureza de um produto químico:
+# Exemplo da impureza de um produto quimico:
 head(impureza)
 sapply(impureza, class)
 impureza <- mutate(impureza,

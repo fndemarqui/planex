@@ -2,18 +2,18 @@
 % Please edit documentation in R/biblioteca.R
 \name{as.factor2k}
 \alias{as.factor2k}
-\title{Codificação de variáveis para delineamentos $2^k$ fatoriais}
+\title{Canonical codification for $\eqn{2^k}$ fatoctorial designs}
 \usage{
 as.factor2k(x)
 }
 \arguments{
-\item{x}{fator que se deseja codificar.}
+\item{x}{factor to be converted.}
 }
 \value{
-o fator codificado em termos dos níveis baixo (-1) e alto (+1).
+the recodified factor with -1 and +1 levels
 }
 \description{
-Função para codificar os níveis baixos e altos de fatores de interesse em um delinemanto $2^K$ tal que -1 representa o nível baixo e 1 representa o nível alto do fator.
+Function to convert the low and hight levels of a given factor to -1 and 1, respectively.
 }
 \examples{
 library(planex)

@@ -1,12 +1,12 @@
 
-#' Teste de não aditividade de Tukey
+#' Tukey's nonadditivity interaction test.
 #' @export
-#' @description Implementação do teste de não aditividade proposto por Tukey (1949) para testar o efeito de interação envolvendo delineamentos com dois fatores fixos cruzados e  uma  única replicação.
+#' @description Function performs the Tukey's nonadditivity interaction test.
 #' @aliases interactionTest
-#' @description Realiza o teste de nao aditividade para delineamentos com dois fatores fixos cruzados.
-#' @param object object ajustado (objeto deve ter classe aov ou lm)
+#' @description Tukey's nonadditivity interaction test for two-away factorial designs with a single replicate.
+#' @param object fitted model (an object of class  aov or lm)
 #' @return Retorna a tabela ANOVA
-#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+#' @references  Montgomery, D. C. (2016) Design and Analysis of Experiments, 8-th. Edition, New York: Wiley.
 #' @examples
 #' \donttest{
 #' library(planex)
@@ -38,13 +38,13 @@ interactionTest <- function(object){
 
 
 
-#' Codificação de variáveis para delineamentos $2^k$ fatoriais
+#' Canonical codification for $\eqn{2^k}$ fatoctorial designs
 #'
 #' @aliases as.factor2k
 #' @export
-#' @description Função para codificar os níveis baixos e altos de fatores de interesse em um delinemanto $2^K$ tal que -1 representa o nível baixo e 1 representa o nível alto do fator.
-#' @param x fator que se deseja codificar.
-#' @return o fator codificado em termos dos níveis baixo (-1) e alto (+1).
+#' @description Function to convert the low and hight levels of a given factor to -1 and 1, respectively.
+#' @param x factor to be converted.
+#' @return the recodified factor with -1 and +1 levels
 #' @examples
 #' library(planex)
 #' library(tidyverse)
@@ -61,7 +61,7 @@ interactionTest <- function(object){
 as.factor2k <- function(x){
   z <- unique(x)
   if(length(z) != 2){
-    warning("essa função deve ser usada apenas para fatores com 2 níveis!!!")
+    warning("this functions must be used only with two-levels factors!!!")
   }else if(is.character(x) | is.factor(x)){
     y <- ifelse(x == z[1], -1, 1)
   }else{
@@ -157,7 +157,7 @@ interPlot4 <- function(object){
 #' library(planex)
 #' library(tidyverse)
 #'
-#' # Exemplo da impureza de um produto químico:
+#' # Exemplo da impureza de um produto quimico:
 #' head(impureza)
 #' sapply(impureza, class)
 #'impureza <- mutate(impureza,
@@ -576,7 +576,7 @@ gg_daniel <- function(tb, alpha = 0.05){
 
 
 
-#' Table of signs for 2^k factorial designs
+#' Table of signs for \eqn{2^k} factorial designs
 #' @aliases table_signs
 #' @export
 #' @description This functions provides the table of signs for factorial designs with up to k = 10 factors.

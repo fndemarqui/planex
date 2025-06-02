@@ -12,6 +12,9 @@ z.test <- function(object, ...) UseMethod("z.test")
 #' z.test default implementation
 #'
 #' @aliases z.test.default
+#' @rdname z.test-methods
+#' @method z.test default
+#' @export
 #' @param x x
 #' @param y y
 #' @param alternative alternative
@@ -19,7 +22,8 @@ z.test <- function(object, ...) UseMethod("z.test")
 #' @param sigma sigma
 #' @param conf.level conf.level
 #' @param data data
-#' @export
+#'
+
 z.test.default <- function (x, y = NULL, alternative = c("two.sided", "less", "greater"),
                             mu = 0, sigma, conf.level = 0.95,
                             data = NULL){
@@ -43,7 +47,6 @@ z.test.default <- function (x, y = NULL, alternative = c("two.sided", "less", "g
     names(estimates) <- paste0("mean in group ", dname)
     n <- c(length(x), length(y))
   }
-
 
   V <- sum(sigma^2/n)
   z0 <- (xbar - mu)/sqrt(V)
@@ -76,13 +79,15 @@ z.test.default <- function (x, y = NULL, alternative = c("two.sided", "less", "g
 #' z.test formula implementation
 #'
 #' @aliases z.test.formula
+#' @rdname z.test-methods
+#' @method z.test formula
+#' @export
 #' @param formula formula
 #' @param alternative alternative
 #' @param mu mu
 #' @param sigma sigma
 #' @param conf.level conf.level
 #' @param data data
-#' @export
 #'
 z.test.formula <- function (formula, alternative = c("two.sided", "less", "greater"),
                             mu = 0, sigma, conf.level = 0.95,
@@ -135,7 +140,19 @@ z.test.formula <- function (formula, alternative = c("two.sided", "less", "great
   return(output)
 }
 
+#' Print method for z.test objects
+#'
+#' @aliases print.z.test
+#' @rdname print-methods
+#' @method print z.test
 #' @export
+#' @param x x
+#' @param digits digits
+#' @param prefix prefix
+#' @param ... description
+
+
+
 print.z.test <- function (x, digits = getOption("digits"), prefix = "\t", ...){
   cat("\n")
   cat(strwrap(x$method, prefix = prefix), sep = "\n")

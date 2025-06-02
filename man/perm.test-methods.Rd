@@ -69,26 +69,26 @@ The permutation test implemented here is based on the difference of the sample m
 library(planex)
 library(tidyr)
 data(catalisadores2)
-t.test  <- with(catalisadores2, t.test(C1, C2))
+t.test  <- t.test(catalisadores2$C1, catalisadores2$C2)
 t.test
-perm <- with(catalisadores2, perm.test(C1, C2, nsim = 1000, seed = 123))
-perm$pvalor
+#perm <- perm.test(catalisadores2$C1, catalisadores2$C2, nsim = 1000, seed = 123)
+#perm$pvalor
 }
 
 \donttest{
 library(planex)
 library(tidyr)
 data(catalisadores2)
-catalisadores2 <- catalisadores2 |>
-  pivot_longer(
-    cols = 1:2,
-    names_to = "catalisador",
-    values_to = "rendimento"
-  )
-t.test  <- t.test(rendimento ~ catalisador, data=catalisadores2)
-t.test
-perm <- perm.test(rendimento ~ catalisador, data=catalisadores2, nsim = 1000, seed = 123)
-perm$pvalor
+#catalisadores2 <- catalisadores2 \%*\%
+#  pivot_longer(
+#     cols = 1:2,
+#     names_to = "catalisador",
+#     values_to = "rendimento"
+#   )
+# t.test  <- t.test(rendimento ~ catalisador, data=catalisadores2)
+# t.test
+# perm <- perm.test(rendimento ~ catalisador, data=catalisadores2, nsim = 1000, seed = 123)
+# perm$pvalor
 }
 
 \donttest{

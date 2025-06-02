@@ -1,5 +1,5 @@
-pandoc: 3.1.11
-pkgdown: 2.0.9
+pandoc: '3.4'
+pkgdown: 2.1.3
 pkgdown_sha: ~
 articles:
   ancova: ancova.html
@@ -9,5 +9,4 @@ articles:
   twosample: twosample.html
   vigas: vigas.html
   wilcoxn: wilcoxn.html
-last_built: 2024-07-04T15:18Z
-
+last_built: 2025-06-02T15:39Z

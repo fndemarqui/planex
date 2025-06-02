@@ -2,20 +2,20 @@
 % Please edit documentation in R/biblioteca.R
 \name{interactionTest}
 \alias{interactionTest}
-\title{Teste de não aditividade de Tukey}
+\title{Tukey's nonadditivity interaction test.}
 \usage{
 interactionTest(object)
 }
 \arguments{
-\item{object}{object ajustado (objeto deve ter classe aov ou lm)}
+\item{object}{fitted model (an object of class  aov or lm)}
 }
 \value{
 Retorna a tabela ANOVA
 }
 \description{
-Implementação do teste de não aditividade proposto por Tukey (1949) para testar o efeito de interação envolvendo delineamentos com dois fatores fixos cruzados e  uma  única replicação.
+Function performs the Tukey's nonadditivity interaction test.
 
-Realiza o teste de nao aditividade para delineamentos com dois fatores fixos cruzados.
+Tukey's nonadditivity interaction test for two-away factorial designs with a single replicate.
 }
 \examples{
 \donttest{
@@ -34,5 +34,5 @@ interactionTest(mod)
 
 }
 \references{
-Montgomery, D. C. (2016) Design and Analysis of Experiments, 8ª. Edição, New York: Wiley.
+Montgomery, D. C. (2016) Design and Analysis of Experiments, 8-th. Edition, New York: Wiley.
 }

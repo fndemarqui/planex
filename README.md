@@ -4,6 +4,7 @@
 # planex
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 Funções e bancos de dados para a disciplina de Planejamento de
@@ -33,9 +34,6 @@ library(planex)
 #> 
 #>     intersect, setdiff, setequal, union
 #> Loading required package: ggplot2
-```
-
-``` r
 data(saquinhos)
 saquinhos$concentracao <- as.factor(saquinhos$concentracao)
 mod <- aov(resistencia ~ concentracao, data = saquinhos)
@@ -60,11 +58,8 @@ testResiduals(mod)
 #> ----------------------------------------------- 
 #> Durbin-Watson Test for Autocorrelated Errors: 
 #>  lag Autocorrelation D-W Statistic p-value
-#>    1      -0.1303884      2.181178   0.848
+#>    1      -0.1303884      2.181178   0.866
 #>  Alternative hypothesis: rho != 0
-```
-
-``` r
 summary(mod)
 #>              Df Sum Sq Mean Sq F value   Pr(>F)    
 #> concentracao  3  382.8  127.60   19.61 3.59e-06 ***
@@ -92,16 +87,10 @@ library(multcomp)
 #> The following object is masked from 'package:MASS':
 #> 
 #>     geyser
-```
-
-``` r
 library(emmeans)
 #> Welcome to emmeans.
 #> Caution: You lose important information if you filter this package's results.
 #> See '? untidy'
-```
-
-``` r
 
 comp1 <- HSD.test(mod, "concentracao", group = FALSE)
 comp2 <- glht(mod, linfct = mcp(concentracao = "Tukey"))
@@ -115,9 +104,6 @@ comp1$comparison
 #> 15 - 20  -4.166667 0.0470       * -8.289229 -0.04410408
 #> 15 - 5    7.000000 0.0007     ***  2.877437 11.12256259
 #> 20 - 5   11.166667 0.0000     ***  7.044104 15.28922925
-```
-
-``` r
 summary(comp2)
 #> 
 #>   Simultaneous Tests for General Linear Hypotheses
@@ -129,18 +115,15 @@ summary(comp2)
 #> 
 #> Linear Hypotheses:
 #>              Estimate Std. Error t value Pr(>|t|)    
-#> 10 - 5 == 0     5.667      1.473   3.847  0.00490 ** 
+#> 10 - 5 == 0     5.667      1.473   3.847  0.00511 ** 
 #> 15 - 5 == 0     7.000      1.473   4.753  < 0.001 ***
 #> 20 - 5 == 0    11.167      1.473   7.581  < 0.001 ***
-#> 15 - 10 == 0    1.333      1.473   0.905  0.80221    
-#> 20 - 10 == 0    5.500      1.473   3.734  0.00648 ** 
-#> 20 - 15 == 0    4.167      1.473   2.829  0.04677 *  
+#> 15 - 10 == 0    1.333      1.473   0.905  0.80224    
+#> 20 - 10 == 0    5.500      1.473   3.734  0.00643 ** 
+#> 20 - 15 == 0    4.167      1.473   2.829  0.04687 *  
 #> ---
 #> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 #> (Adjusted p values reported -- single-step method)
-```
-
-``` r
 comp3$contrasts
 #>  contrast                        estimate   SE df t.ratio p.value
 #>  concentracao5 - concentracao10     -5.67 1.47 20  -3.847  0.0051

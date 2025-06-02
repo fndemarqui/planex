@@ -2,7 +2,7 @@
 % Please edit documentation in R/biblioteca.R
 \name{table_signs}
 \alias{table_signs}
-\title{Table of signs for 2^k factorial designs}
+\title{Table of signs for \eqn{2^k} factorial designs}
 \usage{
 table_signs(k)
 }
