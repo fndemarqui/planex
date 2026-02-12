@@ -517,6 +517,7 @@ testResiduals <- function(model, normality.test = c("sw", "ad"),
   cat("\n")
   cat("-----------------------------------------------", "\n")
   cat("Durbin-Watson Test for Autocorrelated Errors:", "\n")
+  set.seed(123456789)
   print(car::durbinWatsonTest(model))
 }
 
