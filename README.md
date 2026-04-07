@@ -10,14 +10,12 @@
 Funções e bancos de dados para a disciplina de Planejamento de
 Experimentos.
 
-## Installation
+## Instalação
 
-Você pode instalar a versão de desenvolvimento do pacote planex a partir
-do [GitHub](https://github.com/) da seguinte forma:
+Você pode instalar o pacote planex da seguinte forma:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("fndemarqui/planex")
+install.packages('planex', repos = c('https://fndemarqui.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
 ## Exemplo
@@ -38,9 +36,16 @@ data(saquinhos)
 saquinhos$concentracao <- as.factor(saquinhos$concentracao)
 mod <- aov(resistencia ~ concentracao, data = saquinhos)
 plotResiduals(mod)
+#> Warning: `fortify(<lm>)` was deprecated in ggplot2 4.0.0.
+#> ℹ Please use `broom::augment(<lm>)` instead.
+#> ℹ The deprecated feature was likely used in the ggplot2 package.
+#>   Please report the issue at <https://github.com/tidyverse/ggplot2/issues>.
+#> This warning is displayed once per session.
+#> Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+#> generated.
 ```
 
-<img src="man/figures/README-saquinhos-1.png" width="100%" /><img src="man/figures/README-saquinhos-2.png" width="100%" /><img src="man/figures/README-saquinhos-3.png" width="100%" /><img src="man/figures/README-saquinhos-4.png" width="100%" /><img src="man/figures/README-saquinhos-5.png" width="100%" />
+<img src="man/figures/README-saquinhos-1.png" alt="" width="100%" /><img src="man/figures/README-saquinhos-2.png" alt="" width="100%" /><img src="man/figures/README-saquinhos-3.png" alt="" width="100%" /><img src="man/figures/README-saquinhos-4.png" alt="" width="100%" /><img src="man/figures/README-saquinhos-5.png" alt="" width="100%" />
 
 ``` r
 testResiduals(mod)
@@ -115,12 +120,12 @@ summary(comp2)
 #> 
 #> Linear Hypotheses:
 #>              Estimate Std. Error t value Pr(>|t|)    
-#> 10 - 5 == 0     5.667      1.473   3.847  0.00511 ** 
+#> 10 - 5 == 0     5.667      1.473   3.847  0.00513 ** 
 #> 15 - 5 == 0     7.000      1.473   4.753  < 0.001 ***
 #> 20 - 5 == 0    11.167      1.473   7.581  < 0.001 ***
-#> 15 - 10 == 0    1.333      1.473   0.905  0.80224    
-#> 20 - 10 == 0    5.500      1.473   3.734  0.00643 ** 
-#> 20 - 15 == 0    4.167      1.473   2.829  0.04687 *  
+#> 15 - 10 == 0    1.333      1.473   0.905  0.80220    
+#> 20 - 10 == 0    5.500      1.473   3.734  0.00666 ** 
+#> 20 - 15 == 0    4.167      1.473   2.829  0.04702 *  
 #> ---
 #> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 #> (Adjusted p values reported -- single-step method)
@@ -128,7 +133,7 @@ comp3$contrasts
 #>  contrast                        estimate   SE df t.ratio p.value
 #>  concentracao5 - concentracao10     -5.67 1.47 20  -3.847  0.0051
 #>  concentracao5 - concentracao15     -7.00 1.47 20  -4.753  0.0007
-#>  concentracao5 - concentracao20    -11.17 1.47 20  -7.581  <.0001
+#>  concentracao5 - concentracao20    -11.17 1.47 20  -7.581 <0.0001
 #>  concentracao10 - concentracao15    -1.33 1.47 20  -0.905  0.8022
 #>  concentracao10 - concentracao20    -5.50 1.47 20  -3.734  0.0066
 #>  concentracao15 - concentracao20    -4.17 1.47 20  -2.829  0.0470
