@@ -358,7 +358,7 @@ table2kunrep <- function(object){
 
 
 #' Residuals' plots for ANOVA models
-#' @aliases plotResiduals
+#' @aliases ggresiduals
 #' @export
 #' @description This function is only suitable to analyze residuals of ANOVA models. It must not be used to analyze residuals from regression or ANCOVA models.
 #' @param model an object of the class lm or aov.
@@ -372,54 +372,47 @@ table2kunrep <- function(object){
 #'   concentracao = as.factor(concentracao)
 #' )
 #' mod <- aov(resistencia ~ concentracao, data = saquinhos)
-#' plotResiduals(mod)
+#' ggresiduals(mod)
 #'
-plotResiduals <- function(model){
+ggresiduals <- function(object){
 
-  k <- ceiling(1 + log(length(residuals(model)),2))
+  k <- ceiling(1 + log(length(residuals(object)),2))
+  df <- broom::augment(object)
 
-  p0 <- ggplot(model, aes(x=1:length(.data$.resid), y=.data$.resid)) +
+  p1 <- ggplot(df, aes(x=1:length(.data$.resid), y=.data$.resid)) +
     geom_point() +
     geom_line() +
     geom_line(aes(y=0), color="blue") +
     xlab("Order of observations") +
     ylab("Residuals")
-  plot(p0)
-
-  p1 <- ggplot(model, aes(x = .data$.resid)) +
-   geom_histogram(bins = k, color="white") +
-   xlab("Residuals") +
-   ylab("Frequency")
   plot(p1)
 
-  p2 <- ggplot(model, aes(sample = .data$.resid)) +
-    stat_qq() + stat_qq_line(color="blue") +
-    ggtitle("Normal Q-Q plot")
+
+  p2 <- ggplot(df, aes(sample = .data$.std.resid)) +
+    qqplotr::stat_qq_band(alpha = 0.4) +
+    qqplotr::stat_qq_line(color = "blue") +
+    qqplotr::stat_qq_point() +
+    ggtitle("Normal Q-Q")
   plot(p2)
 
-
-  p3 <- ggplot(model, aes(.data$.fitted, .data$.resid)) +
+  p3 <- ggplot(df, aes(.data$.fitted, .data$.std.resid)) +
     geom_point() +
-    geom_line(aes(y=0), color="blue") +
-    #stat_smooth(method="loess", se = TRUE) +
-    xlab("Fitted values") +
-    ylab("Residuals")
-  suppressWarnings(plot(p3))
+    geom_hline(yintercept = 0) +
+    geom_smooth(se = FALSE) +
+    ggtitle("residuals vs fitted")
+  plot(p3)
 
-
-  mf <- as.data.frame(stats::model.frame(model))
+  mf <- as.data.frame(stats::model.frame(object))
   variable <- names(mf)
   for(i in 2:ncol(mf)){
-    p <- ggplot(model, aes(x = mf[,i] , y = .data$.resid)) +
+    p <- ggplot(df, aes(x = mf[,i] , y = .data$.resid)) +
       geom_jitter(position=position_jitter(0.1)) +
-      #geom_line(aes(y=0), color="blue") +
       geom_hline(yintercept = 0, color = "blue") +
       xlab(variable[i]) +
       ylab("residuals")
     plot(p)
   }
   plots <- list(p1, p2, p3)
-
 }
 
 

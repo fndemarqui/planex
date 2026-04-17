@@ -35,17 +35,25 @@ library(planex)
 data(saquinhos)
 saquinhos$concentracao <- as.factor(saquinhos$concentracao)
 mod <- aov(resistencia ~ concentracao, data = saquinhos)
-plotResiduals(mod)
-#> Warning: `fortify(<lm>)` was deprecated in ggplot2 4.0.0.
-#> ℹ Please use `broom::augment(<lm>)` instead.
-#> ℹ The deprecated feature was likely used in the ggplot2 package.
-#>   Please report the issue at <https://github.com/tidyverse/ggplot2/issues>.
+ggresiduals(mod)
+#> Warning: The `augment()` method for objects of class `aov` is not maintained by the broom team, and is only supported through the `lm` tidier method. Please be cautious in interpreting and reporting broom output.
+#> 
 #> This warning is displayed once per session.
-#> Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
-#> generated.
 ```
 
-<img src="man/figures/README-saquinhos-1.png" alt="" width="100%" /><img src="man/figures/README-saquinhos-2.png" alt="" width="100%" /><img src="man/figures/README-saquinhos-3.png" alt="" width="100%" /><img src="man/figures/README-saquinhos-4.png" alt="" width="100%" /><img src="man/figures/README-saquinhos-5.png" alt="" width="100%" />
+<img src="man/figures/README-saquinhos-1.png" alt="" width="100%" /><img src="man/figures/README-saquinhos-2.png" alt="" width="100%" />
+
+    #> `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+    #> Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+    #> : pseudoinverse used at 9.9442
+    #> Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+    #> : neighborhood radius 7.0558
+    #> Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+    #> : reciprocal condition number 7.1324e-17
+    #> Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,
+    #> : There are other near singularities as well. 30.867
+
+<img src="man/figures/README-saquinhos-3.png" alt="" width="100%" /><img src="man/figures/README-saquinhos-4.png" alt="" width="100%" />
 
 ``` r
 testResiduals(mod)

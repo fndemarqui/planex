@@ -26,6 +26,6 @@ glimpse(rendimento2k)
 
 fit <- aov(rendimento ~ reagente*catalisador, data=rendimento2k)
 testResiduals(fit)
-plotResiduals(fit)
+ggresiduals(fit)
 ```
 

@@ -28,6 +28,6 @@ fibras <- fibras %>%
 
 fit <- aov(forca ~ diametro + maquina, data = fibras)
 testResiduals(fit)
-plotResiduals(fit)
+ggresiduals(fit)
 ```
 

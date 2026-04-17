@@ -33,7 +33,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">planex</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.6</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1.7</span>
       </span>
     </div>
 
@@ -123,16 +123,22 @@
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">)</span></span>
 <span><span class="va">saquinhos</span><span class="op">$</span><span class="va">concentracao</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">$</span><span class="va">concentracao</span><span class="op">)</span></span>
 <span><span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">resistencia</span> <span class="op">~</span> <span class="va">concentracao</span>, data <span class="op">=</span> <span class="va">saquinhos</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/plotResiduals.html">plotResiduals</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: `fortify(&lt;lm&gt;)` was deprecated in ggplot2 4.0.0.</span></span>
-<span><span class="co">#&gt; ℹ Please use `broom::augment(&lt;lm&gt;)` instead.</span></span>
-<span><span class="co">#&gt; ℹ The deprecated feature was likely used in the ggplot2 package.</span></span>
-<span><span class="co">#&gt;   Please report the issue at &lt;https://github.com/tidyverse/ggplot2/issues&gt;.</span></span>
-<span><span class="co">#&gt; This warning is displayed once per session.</span></span>
-<span><span class="co">#&gt; Call `lifecycle::last_lifecycle_warnings()` to see where this warning was</span></span>
-<span><span class="co">#&gt; generated.</span></span></code></pre></div>
-<p><img src="reference/figures/README-saquinhos-1.png" alt="" width="100%"><img src="reference/figures/README-saquinhos-2.png" alt="" width="100%"><img src="reference/figures/README-saquinhos-3.png" alt="" width="100%"><img src="reference/figures/README-saquinhos-4.png" alt="" width="100%"><img src="reference/figures/README-saquinhos-5.png" alt="" width="100%"></p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<span><span class="fu"><a href="reference/ggresiduals.html">ggresiduals</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: The `augment()` method for objects of class `aov` is not maintained by the broom team, and is only supported through the `lm` tidier method. Please be cautious in interpreting and reporting broom output.</span></span>
+<span><span class="co">#&gt; </span></span>
+<span><span class="co">#&gt; This warning is displayed once per session.</span></span></code></pre></div>
+<p><img src="reference/figures/README-saquinhos-1.png" alt="" width="100%"><img src="reference/figures/README-saquinhos-2.png" alt="" width="100%"></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co">#&gt; `geom_smooth()` using method = 'loess' and formula = 'y ~ x'</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co">#&gt; Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt; : pseudoinverse used at 9.9442</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">#&gt; Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co">#&gt; : neighborhood radius 7.0558</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt; Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co">#&gt; : reciprocal condition number 7.1324e-17</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co">#&gt; Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co">#&gt; : There are other near singularities as well. 30.867</span></span></code></pre></div>
+<p><img src="reference/figures/README-saquinhos-3.png" alt="" width="100%"><img src="reference/figures/README-saquinhos-4.png" alt="" width="100%"></p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="reference/testResiduals.html">testResiduals</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;  Shapiro-Wilk normality test</span></span>
@@ -157,7 +163,7 @@
 <span><span class="co">#&gt; ---</span></span>
 <span><span class="co">#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span></code></pre></div>
 <p>Realizando as comparações múltiplas:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">agricolae</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://multcomp.R-forge.R-project.org" class="external-link">multcomp</a></span><span class="op">)</span></span>
 <span><span class="co">#&gt; Loading required package: mvtnorm</span></span>
