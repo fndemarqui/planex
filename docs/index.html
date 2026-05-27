@@ -123,10 +123,7 @@
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">)</span></span>
 <span><span class="va">saquinhos</span><span class="op">$</span><span class="va">concentracao</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="va">saquinhos</span><span class="op">$</span><span class="va">concentracao</span><span class="op">)</span></span>
 <span><span class="va">mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">resistencia</span> <span class="op">~</span> <span class="va">concentracao</span>, data <span class="op">=</span> <span class="va">saquinhos</span><span class="op">)</span></span>
-<span><span class="fu"><a href="reference/ggresiduals.html">ggresiduals</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning: The `augment()` method for objects of class `aov` is not maintained by the broom team, and is only supported through the `lm` tidier method. Please be cautious in interpreting and reporting broom output.</span></span>
-<span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt; This warning is displayed once per session.</span></span></code></pre></div>
+<span><span class="fu"><a href="reference/ggresiduals.html">ggresiduals</a></span><span class="op">(</span><span class="va">mod</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-saquinhos-1.png" alt="" width="100%"><img src="reference/figures/README-saquinhos-2.png" alt="" width="100%"></p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co">#&gt; `geom_smooth()` using method = 'loess' and formula = 'y ~ x'</span></span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="co">#&gt; Warning in simpleLoess(y, x, w, span, degree = degree, parametric = parametric,</span></span>

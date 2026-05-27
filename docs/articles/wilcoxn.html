@@ -337,13 +337,11 @@ das populações tende a ter valores maiores (menores) que a outra.</p>
 <span></span>
 <span><span class="co"># alternativa não-paramétrica do teste t:</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/stats/wilcox.test.html" class="external-link">wilcox.test</a></span><span class="op">(</span><span class="va">concentracao</span> <span class="op">~</span> <span class="va">comunidade</span>, data <span class="op">=</span> <span class="va">arsenio</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Warning in wilcox.test.default(x = DATA[[1L]], y = DATA[[2L]], ...): cannot</span></span>
-<span><span class="co">#&gt; compute exact p-value with ties</span></span>
 <span><span class="co">#&gt; </span></span>
-<span><span class="co">#&gt;  Wilcoxon rank sum test with continuity correction</span></span>
+<span><span class="co">#&gt;  Wilcoxon rank sum exact test</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; data:  concentracao by comunidade</span></span>
-<span><span class="co">#&gt; W = 20.5, p-value = 0.02813</span></span>
+<span><span class="co">#&gt; W = 20.5, p-value = 0.02422</span></span>
 <span><span class="co">#&gt; alternative hypothesis: true location shift is not equal to 0</span></span></code></pre></div>
 </div>
 <div class="section level2">
@@ -421,7 +419,7 @@ das populações tende a ter valores maiores (menores) que a outra.</p>
 <span><span class="co">#&gt; data:  K and L</span></span>
 <span><span class="co">#&gt; V = 45, p-value = 0.003906</span></span>
 <span><span class="co">#&gt; alternative hypothesis: true location shift is not equal to 0</span></span>
-<span><span class="co">#&gt; 95 percent confidence interval:</span></span>
+<span><span class="co">#&gt; 96.1 percent confidence interval:</span></span>
 <span><span class="co">#&gt;  0.1590 0.3895</span></span>
 <span><span class="co">#&gt; sample estimates:</span></span>
 <span><span class="co">#&gt; (pseudo)median </span></span>
@@ -433,7 +431,7 @@ das populações tende a ter valores maiores (menores) que a outra.</p>
 <span><span class="co">#&gt; data:  vigas$d</span></span>
 <span><span class="co">#&gt; V = 45, p-value = 0.003906</span></span>
 <span><span class="co">#&gt; alternative hypothesis: true location is not equal to 0</span></span>
-<span><span class="co">#&gt; 95 percent confidence interval:</span></span>
+<span><span class="co">#&gt; 96.1 percent confidence interval:</span></span>
 <span><span class="co">#&gt;  0.1590 0.3895</span></span>
 <span><span class="co">#&gt; sample estimates:</span></span>
 <span><span class="co">#&gt; (pseudo)median </span></span>

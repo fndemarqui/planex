@@ -376,6 +376,7 @@ table2kunrep <- function(object){
 #'
 ggresiduals <- function(object){
 
+  class(object) <- "lm"
   k <- ceiling(1 + log(length(residuals(object)),2))
   df <- broom::augment(object)
 
@@ -521,7 +522,7 @@ is.factor2k <- function(x){
 
 
 #' Daneil probability plot
-#' @aliases gg_daniel
+#' @aliases ggdaniel
 #' @export
 #' @description ggplot implementation for the Daniel probability plot
 #' @param tb a data frame containing the output of the table2kunrep function
@@ -548,10 +549,10 @@ is.factor2k <- function(x){
 #'
 #' mod <- lm(filtragem ~ A*B*C*D, data=filtragem)
 #' tb <- table2kunrep(mod)
-#' gg_daniel(tb)
+#' ggdaniel(tb)
 #'}
 #'
-gg_daniel <- function(tb, alpha = 0.05){
+ggdaniel <- function(tb, alpha = 0.05){
   ME <- DoE.base::ME.Lenth(tb$effects, alpha = alpha)$ME
   tb <- tb %>%
     mutate(

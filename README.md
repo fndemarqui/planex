@@ -36,9 +36,6 @@ data(saquinhos)
 saquinhos$concentracao <- as.factor(saquinhos$concentracao)
 mod <- aov(resistencia ~ concentracao, data = saquinhos)
 ggresiduals(mod)
-#> Warning: The `augment()` method for objects of class `aov` is not maintained by the broom team, and is only supported through the `lm` tidier method. Please be cautious in interpreting and reporting broom output.
-#> 
-#> This warning is displayed once per session.
 ```
 
 <img src="man/figures/README-saquinhos-1.png" alt="" width="100%" /><img src="man/figures/README-saquinhos-2.png" alt="" width="100%" />
