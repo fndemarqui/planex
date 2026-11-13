@@ -3,7 +3,7 @@
 \name{perm.test.default}
 \alias{perm.test.default}
 \alias{perm.test.formula}
-\alias{perm.test.aov}
+\alias{perm.test.lm}
 \title{Two-sample permutation test for differences in the population means}
 \usage{
 \method{perm.test}{default}(
@@ -12,6 +12,7 @@
   nsim = 1000,
   seed = NULL,
   alternative = c("two.sided", "less", "greater"),
+  conf.level = 0.95,
   ...
 )
 
@@ -21,21 +22,24 @@
   nsim = 1000,
   seed = NULL,
   alternative = c("two.sided", "less", "greater"),
+  conf.level = 0.95,
   ...
 )
 
-\method{perm.test}{aov}(object, nsim = 1000, seed = NULL, ...)
+\method{perm.test}{lm}(object, type = c("I", "II", "III"), nsim = 1000, seed = NULL, ...)
 }
 \arguments{
 \item{x}{a (non-empty) numeric vector of data values.}
 
 \item{y}{a (non-empty) numeric vector of data values.}
 
-\item{nsim}{number of permutations to be simulated}
+\item{nsim}{number of permutations to be simulated; default is 1000}
 
 \item{seed}{seed passed to the random number generator; if NULL (default), then a random seed is used}
 
 \item{alternative}{a character string specifying the alternative hypothesis, must be one of "two.sided" (default), "greater" or "less". You can specify just the initial letter.}
+
+\item{conf.level}{confidence level of the interval; default is 0.95.}
 
 \item{...}{further arguments passed to or from other methods.}
 
@@ -44,13 +48,15 @@
 \item{data}{an optional matrix or data frame containing the variables in the formula formula. By default the variables are taken from environment(formula).}
 
 \item{object}{an object of class aov}
+
+\item{type}{type of the test (I, II or III) to be performed; default is type I}
 }
 \value{
 perm.test returns an object of class perm.test containing information regarding the permutation test carried out.
 
 perm.test returns an object of class perm.test containing information regarding the permutation test carried out.
 
-perm.test returns an object of class perm.test.aov containing information regarding the permutation test carried out
+perm.test returns an object of class perm.test.lm containing information regarding the permutation test carried out
 }
 \description{
 Two-sample permutation test for differences in the population means
@@ -96,7 +102,7 @@ library(planex)
 data(refrigerantes)
 mod <- aov(desvio ~ carbonatacao*pressao*velocidade, data=refrigerantes)
 summary(mod)
-perm <- perm.test(mod)
+perm <- perm.test(mod, type = "III")
 summary(perm)
 }
 

@@ -60,7 +60,10 @@
 <url><loc>/reference/planex-package.html</loc></url>
 <url><loc>/reference/plotResiduals.html</loc></url>
 <url><loc>/reference/print-methods.html</loc></url>
+<url><loc>/reference/print.perm.test.default.html</loc></url>
+<url><loc>/reference/print.perm.test.formula.html</loc></url>
 <url><loc>/reference/print.summary.perm.test.aov.html</loc></url>
+<url><loc>/reference/print.summary.perm.test.lm.html</loc></url>
 <url><loc>/reference/propulsores.html</loc></url>
 <url><loc>/reference/queima.html</loc></url>
 <url><loc>/reference/quilometragem.html</loc></url>
@@ -75,6 +78,7 @@
 <url><loc>/reference/semicondutores1rep.html</loc></url>
 <url><loc>/reference/semicondutores2.html</loc></url>
 <url><loc>/reference/summary.perm.test.aov.html</loc></url>
+<url><loc>/reference/summary.perm.test.lm.html</loc></url>
 <url><loc>/reference/table2kunrep.html</loc></url>
 <url><loc>/reference/table_signs.html</loc></url>
 <url><loc>/reference/teares.html</loc></url>

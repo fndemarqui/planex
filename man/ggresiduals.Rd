@@ -7,7 +7,7 @@
 ggresiduals(object)
 }
 \arguments{
-\item{model}{an object of the class lm or aov.}
+\item{object}{an object of the class lm or aov.}
 }
 \value{
 residual plots suitable for residual analysis of data from design experiments.

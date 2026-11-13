@@ -16,3 +16,4 @@
 ^inst/stuff\.R$
 ^doc$
 ^inst/stuff$
+^data-raw$

@@ -361,7 +361,7 @@ table2kunrep <- function(object){
 #' @aliases ggresiduals
 #' @export
 #' @description This function is only suitable to analyze residuals of ANOVA models. It must not be used to analyze residuals from regression or ANCOVA models.
-#' @param model an object of the class lm or aov.
+#' @param object an object of the class lm or aov.
 #' @return residual plots suitable for residual analysis of data from design experiments.
 #'
 #' @examples
